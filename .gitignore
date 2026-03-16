@@ -1,0 +1,17 @@
+# Logs (large, per-run)
+logs/runs/
+logs/summary.tsv
+
+# Environment
+.env
+*.pyc
+__pycache__/
+node_modules/
+
+# OS
+Thumbs.db
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
