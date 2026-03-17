@@ -127,8 +127,25 @@ def load_personas(config_path: str, n_students: int) -> list[StudentPersona]:
     return personas
 
 
-def load_items(unit: int) -> list[dict]:
-    """Load items for a specific unit from data/items/curriculum_render.json."""
+def load_items(unit: int, eval_set: str | None = None) -> list[dict]:
+    """Load items for a specific unit.
+
+    If *eval_set* is given (e.g. ``"unit_1_dev_v1"``), load the frozen
+    eval set from ``eval_sets/{eval_set}.json``.  Otherwise fall back to
+    filtering the full item file by unit number.
+    """
+    if eval_set:
+        es_path = PROJECT_ROOT / "eval_sets" / f"{eval_set}.json"
+        if es_path.exists():
+            with open(es_path, "r", encoding="utf-8") as f:
+                data = json.load(f)
+            items = data.get("items", data) if isinstance(data, dict) else data
+            print(f"Loaded eval set '{eval_set}' ({len(items)} items)")
+            return items
+        else:
+            print(f"WARNING: eval set '{eval_set}' not found at {es_path}, "
+                  "falling back to full item file", file=sys.stderr)
+
     items_path = PROJECT_ROOT / "data" / "items" / "curriculum_render.json"
     if not items_path.exists():
         print(f"ERROR: Items file not found at {items_path}", file=sys.stderr)
@@ -163,7 +180,8 @@ async def run_experiment(unit: int, n_students: int, config_path: str) -> None:
     model = provider.get("student", {}).get("model", "qwen3:8b")
 
     # 2. Load items and personas
-    items = load_items(unit)
+    eval_set = config.get("eval_set")
+    items = load_items(unit, eval_set=eval_set)
     if not items:
         print(f"No items found for unit {unit}.", file=sys.stderr)
         sys.exit(1)

@@ -1,0 +1,2965 @@
+{
+  "eval_set_id": "unit_1_dev_v1",
+  "description": "Unit 1 dev eval set — all 76 extracted items, frozen for baseline comparisons",
+  "unit": 1,
+  "n_items": 76,
+  "source_hash": "98592d715733a5cd",
+  "items": [
+    {
+      "item_id": "CR:U1-L2-Q01",
+      "source": "curriculum_render",
+      "item_type": "mcq",
+      "unit": 1,
+      "lesson": 2,
+      "kc_tags": [
+        "UNC-1.C",
+        "VAR-1.C",
+        "UNC-1.A"
+      ],
+      "prompt": "The following table shows data for the 8 longest roller coasters in the world as of 2015. Which of the following variables is categorical?",
+      "choices": [
+        {
+          "key": "A",
+          "value": "Length"
+        },
+        {
+          "key": "B",
+          "value": "Type"
+        },
+        {
+          "key": "C",
+          "value": "Speed"
+        },
+        {
+          "key": "D",
+          "value": "Height"
+        },
+        {
+          "key": "E",
+          "value": "Drop"
+        }
+      ],
+      "expected": {
+        "answer_key": "B"
+      },
+      "seed": null,
+      "difficulty_estimate": 0.5
+    },
+    {
+      "item_id": "CR:U1-L2-Q02",
+      "source": "curriculum_render",
+      "item_type": "mcq",
+      "unit": 1,
+      "lesson": 2,
+      "kc_tags": [
+        "UNC-1.C",
+        "VAR-1.C",
+        "UNC-1.A"
+      ],
+      "prompt": "Which of the following questions about cars in a school parking lot will allow for the collection of a set of categorical data?",
+      "choices": [
+        {
+          "key": "A",
+          "value": "How many blue cars are in the lot?"
+        },
+        {
+          "key": "B",
+          "value": "What are the gas mileages, in miles per gallon, of the cars in the lot?"
+        },
+        {
+          "key": "C",
+          "value": "What are the weights, in pounds, of the cars in the lot?"
+        },
+        {
+          "key": "D",
+          "value": "What is the number of cars in the lot with out-of-state license plates?"
+        },
+        {
+          "key": "E",
+          "value": "What are the colors of the cars in the lot?"
+        }
+      ],
+      "expected": {
+        "answer_key": "E"
+      },
+      "seed": null,
+      "difficulty_estimate": 0.5
+    },
+    {
+      "item_id": "CR:U1-L2-Q03",
+      "source": "curriculum_render",
+      "item_type": "mcq",
+      "unit": 1,
+      "lesson": 2,
+      "kc_tags": [
+        "UNC-1.L",
+        "UNC-1.O",
+        "VAR-1.C"
+      ],
+      "prompt": "Data were collected on 100 United States coins minted in 2018. Which of the following represents a quantitative variable for the data collected?",
+      "choices": [
+        {
+          "key": "A",
+          "value": "The type of metal used in the coin"
+        },
+        {
+          "key": "B",
+          "value": "The value of the coin"
+        },
+        {
+          "key": "C",
+          "value": "The color of the coin"
+        },
+        {
+          "key": "D",
+          "value": "The person depicted on the face of the coin"
+        },
+        {
+          "key": "E",
+          "value": "The location where the coin was minted"
+        }
+      ],
+      "expected": {
+        "answer_key": "B"
+      },
+      "seed": null,
+      "difficulty_estimate": 0.5
+    },
+    {
+      "item_id": "CR:U1-L3-Q01",
+      "source": "curriculum_render",
+      "item_type": "mcq",
+      "unit": 1,
+      "lesson": 3,
+      "kc_tags": [
+        "UNC-1.A",
+        "UNC-1.L",
+        "UNC-1.K"
+      ],
+      "prompt": "The following frequency table shows the responses from a group of college students who were asked to choose their favorite flavor of ice cream. Which of the following statements is not supported by the table?",
+      "choices": [
+        {
+          "key": "A",
+          "value": "The number of student responses is 300."
+        },
+        {
+          "key": "B",
+          "value": "One-third of the students chose vanilla."
+        },
+        {
+          "key": "C",
+          "value": "One-third of the students chose chocolate or strawberry."
+        },
+        {
+          "key": "D",
+          "value": "One-fourth of the students chose mint chip or coffee."
+        },
+        {
+          "key": "E",
+          "value": "One-half of the students chose vanilla or chocolate."
+        }
+      ],
+      "expected": {
+        "answer_key": "E"
+      },
+      "seed": null,
+      "difficulty_estimate": 0.5
+    },
+    {
+      "item_id": "CR:U1-L3-Q02",
+      "source": "curriculum_render",
+      "item_type": "mcq",
+      "unit": 1,
+      "lesson": 3,
+      "kc_tags": [
+        "UNC-1.A",
+        "UNC-1.I",
+        "VAR-4.B"
+      ],
+      "prompt": "The following relative frequency table shows the political party affiliation for a sample of 500 people in a certain town. Which of the following statements is supported by the table?",
+      "choices": [
+        {
+          "key": "A",
+          "value": "The number of people affiliated with the Republicans is 30."
+        },
+        {
+          "key": "B",
+          "value": "The number of people affiliated with the Independents is 100."
+        },
+        {
+          "key": "C",
+          "value": "Less than half of the people are affiliated with the Democrats or the Republicans."
+        },
+        {
+          "key": "D",
+          "value": "At least 200 people are affiliated with the Democrats."
+        },
+        {
+          "key": "E",
+          "value": "At least 80 people are affiliated with the Green Party or the Libertarians."
+        }
+      ],
+      "expected": {
+        "answer_key": "B"
+      },
+      "seed": null,
+      "difficulty_estimate": 0.5
+    },
+    {
+      "item_id": "CR:U1-L3-Q03",
+      "source": "curriculum_render",
+      "item_type": "mcq",
+      "unit": 1,
+      "lesson": 3,
+      "kc_tags": [
+        "UNC-1.I",
+        "UNC-1.A",
+        "UNC-1.G"
+      ],
+      "prompt": "The following table summarizes the number of pies sold at a booth one day at a local farmers market. Which of the following statements is supported by the table?",
+      "choices": [
+        {
+          "key": "A",
+          "value": "More cherry pies were sold than any other type of pie."
+        },
+        {
+          "key": "B",
+          "value": "Twice as many apple pies as key lime pies were sold."
+        },
+        {
+          "key": "C",
+          "value": "More than half the pies sold were apple."
+        },
+        {
+          "key": "D",
+          "value": "Fewer than 50 pies were sold at the booth that day."
+        },
+        {
+          "key": "E",
+          "value": "The combined percentage of key lime pies sold and pumpkin pies sold was less than 50%."
+        }
+      ],
+      "expected": {
+        "answer_key": "E"
+      },
+      "seed": null,
+      "difficulty_estimate": 0.5
+    },
+    {
+      "item_id": "CR:U1-L4-Q01",
+      "source": "curriculum_render",
+      "item_type": "mcq",
+      "unit": 1,
+      "lesson": 4,
+      "kc_tags": [
+        "UNC-1.I",
+        "UNC-1.G",
+        "VAR-4.A"
+      ],
+      "prompt": "A market researcher asked a group of men and women to choose their favorite color design from a sample of advertisements. Which of the following statements is not supported by the table?",
+      "choices": [
+        {
+          "key": "A",
+          "value": "More men than women chose the color design red with black."
+        },
+        {
+          "key": "B",
+          "value": "More women than men chose the color design yellow with black."
+        },
+        {
+          "key": "C",
+          "value": "For men, the number who chose a design with black was greater than the number who chose a design with blue."
+        },
+        {
+          "key": "D",
+          "value": "The color design chosen by the most people was green with blue."
+        },
+        {
+          "key": "E",
+          "value": "The total number of men surveyed by the market researcher was equal to the total number of women surveyed by the market researcher."
+        }
+      ],
+      "expected": {
+        "answer_key": "C"
+      },
+      "seed": null,
+      "difficulty_estimate": 0.5
+    },
+    {
+      "item_id": "CR:U1-L4-Q02",
+      "source": "curriculum_render",
+      "item_type": "mcq",
+      "unit": 1,
+      "lesson": 4,
+      "kc_tags": [
+        "UNC-1.C",
+        "UNC-1.B",
+        "UNC-1.E"
+      ],
+      "prompt": "In a certain school district, students from grade 6 through grade 12 can participate in a school-sponsored community service activity. The following bar chart shows the relative frequencies of students from each grade who participate in the community service activity. Which of the following statements is supported by the bar chart?",
+      "choices": [
+        {
+          "key": "A",
+          "value": "The greatest number of participating students was in grade 9."
+        },
+        {
+          "key": "B",
+          "value": "The number of participating students in grade 6 was equal to the number of participating students in grade 7."
+        },
+        {
+          "key": "C",
+          "value": "The relative frequency of all participating students in grades 6 and 7 combined was 0.60."
+        },
+        {
+          "key": "D",
+          "value": "Grade 12 had the least relative frequency of participating students."
+        },
+        {
+          "key": "E",
+          "value": "Grade 11 had the greatest relative frequency of participating students."
+        }
+      ],
+      "expected": {
+        "answer_key": "D"
+      },
+      "seed": null,
+      "difficulty_estimate": 0.5
+    },
+    {
+      "item_id": "CR:U1-L4-Q03",
+      "source": "curriculum_render",
+      "item_type": "mcq",
+      "unit": 1,
+      "lesson": 4,
+      "kc_tags": [
+        "UNC-1.I",
+        "UNC-1.G",
+        "UNC-1.L"
+      ],
+      "prompt": "A child psychologist asked 100 five year olds and 50 ten year olds to name their favorite color. Which of the following statements is supported by the table?",
+      "choices": [
+        {
+          "key": "A",
+          "value": "The percentage of five year olds who selected red or blue as their favorite color is greater than the percentage of ten year olds who selected red or blue as their favorite color."
+        },
+        {
+          "key": "B",
+          "value": "The percentage of five year olds who selected yellow as their favorite color is greater than the percentage of ten year olds who selected yellow as their favorite color."
+        },
+        {
+          "key": "C",
+          "value": "The percentage of children who selected red, yellow, or blue as their favorite color was equal for both ages."
+        },
+        {
+          "key": "D",
+          "value": "Less than half of the five year olds selected red, yellow, or blue as their favorite color."
+        },
+        {
+          "key": "E",
+          "value": "Less than half of the ten year olds selected red, yellow, or blue as their favorite color."
+        }
+      ],
+      "expected": {
+        "answer_key": "A"
+      },
+      "seed": null,
+      "difficulty_estimate": 0.5
+    },
+    {
+      "item_id": "CR:U1-L4-Q04",
+      "source": "curriculum_render",
+      "item_type": "mcq",
+      "unit": 1,
+      "lesson": 4,
+      "kc_tags": [
+        "UNC-1.E",
+        "UNC-1.I",
+        "UNC-1.B"
+      ],
+      "prompt": "The following pie chart summarizes the results of a survey given to airlines about the primary reason for flight delays. Which of the following statements is supported by the pie chart?",
+      "choices": [
+        {
+          "key": "A",
+          "value": "The reason given most frequently was runway closure."
+        },
+        {
+          "key": "B",
+          "value": "More delays were caused by weather than by all other reasons combined."
+        },
+        {
+          "key": "C",
+          "value": "More delays were caused by runway closure than were caused by overbooking."
+        },
+        {
+          "key": "D",
+          "value": "Overbooking and runway closure accounted for greater than one-fourth of the reasons given for flight delays."
+        },
+        {
+          "key": "E",
+          "value": "The combined percentage for other and runway closure was equal to the percentage for overbooking."
+        }
+      ],
+      "expected": {
+        "answer_key": "B"
+      },
+      "seed": null,
+      "difficulty_estimate": 0.5
+    },
+    {
+      "item_id": "CR:U1-L4-Q05",
+      "source": "curriculum_render",
+      "item_type": "mcq",
+      "unit": 1,
+      "lesson": 4,
+      "kc_tags": [
+        "UNC-1.C",
+        "UNC-1.E",
+        "UNC-1.G"
+      ],
+      "prompt": "A sample of 100 students from Liberty High School and a sample of 60 students from Central High School were asked what they planned to do after graduation. Responses fell into five categories: four-year university (4Y), community college (CC), join the workforce (W), join the military (M), or undecided (UD). Which of the following statements is supported by the bar chart?",
+      "choices": [
+        {
+          "key": "A",
+          "value": "For the category four-year university, the number of students from Central High School was 10 greater than the number of students from Liberty High School."
+        },
+        {
+          "key": "B",
+          "value": "At Liberty High School, more students selected a four-year university than any other activity."
+        },
+        {
+          "key": "C",
+          "value": "For the category join the workforce, the number of students from each school was equal."
+        },
+        {
+          "key": "D",
+          "value": "At Central High School, the same number of students selected four-year university and military."
+        },
+        {
+          "key": "E",
+          "value": "For the category undecided, the number of students from Liberty High School was 4 greater than the number of students from Central High School."
+        }
+      ],
+      "expected": {
+        "answer_key": "E"
+      },
+      "seed": null,
+      "difficulty_estimate": 0.5
+    },
+    {
+      "item_id": "CR:U1-L4-Q06",
+      "source": "curriculum_render",
+      "item_type": "mcq",
+      "unit": 1,
+      "lesson": 4,
+      "kc_tags": [
+        "UNC-1.E",
+        "UNC-1.C",
+        "UNC-1.I"
+      ],
+      "prompt": "The following bar chart shows the relative frequency of days of rain for 30 days in four regions of a certain state. Which of the following statements is not supported by the bar chart?",
+      "choices": [
+        {
+          "key": "A",
+          "value": "Region D had the greatest percentage of days of rain."
+        },
+        {
+          "key": "B",
+          "value": "Region B had the least percentage of days of rain."
+        },
+        {
+          "key": "C",
+          "value": "Region A had more than 15 days of rain."
+        },
+        {
+          "key": "D",
+          "value": "Region C had more than 25 days of rain."
+        },
+        {
+          "key": "E",
+          "value": "Region D had less than 23 days of rain."
+        }
+      ],
+      "expected": {
+        "answer_key": "D"
+      },
+      "seed": null,
+      "difficulty_estimate": 0.5
+    },
+    {
+      "item_id": "CR:U1-L5-Q01",
+      "source": "curriculum_render",
+      "item_type": "mcq",
+      "unit": 1,
+      "lesson": 5,
+      "kc_tags": [
+        "UNC-1.F",
+        "VAR-1.B",
+        "VAR-1.C"
+      ],
+      "prompt": "Which of the following describes a continuous variable?",
+      "choices": [
+        {
+          "key": "A",
+          "value": "The number of items sold at a craft booth for one day"
+        },
+        {
+          "key": "B",
+          "value": "The number of apps downloaded from a website one day"
+        },
+        {
+          "key": "C",
+          "value": "The diameters of the tree trunks at an evergreen farm"
+        },
+        {
+          "key": "D",
+          "value": "The number of baskets made by a basketball player"
+        },
+        {
+          "key": "E",
+          "value": "The shoe sizes of all shoes on sale at a department store"
+        }
+      ],
+      "expected": {
+        "answer_key": "C"
+      },
+      "seed": null,
+      "difficulty_estimate": 0.5
+    },
+    {
+      "item_id": "CR:U1-L5-Q02",
+      "source": "curriculum_render",
+      "item_type": "mcq",
+      "unit": 1,
+      "lesson": 5,
+      "kc_tags": [
+        "UNC-1.F",
+        "UNC-1.C",
+        "UNC-1.G"
+      ],
+      "prompt": "Data will be collected on the following variables. Which variable can be considered discrete?",
+      "choices": [
+        {
+          "key": "A",
+          "value": "The height of a person"
+        },
+        {
+          "key": "B",
+          "value": "The weight of a person"
+        },
+        {
+          "key": "C",
+          "value": "The length of a person's arm span"
+        },
+        {
+          "key": "D",
+          "value": "The time it takes for a person to solve a puzzle"
+        },
+        {
+          "key": "E",
+          "value": "The number of books a person finished reading last month"
+        }
+      ],
+      "expected": {
+        "answer_key": "E"
+      },
+      "seed": null,
+      "difficulty_estimate": 0.5
+    },
+    {
+      "item_id": "CR:U1-L5-Q03",
+      "source": "curriculum_render",
+      "item_type": "mcq",
+      "unit": 1,
+      "lesson": 5,
+      "kc_tags": [
+        "UNC-1.G",
+        "UNC-1.L",
+        "UNC-1.A"
+      ],
+      "prompt": "The following list shows the number of video games sold at a game store each day for one week.\n\n15, 43, 50, 39, 22, 16, 20\n\nWhich of the following is the best classification of the data in the list?",
+      "choices": [
+        {
+          "key": "A",
+          "value": "Categorical and continuous"
+        },
+        {
+          "key": "B",
+          "value": "Quantitative and continuous"
+        },
+        {
+          "key": "C",
+          "value": "Categorical and discrete"
+        },
+        {
+          "key": "D",
+          "value": "Quantitative and discrete"
+        },
+        {
+          "key": "E",
+          "value": "Neither categorical nor quantitative, and neither discrete nor continuous"
+        }
+      ],
+      "expected": {
+        "answer_key": "D"
+      },
+      "seed": null,
+      "difficulty_estimate": 0.5
+    },
+    {
+      "item_id": "CR:U1-L6-Q01",
+      "source": "curriculum_render",
+      "item_type": "mcq",
+      "unit": 1,
+      "lesson": 6,
+      "kc_tags": [
+        "UNC-1.H",
+        "UNC-1.I",
+        "VAR-2.A"
+      ],
+      "prompt": "Which of the following statements is true about a distribution that appears to have a gap when displayed as a histogram?",
+      "choices": [
+        {
+          "key": "A",
+          "value": "The distribution must have an outlier."
+        },
+        {
+          "key": "B",
+          "value": "The distribution has a region between two data values where no data were observed."
+        },
+        {
+          "key": "C",
+          "value": "The distribution is approximately normal."
+        },
+        {
+          "key": "D",
+          "value": "The distribution cannot be symmetric."
+        },
+        {
+          "key": "E",
+          "value": "The distribution must be bimodal."
+        }
+      ],
+      "expected": {
+        "answer_key": "B"
+      },
+      "seed": null,
+      "difficulty_estimate": 0.5
+    },
+    {
+      "item_id": "CR:U1-L6-Q02",
+      "source": "curriculum_render",
+      "item_type": "mcq",
+      "unit": 1,
+      "lesson": 6,
+      "kc_tags": [
+        "UNC-1.G",
+        "UNC-1.B",
+        "VAR-8.L"
+      ],
+      "prompt": "If the interval size is decreased from $200 to $100, which of the following must remain the same on the new histogram?",
+      "choices": [
+        {
+          "key": "A",
+          "value": "The heights of the bars"
+        },
+        {
+          "key": "B",
+          "value": "The widths of the bars"
+        },
+        {
+          "key": "C",
+          "value": "The number of bars"
+        },
+        {
+          "key": "D",
+          "value": "The sum of the frequencies"
+        },
+        {
+          "key": "E",
+          "value": "The shape of the distribution"
+        }
+      ],
+      "expected": {
+        "answer_key": "D"
+      },
+      "seed": null,
+      "difficulty_estimate": 0.5
+    },
+    {
+      "item_id": "CR:U1-L6-Q03",
+      "source": "curriculum_render",
+      "item_type": "mcq",
+      "unit": 1,
+      "lesson": 6,
+      "kc_tags": [
+        "UNC-1.M",
+        "UNC-1.H",
+        "VAR-2.A"
+      ],
+      "prompt": "Which of the following statements is the best description of the distribution of scores?",
+      "choices": [
+        {
+          "key": "A",
+          "value": "The distribution is roughly symmetric."
+        },
+        {
+          "key": "B",
+          "value": "The distribution is roughly uniform."
+        },
+        {
+          "key": "C",
+          "value": "The distribution is skewed left."
+        },
+        {
+          "key": "D",
+          "value": "The distribution is skewed right."
+        },
+        {
+          "key": "E",
+          "value": "The distribution is bimodal."
+        }
+      ],
+      "expected": {
+        "answer_key": "D"
+      },
+      "seed": null,
+      "difficulty_estimate": 0.5
+    },
+    {
+      "item_id": "CR:U1-L7-Q01",
+      "source": "curriculum_render",
+      "item_type": "mcq",
+      "unit": 1,
+      "lesson": 7,
+      "kc_tags": [
+        "UNC-1.K",
+        "UNC-1.I",
+        "UNC-1.B"
+      ],
+      "prompt": "Roger claims that the two statistics most likely to change greatly when an outlier is added to a small data set are the mean and the median. Is Roger's claim correct?",
+      "choices": [
+        {
+          "key": "A",
+          "value": "Yes, both the mean and median are likely to change greatly."
+        },
+        {
+          "key": "B",
+          "value": "No, only the mean is likely to change greatly."
+        },
+        {
+          "key": "C",
+          "value": "No, only the median is likely to change greatly."
+        },
+        {
+          "key": "D",
+          "value": "No, neither the mean nor the median are likely to change greatly."
+        },
+        {
+          "key": "E",
+          "value": "There is not enough information to determine if the mean or the median is likely to change greatly."
+        }
+      ],
+      "expected": {
+        "answer_key": "B"
+      },
+      "seed": null,
+      "difficulty_estimate": 0.5
+    },
+    {
+      "item_id": "CR:U1-L7-Q02",
+      "source": "curriculum_render",
+      "item_type": "mcq",
+      "unit": 1,
+      "lesson": 7,
+      "kc_tags": [
+        "UNC-1.J",
+        "VAR-2.B",
+        "UNC-1.I"
+      ],
+      "prompt": "A golfer recorded the following scores for each of four rounds of golf: 86, 81, 87, 82. The mean of the scores is 84. What is the sum of the squared deviations of the scores from the mean?",
+      "choices": [
+        {
+          "key": "A",
+          "value": "Σ(x - x̄) = (86 - 84) + (81 - 84) + (87 - 84) + (82 - 84)"
+        },
+        {
+          "key": "B",
+          "value": "Σ|x - x̄| = |86 - 84| + |81 - 84| + |87 - 84| + |82 - 84|"
+        },
+        {
+          "key": "C",
+          "value": "2Σ|x - x̄| = 2[|86 - 84| + |81 - 84| + |87 - 84| + |82 - 84|]"
+        },
+        {
+          "key": "D",
+          "value": "Σ(x - x̄)² = (86 - 84)² + (81 - 84)² + (87 - 84)² + (82 - 84)²"
+        },
+        {
+          "key": "E",
+          "value": "|Σ|x - x̄||² = [|86 - 84| + |81 - 84| + |87 - 84| + |82 - 84|]²"
+        }
+      ],
+      "expected": {
+        "answer_key": "D"
+      },
+      "seed": null,
+      "difficulty_estimate": 0.5
+    },
+    {
+      "item_id": "CR:U1-L7-Q03",
+      "source": "curriculum_render",
+      "item_type": "mcq",
+      "unit": 1,
+      "lesson": 7,
+      "kc_tags": [
+        "UNC-1.K",
+        "UNC-1.I",
+        "UNC-1.L"
+      ],
+      "prompt": "What is the median selling price of the houses in the list?",
+      "choices": [
+        {
+          "key": "A",
+          "value": "$263,200"
+        },
+        {
+          "key": "B",
+          "value": "$283,300"
+        },
+        {
+          "key": "C",
+          "value": "$288,450"
+        },
+        {
+          "key": "D",
+          "value": "$290,600"
+        },
+        {
+          "key": "E",
+          "value": "$293,400"
+        }
+      ],
+      "expected": {
+        "answer_key": "B"
+      },
+      "seed": null,
+      "difficulty_estimate": 0.5
+    },
+    {
+      "item_id": "CR:U1-L7-Q04",
+      "source": "curriculum_render",
+      "item_type": "mcq",
+      "unit": 1,
+      "lesson": 7,
+      "kc_tags": [
+        "UNC-1.K",
+        "UNC-1.I",
+        "VAR-2.A"
+      ],
+      "prompt": "A statistician at a metal manufacturing plant is sampling the thickness of metal plates. If an outlier occurs within a particular sample, the statistician must check the configuration of the machine. The distribution of metal thickness has mean 23.5 millimeters and standard deviation 1.4. Based on the two-standard deviations rule for outliers, of the following, which is the greatest thickness that would require the statistician to check the configuration of the machine?",
+      "choices": [
+        {
+          "key": "A",
+          "value": "19.3 mm"
+        },
+        {
+          "key": "B",
+          "value": "20.6 mm"
+        },
+        {
+          "key": "C",
+          "value": "22.1 mm"
+        },
+        {
+          "key": "D",
+          "value": "23.5 mm"
+        },
+        {
+          "key": "E",
+          "value": "24.9 mm"
+        }
+      ],
+      "expected": {
+        "answer_key": "B"
+      },
+      "seed": null,
+      "difficulty_estimate": 0.5
+    },
+    {
+      "item_id": "CR:U1-L7-Q05",
+      "source": "curriculum_render",
+      "item_type": "mcq",
+      "unit": 1,
+      "lesson": 7,
+      "kc_tags": [
+        "UNC-1.I",
+        "VAR-5.A",
+        "UNC-1.K"
+      ],
+      "prompt": "At a photography contest, entries are scored on a scale from 1 to 100. At a recent contest with 1,000 entries, a score of 68 was at the 77th percentile of the distribution of all the scores. Which of the following is the best description of the 77th percentile of the distribution?",
+      "choices": [
+        {
+          "key": "A",
+          "value": "There were 770 entries with a score less than or equal to 68."
+        },
+        {
+          "key": "B",
+          "value": "There were at least 230 entries with a score of 77."
+        },
+        {
+          "key": "C",
+          "value": "There were 23% of the entries with a score less than or equal to 68."
+        },
+        {
+          "key": "D",
+          "value": "There were 77% of the entries with a score equal to 68."
+        },
+        {
+          "key": "E",
+          "value": "There were at least 77% of the entries with a score greater than 68."
+        }
+      ],
+      "expected": {
+        "answer_key": "A"
+      },
+      "seed": null,
+      "difficulty_estimate": 0.5
+    },
+    {
+      "item_id": "CR:U1-L7-Q06",
+      "source": "curriculum_render",
+      "item_type": "mcq",
+      "unit": 1,
+      "lesson": 7,
+      "kc_tags": [
+        "UNC-1.K",
+        "UNC-1.J",
+        "UNC-1.I"
+      ],
+      "prompt": "The following boxplot summarizes the heights of a sample of 100 trees growing on a tree farm. Emily claims that a tree height of 43 inches is an outlier for the distribution. Based on the 1.5 × IQR rule for outliers, is there evidence to support the claim?",
+      "choices": [
+        {
+          "key": "A",
+          "value": "Yes, because (max - Q3) is greater than (Q1 - min)."
+        },
+        {
+          "key": "B",
+          "value": "Yes, because 43 is greater than (Q3 + IQR)."
+        },
+        {
+          "key": "C",
+          "value": "Yes, because 43 is greater than (Q1 - 1.5 × IQR)."
+        },
+        {
+          "key": "D",
+          "value": "No, because 43 is not greater than (Q3 + 1.5 × IQR)."
+        },
+        {
+          "key": "E",
+          "value": "No, because 43 is greater than (Q1 - 1.5 × IQR)."
+        }
+      ],
+      "expected": {
+        "answer_key": "D"
+      },
+      "seed": null,
+      "difficulty_estimate": 0.5
+    },
+    {
+      "item_id": "CR:U1-L8-Q01",
+      "source": "curriculum_render",
+      "item_type": "mcq",
+      "unit": 1,
+      "lesson": 8,
+      "kc_tags": [
+        "UNC-1.L",
+        "DAT-1.G",
+        "UNC-1.C"
+      ],
+      "prompt": "The following boxplot shows the typical gas mileage, in miles per gallon, for 20 different car models. Based on the boxplot, the top 25 percent of the cars have a typical gas mileage of at least how many miles per gallon?",
+      "choices": [
+        {
+          "key": "A",
+          "value": "15"
+        },
+        {
+          "key": "B",
+          "value": "20"
+        },
+        {
+          "key": "C",
+          "value": "25"
+        },
+        {
+          "key": "D",
+          "value": "35"
+        },
+        {
+          "key": "E",
+          "value": "50"
+        }
+      ],
+      "expected": {
+        "answer_key": "D"
+      },
+      "seed": null,
+      "difficulty_estimate": 0.5
+    },
+    {
+      "item_id": "CR:U1-L8-Q02",
+      "source": "curriculum_render",
+      "item_type": "mcq",
+      "unit": 1,
+      "lesson": 8,
+      "kc_tags": [
+        "UNC-1.L",
+        "UNC-1.I",
+        "VAR-1.C"
+      ],
+      "prompt": "An amusement park attraction has a sign that indicates that a person must be at least 48 inches tall to ride the attraction. The following boxplot shows the heights of a sample of people who entered the amusement park on one day. Based on the boxplot, approximately what percent of the people who entered the amusement park met the height requirement for the attraction?",
+      "choices": [
+        {
+          "key": "A",
+          "value": "25%"
+        },
+        {
+          "key": "B",
+          "value": "48%"
+        },
+        {
+          "key": "C",
+          "value": "50%"
+        },
+        {
+          "key": "D",
+          "value": "75%"
+        },
+        {
+          "key": "E",
+          "value": "100%"
+        }
+      ],
+      "expected": {
+        "answer_key": "C"
+      },
+      "seed": null,
+      "difficulty_estimate": 0.5
+    },
+    {
+      "item_id": "CR:U1-L8-Q03",
+      "source": "curriculum_render",
+      "item_type": "mcq",
+      "unit": 1,
+      "lesson": 8,
+      "kc_tags": [
+        "UNC-1.M",
+        "UNC-1.I",
+        "UNC-1.K"
+      ],
+      "prompt": "The following histogram shows the ages, in years, of the people who attended a documentary at a movie theater. Based on the histogram, which of the following statements best describes the relationship between the mean and the median of the distribution of ages?",
+      "choices": [
+        {
+          "key": "A",
+          "value": "The mean and the median are equal in value because the distribution is symmetric."
+        },
+        {
+          "key": "B",
+          "value": "The mean is most likely less than the median because the distribution is skewed to the right."
+        },
+        {
+          "key": "C",
+          "value": "The mean is most likely less than the median because the distribution is skewed to the left."
+        },
+        {
+          "key": "D",
+          "value": "The mean is most likely greater than the median because the distribution is skewed to the right."
+        },
+        {
+          "key": "E",
+          "value": "The mean is most likely greater than the median because the distribution is skewed to the left."
+        }
+      ],
+      "expected": {
+        "answer_key": "C"
+      },
+      "seed": null,
+      "difficulty_estimate": 0.5
+    },
+    {
+      "item_id": "CR:U1-L9-Q01",
+      "source": "curriculum_render",
+      "item_type": "mcq",
+      "unit": 1,
+      "lesson": 9,
+      "kc_tags": [
+        "UNC-1.J",
+        "UNC-1.L",
+        "UNC-1.O"
+      ],
+      "prompt": "One statistic calculated for pitchers in baseball is called the earned run average, or \\(ERA\\). Based on the boxplots, which of the following statistics is the same for both leagues?",
+      "choices": [
+        {
+          "key": "A",
+          "value": "The range"
+        },
+        {
+          "key": "B",
+          "value": "The interquartile range"
+        },
+        {
+          "key": "C",
+          "value": "The median"
+        },
+        {
+          "key": "D",
+          "value": "The minimum"
+        },
+        {
+          "key": "E",
+          "value": "The maximum"
+        }
+      ],
+      "expected": {
+        "answer_key": "B"
+      },
+      "seed": null,
+      "difficulty_estimate": 0.5
+    },
+    {
+      "item_id": "CR:U1-L9-Q02",
+      "source": "curriculum_render",
+      "item_type": "mcq",
+      "unit": 1,
+      "lesson": 9,
+      "kc_tags": [
+        "UNC-1.I",
+        "UNC-1.K",
+        "VAR-5.E"
+      ],
+      "prompt": "One way to measure the duration of subterranean disturbances such as earthquakes and mining is to calculate the root-mean-square time. Based on the histograms, which of the following correctly compares the two distributions?",
+      "choices": [
+        {
+          "key": "A",
+          "value": "The median of the earthquake disturbances is equal to the median of the mining disturbances."
+        },
+        {
+          "key": "B",
+          "value": "The median of the earthquake disturbances is less than the median of the mining disturbances."
+        },
+        {
+          "key": "C",
+          "value": "The range of the earthquake disturbances is equal to the range of the mining disturbances."
+        },
+        {
+          "key": "D",
+          "value": "The range of the earthquake disturbances is less than the range of the mining disturbances."
+        },
+        {
+          "key": "E",
+          "value": "The mode of the earthquake disturbances is equal to the mode of the mining disturbances."
+        }
+      ],
+      "expected": {
+        "answer_key": "B"
+      },
+      "seed": null,
+      "difficulty_estimate": 0.5
+    },
+    {
+      "item_id": "CR:U1-L9-Q03",
+      "source": "curriculum_render",
+      "item_type": "mcq",
+      "unit": 1,
+      "lesson": 9,
+      "kc_tags": [
+        "UNC-1.L",
+        "UNC-1.I",
+        "UNC-1.G"
+      ],
+      "prompt": "The following table shows summary statistics for the number of hours a group of students spent playing video games last Monday and last Saturday. Based on the summary statistics, which of the following gives the best comparison of the range and the interquartile range (\\(IQR\\)) of the two days?",
+      "choices": [
+        {
+          "key": "A",
+          "value": "The range and \\(IQR\\) of hours played on Monday are both greater than the range and \\(IQR\\) of hours played on Saturday."
+        },
+        {
+          "key": "B",
+          "value": "The range and \\(IQR\\) of hours played on Monday are both less than the range and \\(IQR\\) of hours played on Saturday."
+        },
+        {
+          "key": "C",
+          "value": "The range and \\(IQR\\) of hours played on Monday are both equal to the range and \\(IQR\\) of hours played on Saturday."
+        },
+        {
+          "key": "D",
+          "value": "The range of hours played on Monday is greater than the range of hours played on Saturday, and the \\(IQR\\) of hours played on Monday is less than the \\(IQR\\) of hours played on Saturday."
+        },
+        {
+          "key": "E",
+          "value": "The range of hours played on Monday is less than the range of hours played on Saturday, and the \\(IQR\\) of hours played on Monday is greater than the \\(IQR\\) of hours played on Saturday."
+        }
+      ],
+      "expected": {
+        "answer_key": "B"
+      },
+      "seed": null,
+      "difficulty_estimate": 0.5
+    },
+    {
+      "item_id": "CR:U1-L10-Q01",
+      "source": "curriculum_render",
+      "item_type": "mcq",
+      "unit": 1,
+      "lesson": 10,
+      "kc_tags": [
+        "VAR-2.A",
+        "VAR-2.B",
+        "UNC-3.F"
+      ],
+      "prompt": "The distribution of the number of transactions per day at a certain automated teller machine (ATM) is approximately normal with a mean of 80 transactions and a standard deviation of 10 transactions. Which of the following represents the parameters of the distribution?",
+      "choices": [
+        {
+          "key": "A",
+          "value": "x̄ = 80; s = 10"
+        },
+        {
+          "key": "B",
+          "value": "x̄ = 80; s² = 10"
+        },
+        {
+          "key": "C",
+          "value": "x̄ = 80; σ = 10"
+        },
+        {
+          "key": "D",
+          "value": "μ = 80; σ = 10"
+        },
+        {
+          "key": "E",
+          "value": "μ = 80; s = 10"
+        }
+      ],
+      "expected": {
+        "answer_key": "D"
+      },
+      "seed": null,
+      "difficulty_estimate": 0.5
+    },
+    {
+      "item_id": "CR:U1-L10-Q02",
+      "source": "curriculum_render",
+      "item_type": "mcq",
+      "unit": 1,
+      "lesson": 10,
+      "kc_tags": [
+        "VAR-2.A",
+        "VAR-2.B",
+        "UNC-1.I"
+      ],
+      "prompt": "At a small coffee shop, the distribution of the number of seconds it takes for a cashier to process an order is approximately normal with mean 276 seconds and standard deviation 38 seconds. Which of the following is closest to the proportion of orders that are processed in less than 240 seconds?",
+      "choices": [
+        {
+          "key": "A",
+          "value": "0.17"
+        },
+        {
+          "key": "B",
+          "value": "0.25"
+        },
+        {
+          "key": "C",
+          "value": "0.36"
+        },
+        {
+          "key": "D",
+          "value": "0.83"
+        },
+        {
+          "key": "E",
+          "value": "0.95"
+        }
+      ],
+      "expected": {
+        "answer_key": "A"
+      },
+      "seed": null,
+      "difficulty_estimate": 0.5
+    },
+    {
+      "item_id": "CR:U1-L10-Q03",
+      "source": "curriculum_render",
+      "item_type": "mcq",
+      "unit": 1,
+      "lesson": 10,
+      "kc_tags": [
+        "VAR-2.A",
+        "VAR-2.B",
+        "UNC-1.J"
+      ],
+      "prompt": "A researcher is studying a group of field mice. The distribution of the weight of field mice is approximately normal with mean 25 grams and standard deviation 4 grams. Which of the following is closest to the proportion of field mice with a weight greater than 33 grams?",
+      "choices": [
+        {
+          "key": "A",
+          "value": "0.023"
+        },
+        {
+          "key": "B",
+          "value": "0.046"
+        },
+        {
+          "key": "C",
+          "value": "0.954"
+        },
+        {
+          "key": "D",
+          "value": "0.977"
+        },
+        {
+          "key": "E",
+          "value": "1.000"
+        }
+      ],
+      "expected": {
+        "answer_key": "A"
+      },
+      "seed": null,
+      "difficulty_estimate": 0.5
+    },
+    {
+      "item_id": "CR:U1-L10-Q04",
+      "source": "curriculum_render",
+      "item_type": "frq_multipart",
+      "unit": 1,
+      "lesson": 10,
+      "kc_tags": [
+        "VAR-2.B",
+        "UNC-1.B",
+        "VAR-2.A"
+      ],
+      "prompt": "Show all your work. Indicate clearly the methods you use, because you will be scored on the correctness of your methods as well as on the accuracy and completeness of your results and explanations.\n\nThe following frequency table summarizes the total amounts, in dollars, for 91 orders from a food truck during a certain day.\n\n(a-i) Use the data in the table to create a histogram showing the distribution of the amounts of the orders.\n(a-ii) Describe the shape of the distribution of amounts.\n(b) Identify a possible amount for the median of the distribution. Justify your answer.",
+      "choices": [],
+      "expected": {
+        "rubric_rule": "describeDistributionShape"
+      },
+      "seed": null,
+      "difficulty_estimate": 0.5
+    },
+    {
+      "item_id": "CR:U1-L10-Q05",
+      "source": "curriculum_render",
+      "item_type": "mcq",
+      "unit": 1,
+      "lesson": 10,
+      "kc_tags": [
+        "VAR-2.A",
+        "VAR-2.B",
+        "UNC-1.I"
+      ],
+      "prompt": "Shalise competed in a jigsaw puzzle competition where participants are timed on how long they take to complete puzzles of various sizes. Shalise completed a small puzzle in 75 minutes and a large jigsaw puzzle in 140 minutes. For all participants, the distribution of completion time for the small puzzle was approximately normal with mean 60 minutes and standard deviation 15 minutes. The distribution of completion time for the large puzzle was approximately normal with mean 180 minutes and standard deviation 40 minutes.\n\nApproximately what percent of the participants had finishing times greater than Shalise's for each puzzle?",
+      "choices": [
+        {
+          "key": "A",
+          "value": "16% on the small puzzle and 16% on the large puzzle"
+        },
+        {
+          "key": "B",
+          "value": "16% on the small puzzle and 84% on the large puzzle"
+        },
+        {
+          "key": "C",
+          "value": "32% on the small puzzle and 68% on the large puzzle"
+        },
+        {
+          "key": "D",
+          "value": "84% on the small puzzle and 84% on the large puzzle"
+        },
+        {
+          "key": "E",
+          "value": "84% on the small puzzle and 16% on the large puzzle"
+        }
+      ],
+      "expected": {
+        "answer_key": "B"
+      },
+      "seed": null,
+      "difficulty_estimate": 0.5
+    },
+    {
+      "item_id": "CR:U1-L10-Q06",
+      "source": "curriculum_render",
+      "item_type": "frq_multipart",
+      "unit": 1,
+      "lesson": 10,
+      "kc_tags": [
+        "VAR-2.B",
+        "VAR-2.A",
+        "UNC-1.I"
+      ],
+      "prompt": "Show all your work. Indicate clearly the methods you use, because you will be scored on the correctness of your methods as well as on the accuracy and completeness of your results and explanations.\n\nKathy and her brother Clay recently ran in a local marathon. The distribution of finishing time for women was approximately normal with mean 259 minutes and standard deviation 32 minutes. The distribution of finishing time for men was approximately normal with mean 242 minutes and standard deviation 29 minutes.\n\n(a) The finishing time for Clay was 289 minutes. Calculate and interpret the standardized score for Clay's marathon time. Show your work.\n(b) The finishing time for Kathy was 272 minutes. What proportion of women who ran the marathon had a finishing time less than Kathy's? Show your work.\n(c) The standard deviation of finishing time is greater for women than for men. What does this indicate about the finishing times of the women who ran the marathon compared to the finishing times of the men who ran the marathon?",
+      "choices": [],
+      "expected": {
+        "rubric_rule": "zScoreCalculation"
+      },
+      "seed": null,
+      "difficulty_estimate": 0.5
+    },
+    {
+      "item_id": "CR:U1-L10-Q07",
+      "source": "curriculum_render",
+      "item_type": "mcq",
+      "unit": 1,
+      "lesson": 10,
+      "kc_tags": [
+        "VAR-2.A",
+        "VAR-2.B",
+        "UNC-1.J"
+      ],
+      "prompt": "For a certain online store, the distribution of number of purchases per hour is approximately normal with mean 1,200 purchases and standard deviation 200 purchases. For what proportion of hours will the number of purchases at the online store exceed 1,400?",
+      "choices": [
+        {
+          "key": "A",
+          "value": "68%"
+        },
+        {
+          "key": "B",
+          "value": "32%"
+        },
+        {
+          "key": "C",
+          "value": "16%"
+        },
+        {
+          "key": "D",
+          "value": "5%"
+        },
+        {
+          "key": "E",
+          "value": "2.5%"
+        }
+      ],
+      "expected": {
+        "answer_key": "C"
+      },
+      "seed": null,
+      "difficulty_estimate": 0.5
+    },
+    {
+      "item_id": "CR:U1-L10-Q08",
+      "source": "curriculum_render",
+      "item_type": "mcq",
+      "unit": 1,
+      "lesson": 10,
+      "kc_tags": [
+        "VAR-2.A",
+        "VAR-2.B",
+        "UNC-1.J"
+      ],
+      "prompt": "The distribution of lengths of salmon from a certain river is approximately normal with standard deviation 3.5 inches. If 10 percent of salmon are longer than 30 inches, which of the following is closest to the mean of the distribution?",
+      "choices": [
+        {
+          "key": "A",
+          "value": "26 inches"
+        },
+        {
+          "key": "B",
+          "value": "28 inches"
+        },
+        {
+          "key": "C",
+          "value": "30 inches"
+        },
+        {
+          "key": "D",
+          "value": "33 inches"
+        },
+        {
+          "key": "E",
+          "value": "34 inches"
+        }
+      ],
+      "expected": {
+        "answer_key": "A"
+      },
+      "seed": null,
+      "difficulty_estimate": 0.5
+    },
+    {
+      "item_id": "CR:U1-PC-FRQ-Q01",
+      "source": "curriculum_render",
+      "item_type": "frq_multipart",
+      "unit": 1,
+      "lesson": null,
+      "kc_tags": [
+        "UNC-1.B",
+        "VAR-2.A",
+        "VAR-2.B"
+      ],
+      "prompt": "Show all your work. Indicate clearly the methods you use, because you will be scored on the correctness of your methods as well as on the accuracy and completeness of your results and explanations.\n\nThe manager of a vacation resort believes that the ages of adult visitors to the resort can be modeled by a normal distribution. The manager surveyed a random sample of visitors and recorded their age. A summary of the responses is shown in the frequency table, where x represents the age of the visitor.\n\n(a) Construct a histogram of the distribution of ages.\n(b) Write a few sentences to describe the distribution of ages of the adult visitors to the resort.\n(c) Does the histogram provide convincing evidence that the surveyed ages come from a normal distribution? Explain your answer.",
+      "choices": [],
+      "expected": {
+        "rubric_rule": "describeDistributionShape"
+      },
+      "seed": null,
+      "difficulty_estimate": 0.5
+    },
+    {
+      "item_id": "CR:U1-PC-FRQ-Q02",
+      "source": "curriculum_render",
+      "item_type": "frq_multipart",
+      "unit": 1,
+      "lesson": null,
+      "kc_tags": [
+        "VAR-2.A",
+        "VAR-2.B",
+        "UNC-1.I"
+      ],
+      "prompt": "Show all your work. Indicate clearly the methods you use, because you will be scored on the correctness of your methods as well as on the accuracy and completeness of your results and explanations.\n\nA certain type of bird lives in two regions of a state. The distribution of weight for birds of this type in the northern region is approximately normal with mean 10 ounces and standard deviation 3 ounces. The distribution of weight for birds of this type in the southern region is approximately normal with mean 16 ounces and standard deviation 2.5 ounces.\n\n(a) Calculate the z-scores for a weight of 13 ounces for a bird living in the northern region and for a weight of 13 ounces for a bird living in the southern region.\n(b) Is it more likely that a bird of this type with a weight greater than 13 ounces lives in the northern region or the southern region? Justify your answer.",
+      "choices": [],
+      "expected": {
+        "rubric_rule": "zScoreComparison"
+      },
+      "seed": null,
+      "difficulty_estimate": 0.5
+    },
+    {
+      "item_id": "CR:U1-PC-MCQ-A-Q01",
+      "source": "curriculum_render",
+      "item_type": "mcq",
+      "unit": 1,
+      "lesson": null,
+      "kc_tags": [
+        "UNC-1.C",
+        "UNC-1.L",
+        "VAR-1.B"
+      ],
+      "prompt": "Data are collected on the 35 students in a college history course. Which of the following is not a variable for the data set?",
+      "choices": [
+        {
+          "key": "A",
+          "value": "Student birth month"
+        },
+        {
+          "key": "B",
+          "value": "Political affiliation of student"
+        },
+        {
+          "key": "C",
+          "value": "Student age"
+        },
+        {
+          "key": "D",
+          "value": "Student address"
+        },
+        {
+          "key": "E",
+          "value": "Number of students in the data set"
+        }
+      ],
+      "expected": {
+        "answer_key": "E"
+      },
+      "seed": null,
+      "difficulty_estimate": 0.5
+    },
+    {
+      "item_id": "CR:U1-PC-MCQ-A-Q02",
+      "source": "curriculum_render",
+      "item_type": "mcq",
+      "unit": 1,
+      "lesson": null,
+      "kc_tags": [
+        "VAR-2.B",
+        "UNC-1.K",
+        "UNC-1.J"
+      ],
+      "prompt": "A local ice-cream shop sells ice-cream cones for $2.00, and customers can choose from the following options.\n\nIce-cream flavor\nType of cone: sugar or waffle\nChocolate dipped for an additional $0.50\nSprinkles for an additional $0.50\n\nWhich of the following is a quantitative variable?",
+      "choices": [
+        {
+          "key": "A",
+          "value": "Ice-cream flavor"
+        },
+        {
+          "key": "B",
+          "value": "Type of cone"
+        },
+        {
+          "key": "C",
+          "value": "Chocolate dipped or not"
+        },
+        {
+          "key": "D",
+          "value": "Sprinkles or not"
+        },
+        {
+          "key": "E",
+          "value": "The total cost of the cone"
+        }
+      ],
+      "expected": {
+        "answer_key": "E"
+      },
+      "seed": null,
+      "difficulty_estimate": 0.5
+    },
+    {
+      "item_id": "CR:U1-PC-MCQ-A-Q03",
+      "source": "curriculum_render",
+      "item_type": "mcq",
+      "unit": 1,
+      "lesson": null,
+      "kc_tags": [
+        "UNC-1.D",
+        "VAR-1.C",
+        "UNC-1.B"
+      ],
+      "prompt": "The following table shows data collected about the thirty-third through fortieth presidents of the United States. All variables reported in the table are categorical.\n\nWhich of the variables in the table could have been reported differently such that the variable would be classified as quantitative?",
+      "choices": [
+        {
+          "key": "A",
+          "value": "Name"
+        },
+        {
+          "key": "B",
+          "value": "Political Party"
+        },
+        {
+          "key": "C",
+          "value": "Eye color"
+        },
+        {
+          "key": "D",
+          "value": "Age at inauguration"
+        },
+        {
+          "key": "E",
+          "value": "Dominant hand"
+        }
+      ],
+      "expected": {
+        "answer_key": "D"
+      },
+      "seed": null,
+      "difficulty_estimate": 0.5
+    },
+    {
+      "item_id": "CR:U1-PC-MCQ-A-Q04",
+      "source": "curriculum_render",
+      "item_type": "mcq",
+      "unit": 1,
+      "lesson": null,
+      "kc_tags": [
+        "UNC-1.A",
+        "UNC-1.I",
+        "UNC-1.G"
+      ],
+      "prompt": "Students in a class were asked to choose their favorite school subject. The following frequency table summarizes the responses.\n\nWhich of the following statements is supported by the frequency table?",
+      "choices": [
+        {
+          "key": "A",
+          "value": "More students chose math as their favorite subject than the combined number of students who chose English and science."
+        },
+        {
+          "key": "B",
+          "value": "Fewer students chose math as their favorite subject than the combined number of students who chose science and social studies."
+        },
+        {
+          "key": "C",
+          "value": "The total number of students in the class is less than 20."
+        },
+        {
+          "key": "D",
+          "value": "Seventy percent of the students chose math as their favorite subject."
+        },
+        {
+          "key": "E",
+          "value": "Less than half of the students chose math as their favorite subject."
+        }
+      ],
+      "expected": {
+        "answer_key": "E"
+      },
+      "seed": null,
+      "difficulty_estimate": 0.5
+    },
+    {
+      "item_id": "CR:U1-PC-MCQ-A-Q05",
+      "source": "curriculum_render",
+      "item_type": "mcq",
+      "unit": 1,
+      "lesson": null,
+      "kc_tags": [
+        "UNC-1.A",
+        "UNC-1.E",
+        "UNC-1.I"
+      ],
+      "prompt": "A group of first-grade students were asked to name their favorite color. The responses are shown in the following frequency table.\n\nWhich of the following statements is supported by the frequency table?",
+      "choices": [
+        {
+          "key": "A",
+          "value": "More students chose purple than any other color."
+        },
+        {
+          "key": "B",
+          "value": "Twice as many students chose blue as chose red."
+        },
+        {
+          "key": "C",
+          "value": "Yellow was chosen by the least number of students."
+        },
+        {
+          "key": "D",
+          "value": "The total number of student responses is 80."
+        },
+        {
+          "key": "E",
+          "value": "The combined number of students who chose green and yellow is greater than the number of students who chose purple."
+        }
+      ],
+      "expected": {
+        "answer_key": "B"
+      },
+      "seed": null,
+      "difficulty_estimate": 0.5
+    },
+    {
+      "item_id": "CR:U1-PC-MCQ-A-Q06",
+      "source": "curriculum_render",
+      "item_type": "mcq",
+      "unit": 1,
+      "lesson": null,
+      "kc_tags": [
+        "UNC-1.A",
+        "UNC-1.G",
+        "UNC-1.I"
+      ],
+      "prompt": "The following relative frequency table shows reasons given by high school students for their last absence from school.\n\nWhich of the following statements is not supported by the relative frequency table?",
+      "choices": [
+        {
+          "key": "A",
+          "value": "More than half the students were absent because of illness."
+        },
+        {
+          "key": "B",
+          "value": "More than one-third of the students were absent because of oversleeping or college visits."
+        },
+        {
+          "key": "C",
+          "value": "The reason given the least number of times was did not finish assignment."
+        },
+        {
+          "key": "D",
+          "value": "Only 7 students were absent because they did not finish an assignment."
+        },
+        {
+          "key": "E",
+          "value": "Less than one-fourth of the students were absent because they overslept."
+        }
+      ],
+      "expected": {
+        "answer_key": "D"
+      },
+      "seed": null,
+      "difficulty_estimate": 0.5
+    },
+    {
+      "item_id": "CR:U1-PC-MCQ-A-Q07",
+      "source": "curriculum_render",
+      "item_type": "mcq",
+      "unit": 1,
+      "lesson": null,
+      "kc_tags": [
+        "UNC-1.I",
+        "UNC-1.G",
+        "UNC-1.A"
+      ],
+      "prompt": "Residents from five districts of a city were asked whether they were in favor of a city proposal to create new bike lanes in the roads. The following bar chart shows the relative frequency in each district of those who responded that they were in favor of the proposal.\n\nWhich of the following statements is supported by the bar chart?",
+      "choices": [
+        {
+          "key": "A",
+          "value": "District 2 has the greatest number of residents who are in favor of the proposal."
+        },
+        {
+          "key": "B",
+          "value": "District 1 has the least number of residents who are in favor of the proposal."
+        },
+        {
+          "key": "C",
+          "value": "All districts show at least 60% of residents in favor of the proposal."
+        },
+        {
+          "key": "D",
+          "value": "In 3 districts, less than half of the residents were in favor of the proposal."
+        },
+        {
+          "key": "E",
+          "value": "District 2 has the greatest percentage of residents who are in favor of the proposal."
+        }
+      ],
+      "expected": {
+        "answer_key": "E"
+      },
+      "seed": null,
+      "difficulty_estimate": 0.5
+    },
+    {
+      "item_id": "CR:U1-PC-MCQ-A-Q08",
+      "source": "curriculum_render",
+      "item_type": "mcq",
+      "unit": 1,
+      "lesson": null,
+      "kc_tags": [
+        "UNC-1.G",
+        "UNC-1.I",
+        "UNC-1.K"
+      ],
+      "prompt": "The following bar chart shows the average price per gallon of gasoline for each month in 2004.\n\nWhich of the following statements is not supported by the bar chart?",
+      "choices": [
+        {
+          "key": "A",
+          "value": "The gas price was highest in June and October."
+        },
+        {
+          "key": "B",
+          "value": "The gas price increased each month from January through June."
+        },
+        {
+          "key": "C",
+          "value": "All months had gas prices greater than $1.50 per gallon."
+        },
+        {
+          "key": "D",
+          "value": "The gas price was lowest in February."
+        },
+        {
+          "key": "E",
+          "value": "The September gas price was higher than the January gas price."
+        }
+      ],
+      "expected": {
+        "answer_key": "D"
+      },
+      "seed": null,
+      "difficulty_estimate": 0.5
+    },
+    {
+      "item_id": "CR:U1-PC-MCQ-A-Q09",
+      "source": "curriculum_render",
+      "item_type": "mcq",
+      "unit": 1,
+      "lesson": null,
+      "kc_tags": [
+        "UNC-1.I",
+        "UNC-1.L",
+        "UNC-1.G"
+      ],
+      "prompt": "The following bar chart shows the number of wins for four middle-school basketball teams. Each team played 12 games.\n\nWhich of the following statements is not supported by the bar chart?",
+      "choices": [
+        {
+          "key": "A",
+          "value": "Team A won 75% of its games."
+        },
+        {
+          "key": "B",
+          "value": "Team B won 60% of its games."
+        },
+        {
+          "key": "C",
+          "value": "Team C won 7 games."
+        },
+        {
+          "key": "D",
+          "value": "Team D won less than half its games."
+        },
+        {
+          "key": "E",
+          "value": "Team C won 2 fewer games than Team A."
+        }
+      ],
+      "expected": {
+        "answer_key": "B"
+      },
+      "seed": null,
+      "difficulty_estimate": 0.5
+    },
+    {
+      "item_id": "CR:U1-PC-MCQ-A-Q10",
+      "source": "curriculum_render",
+      "item_type": "mcq",
+      "unit": 1,
+      "lesson": null,
+      "kc_tags": [
+        "UNC-1.G",
+        "UNC-1.I",
+        "UNC-1.A"
+      ],
+      "prompt": "The following table shows the numbers of students in grades 7 and 8 at a middle school who are participating in extracurricular activities.\n\nWhich of the following statements is supported by the table?",
+      "choices": [
+        {
+          "key": "A",
+          "value": "Each activity has more grade 8 students than grade 7 students."
+        },
+        {
+          "key": "B",
+          "value": "The number of students in Band is less than the number of students in the Chess Club."
+        },
+        {
+          "key": "C",
+          "value": "The total number of grade 7 students is greater than the total number of grade 8 students."
+        },
+        {
+          "key": "D",
+          "value": "The number of students in the Drama Club is more than twice the number of students in the School Newspaper."
+        },
+        {
+          "key": "E",
+          "value": "The activity with the greatest number of students is Chorus."
+        }
+      ],
+      "expected": {
+        "answer_key": "E"
+      },
+      "seed": null,
+      "difficulty_estimate": 0.5
+    },
+    {
+      "item_id": "CR:U1-PC-MCQ-A-Q11",
+      "source": "curriculum_render",
+      "item_type": "mcq",
+      "unit": 1,
+      "lesson": null,
+      "kc_tags": [
+        "UNC-1.I",
+        "UNC-1.C",
+        "UNC-1.L"
+      ],
+      "prompt": "A group of middle school students were asked which school subject was their favorite. The results are displayed by grade of student in the following bar chart.\n\nWhich of the following statements is supported by the bar chart?",
+      "choices": [
+        {
+          "key": "A",
+          "value": "For students who chose art, the number of grade 8 students was at least 100% greater than the number of grade 7 students."
+        },
+        {
+          "key": "B",
+          "value": "For students who chose social studies, the number of grade 8 students was at least 100% greater than the number of grade 7 students."
+        },
+        {
+          "key": "C",
+          "value": "For students who chose science, the number of grade 8 students was at least 50% less than the number of grade 7 students."
+        },
+        {
+          "key": "D",
+          "value": "For students who chose math, the number of grade 8 students was at least 50% less than the number of grade 7 students."
+        },
+        {
+          "key": "E",
+          "value": "For students who chose language arts, the number of grade 8 students was at least 100% greater than the number of grade 7 students."
+        }
+      ],
+      "expected": {
+        "answer_key": "A"
+      },
+      "seed": null,
+      "difficulty_estimate": 0.5
+    },
+    {
+      "item_id": "CR:U1-PC-MCQ-A-Q12",
+      "source": "curriculum_render",
+      "item_type": "mcq",
+      "unit": 1,
+      "lesson": null,
+      "kc_tags": [
+        "UNC-1.I",
+        "UNC-1.C",
+        "UNC-1.E"
+      ],
+      "prompt": "Just before graduation, a random sample of high school seniors were asked what their plans were for the coming year. A year after graduation, those same individuals were asked what their main activity was in the year since graduation. Their responses are shown in the following bar chart.\n\nWhich of the following statements is supported by the bar chart?",
+      "choices": [
+        {
+          "key": "A",
+          "value": "The percentage of students who selected Work as their main activity increased after graduation."
+        },
+        {
+          "key": "B",
+          "value": "The percentage of students who selected College as their main activity increased after graduation."
+        },
+        {
+          "key": "C",
+          "value": "Before graduation, there is no activity that greater than 50% of the students selected."
+        },
+        {
+          "key": "D",
+          "value": "Before graduation, the percentage of students who selected Tech School as their main activity was greater than the percentage who selected Work as their main activity."
+        },
+        {
+          "key": "E",
+          "value": "After graduation, the percentage of students who selected College as their main activity was twice the percentage of those who selected Work as their main activity."
+        }
+      ],
+      "expected": {
+        "answer_key": "A"
+      },
+      "seed": null,
+      "difficulty_estimate": 0.5
+    },
+    {
+      "item_id": "CR:U1-PC-MCQ-A-Q13",
+      "source": "curriculum_render",
+      "item_type": "mcq",
+      "unit": 1,
+      "lesson": null,
+      "kc_tags": [
+        "VAR-1.B",
+        "UNC-1.D",
+        "VAR-1.C"
+      ],
+      "prompt": "Which of the following variables for data about a track team is a discrete variable?",
+      "choices": [
+        {
+          "key": "A",
+          "value": "The height of a team member"
+        },
+        {
+          "key": "B",
+          "value": "The weight of a team member"
+        },
+        {
+          "key": "C",
+          "value": "The number of times that a team member finished first in a race"
+        },
+        {
+          "key": "D",
+          "value": "The time recorded for the last race that was run by a team member"
+        },
+        {
+          "key": "E",
+          "value": "The time recorded for a one-mile race by a team member"
+        }
+      ],
+      "expected": {
+        "answer_key": "C"
+      },
+      "seed": null,
+      "difficulty_estimate": 0.5
+    },
+    {
+      "item_id": "CR:U1-PC-MCQ-A-Q14",
+      "source": "curriculum_render",
+      "item_type": "mcq",
+      "unit": 1,
+      "lesson": null,
+      "kc_tags": [
+        "VAR-1.B",
+        "UNC-1.A",
+        "UNC-1.C"
+      ],
+      "prompt": "The traffic engineer for a large city is conducting a study on traffic flow at a certain intersection near the city administration building. The engineer will collect data on different variables related to the intersection each day for ten days. Of the following variables, which will be measured using continuous data?",
+      "choices": [
+        {
+          "key": "A",
+          "value": "The number of cars passing through the intersection in one hour"
+        },
+        {
+          "key": "B",
+          "value": "The number of pedestrians crossing the intersection in one hour"
+        },
+        {
+          "key": "C",
+          "value": "The number of bicyclists crossing the intersection in one hour"
+        },
+        {
+          "key": "D",
+          "value": "The number of food trucks that park within four blocks of the intersection"
+        },
+        {
+          "key": "E",
+          "value": "The number of minutes for a car to get from the intersection to the administration building"
+        }
+      ],
+      "expected": {
+        "answer_key": "E"
+      },
+      "seed": null,
+      "difficulty_estimate": 0.5
+    },
+    {
+      "item_id": "CR:U1-PC-MCQ-A-Q15",
+      "source": "curriculum_render",
+      "item_type": "mcq",
+      "unit": 1,
+      "lesson": null,
+      "kc_tags": [
+        "UNC-1.F",
+        "UNC-1.D",
+        "UNC-1.G"
+      ],
+      "prompt": "The following dotplot shows the number of strokes taken by 20 professional golfers competing at an 18-hole golf course.\n\nWhich of the following best describes the type of variable represented in the dotplot?",
+      "choices": [
+        {
+          "key": "A",
+          "value": "Quantitative and discrete"
+        },
+        {
+          "key": "B",
+          "value": "Quantitative and continuous"
+        },
+        {
+          "key": "C",
+          "value": "Categorical and discrete"
+        },
+        {
+          "key": "D",
+          "value": "Categorical and continuous"
+        },
+        {
+          "key": "E",
+          "value": "Quantitative and categorical"
+        }
+      ],
+      "expected": {
+        "answer_key": "A"
+      },
+      "seed": null,
+      "difficulty_estimate": 0.5
+    },
+    {
+      "item_id": "CR:U1-PC-MCQ-A-Q16",
+      "source": "curriculum_render",
+      "item_type": "mcq",
+      "unit": 1,
+      "lesson": null,
+      "kc_tags": [
+        "UNC-1.H",
+        "UNC-1.K",
+        "VAR-2.B"
+      ],
+      "prompt": "Relative humidity is a measure, expressed as a percentage, of the amount of water vapor present in air. The following histogram summarizes the relative humidity, at noon, for a random sample of 100 days for a certain city.\n\nBased on the histogram, which of the following is the best description of the distribution?",
+      "choices": [
+        {
+          "key": "A",
+          "value": "The distribution displays a gap with a potential outlier located between 40% and 45%."
+        },
+        {
+          "key": "B",
+          "value": "The distribution displays a gap with potential outliers located between 90% and 95%."
+        },
+        {
+          "key": "C",
+          "value": "The distribution displays a gap with potential outliers located between 70% and 75%."
+        },
+        {
+          "key": "D",
+          "value": "The distribution displays two clusters with no apparent outliers."
+        },
+        {
+          "key": "E",
+          "value": "The distribution is uniform."
+        }
+      ],
+      "expected": {
+        "answer_key": "A"
+      },
+      "seed": null,
+      "difficulty_estimate": 0.5
+    },
+    {
+      "item_id": "CR:U1-PC-MCQ-A-Q17",
+      "source": "curriculum_render",
+      "item_type": "mcq",
+      "unit": 1,
+      "lesson": null,
+      "kc_tags": [
+        "UNC-1.H",
+        "UNC-1.M",
+        "UNC-1.I"
+      ],
+      "prompt": "The occupancy rate of a motel is the percentage of rooms that are occupied on a particular night. The histogram shown summarizes the occupancy rates for a random sample of 100 nights for a motel. Based on the histogram, which of the following best describes the shape of the distribution of occupancy rates?",
+      "choices": [
+        {
+          "key": "A",
+          "value": "Skewed to the left"
+        },
+        {
+          "key": "B",
+          "value": "Skewed to the right"
+        },
+        {
+          "key": "C",
+          "value": "Symmetric"
+        },
+        {
+          "key": "D",
+          "value": "Bimodal"
+        },
+        {
+          "key": "E",
+          "value": "Uniform"
+        }
+      ],
+      "expected": {
+        "answer_key": "B"
+      },
+      "seed": null,
+      "difficulty_estimate": 0.5
+    },
+    {
+      "item_id": "CR:U1-PC-MCQ-A-Q18",
+      "source": "curriculum_render",
+      "item_type": "mcq",
+      "unit": 1,
+      "lesson": null,
+      "kc_tags": [
+        "UNC-1.H",
+        "UNC-1.M",
+        "VAR-2.A"
+      ],
+      "prompt": "The diameter, in centimeters (cm), of each tree in a random sample of trees in a forest was measured. The histogram shown summarizes the diameters.\n\nWhich of the following is the best description of the distribution?",
+      "choices": [
+        {
+          "key": "A",
+          "value": "The distribution consists of two clusters and a gap."
+        },
+        {
+          "key": "B",
+          "value": "The distribution is approximately normal."
+        },
+        {
+          "key": "C",
+          "value": "The distribution is symmetric with a skew to the right."
+        },
+        {
+          "key": "D",
+          "value": "The distribution is skewed to the left."
+        },
+        {
+          "key": "E",
+          "value": "The distribution is uniform."
+        }
+      ],
+      "expected": {
+        "answer_key": "A"
+      },
+      "seed": null,
+      "difficulty_estimate": 0.5
+    },
+    {
+      "item_id": "CR:U1-PC-MCQ-B-Q01",
+      "source": "curriculum_render",
+      "item_type": "mcq",
+      "unit": 1,
+      "lesson": null,
+      "kc_tags": [
+        "UNC-1.A",
+        "UNC-1.L",
+        "UNC-1.C"
+      ],
+      "prompt": "The following table shows the number of miles a hiker walked on a trail each day for 6 days. What was the mean number of miles the hiker walked for the 6 days?",
+      "choices": [
+        {
+          "key": "A",
+          "value": "3.5"
+        },
+        {
+          "key": "B",
+          "value": "4.5"
+        },
+        {
+          "key": "C",
+          "value": "6.5"
+        },
+        {
+          "key": "D",
+          "value": "7.5"
+        },
+        {
+          "key": "E",
+          "value": "8"
+        }
+      ],
+      "expected": {
+        "answer_key": "C"
+      },
+      "seed": null,
+      "difficulty_estimate": 0.5
+    },
+    {
+      "item_id": "CR:U1-PC-MCQ-B-Q02",
+      "source": "curriculum_render",
+      "item_type": "mcq",
+      "unit": 1,
+      "lesson": null,
+      "kc_tags": [
+        "UNC-1.G",
+        "UNC-1.I",
+        "UNC-1.L"
+      ],
+      "prompt": "The following list shows the number of goals scored by a soccer team in each of 9 games. How does the median number of goals scored compare with the mean number of goals scored?",
+      "choices": [
+        {
+          "key": "A",
+          "value": "The median is equal to the mean."
+        },
+        {
+          "key": "B",
+          "value": "The median is less than the mean by 1."
+        },
+        {
+          "key": "C",
+          "value": "The median is greater than the mean by 1."
+        },
+        {
+          "key": "D",
+          "value": "The median is less than the mean by 2."
+        },
+        {
+          "key": "E",
+          "value": "The median is greater than the mean by 2."
+        }
+      ],
+      "expected": {
+        "answer_key": "B"
+      },
+      "seed": null,
+      "difficulty_estimate": 0.5
+    },
+    {
+      "item_id": "CR:U1-PC-MCQ-B-Q03",
+      "source": "curriculum_render",
+      "item_type": "mcq",
+      "unit": 1,
+      "lesson": null,
+      "kc_tags": [
+        "UNC-1.J",
+        "UNC-1.L",
+        "UNC-1.C"
+      ],
+      "prompt": "To gather data for a statistics project, a student asked 10 friends how many hours of sleep they got on the previous night. The data are shown in the following list. What is the interquartile range (IQR) of the number of hours of sleep shown in the list?",
+      "choices": [
+        {
+          "key": "A",
+          "value": "3 hours"
+        },
+        {
+          "key": "B",
+          "value": "4 hours"
+        },
+        {
+          "key": "C",
+          "value": "6 hours"
+        },
+        {
+          "key": "D",
+          "value": "6.3 hours"
+        },
+        {
+          "key": "E",
+          "value": "6.5 hours"
+        }
+      ],
+      "expected": {
+        "answer_key": "A"
+      },
+      "seed": null,
+      "difficulty_estimate": 0.5
+    },
+    {
+      "item_id": "CR:U1-PC-MCQ-B-Q04",
+      "source": "curriculum_render",
+      "item_type": "mcq",
+      "unit": 1,
+      "lesson": null,
+      "kc_tags": [
+        "UNC-1.K",
+        "UNC-1.C",
+        "UNC-1.L"
+      ],
+      "prompt": "The time, in minutes, it took each of 11 students to complete a puzzle was recorded and is shown in the following list. One of the students who completed the puzzle claimed that there were two outliers in the data set. Based on the 1.5 × IQR rule for outliers, is there evidence to support the student's claim?",
+      "choices": [
+        {
+          "key": "A",
+          "value": "Yes, there are two outliers. One outlier is 9 minutes and the other outlier is 58 minutes."
+        },
+        {
+          "key": "B",
+          "value": "No, there is only one outlier at 9 minutes."
+        },
+        {
+          "key": "C",
+          "value": "No, there is only one outlier at 58 minutes."
+        },
+        {
+          "key": "D",
+          "value": "No, there are three outliers. One outlier is 9 minutes, one outlier is 35 minutes, and one outlier is 58 minutes."
+        },
+        {
+          "key": "E",
+          "value": "No, there are no outliers."
+        }
+      ],
+      "expected": {
+        "answer_key": "C"
+      },
+      "seed": null,
+      "difficulty_estimate": 0.5
+    },
+    {
+      "item_id": "CR:U1-PC-MCQ-B-Q05",
+      "source": "curriculum_render",
+      "item_type": "mcq",
+      "unit": 1,
+      "lesson": null,
+      "kc_tags": [
+        "UNC-1.H",
+        "UNC-1.C",
+        "UNC-1.K"
+      ],
+      "prompt": "A reporter collected data on the purchase prices, in thousands of dollars, of 72 cars sold in a region. The following histogram summarizes the reporter's data. For a presentation on the data collected, the reporter used the median of the distribution to describe the typical purchase price. Which of the following might explain the use of median to describe the typical purchase price?",
+      "choices": [
+        {
+          "key": "A",
+          "value": "There is an outlier between $80,000 and $85,000. Medians are resistant to outliers, while means are not."
+        },
+        {
+          "key": "B",
+          "value": "The number of observations that fall within a given interval is known. However, within each interval, the actual values are not known."
+        },
+        {
+          "key": "C",
+          "value": "The distribution is left skewed."
+        },
+        {
+          "key": "D",
+          "value": "The values represented in the histogram are in the thousands."
+        },
+        {
+          "key": "E",
+          "value": "The distribution is uniform."
+        }
+      ],
+      "expected": {
+        "answer_key": "A"
+      },
+      "seed": null,
+      "difficulty_estimate": 0.5
+    },
+    {
+      "item_id": "CR:U1-PC-MCQ-B-Q06",
+      "source": "curriculum_render",
+      "item_type": "mcq",
+      "unit": 1,
+      "lesson": null,
+      "kc_tags": [
+        "UNC-1.K",
+        "VAR-2.A",
+        "UNC-1.J"
+      ],
+      "prompt": "The distribution of 27 salaries at a small company has mean $35,000 and standard deviation $2,000. Suppose the company hires a 28th employee at a salary of $120,000. Which of the following claims about the new salary distribution is supported? I. The median is not likely to change. II. The range is not likely to change. III. The mean is likely to increase.",
+      "choices": [
+        {
+          "key": "A",
+          "value": "I only"
+        },
+        {
+          "key": "B",
+          "value": "III only"
+        },
+        {
+          "key": "C",
+          "value": "I and II only"
+        },
+        {
+          "key": "D",
+          "value": "I and III only"
+        },
+        {
+          "key": "E",
+          "value": "I, II, and III"
+        }
+      ],
+      "expected": {
+        "answer_key": "D"
+      },
+      "seed": null,
+      "difficulty_estimate": 0.5
+    },
+    {
+      "item_id": "CR:U1-PC-MCQ-B-Q07",
+      "source": "curriculum_render",
+      "item_type": "mcq",
+      "unit": 1,
+      "lesson": null,
+      "kc_tags": [
+        "UNC-1.G",
+        "UNC-1.I",
+        "UNC-1.L"
+      ],
+      "prompt": "The following boxplot summarizes the heights of a group of people who participate in a weekend biking club. Which of the following statements is supported by the boxplot?",
+      "choices": [
+        {
+          "key": "A",
+          "value": "The mean height is 67 inches."
+        },
+        {
+          "key": "B",
+          "value": "The number of people with height at least 70 inches is greater than the number of people with height at most 62 inches."
+        },
+        {
+          "key": "C",
+          "value": "The number of people with height at least 67 inches is less than the number of people with height at most 67 inches."
+        },
+        {
+          "key": "D",
+          "value": "Approximately 50% of the people have a height between 62 inches and 70 inches."
+        },
+        {
+          "key": "E",
+          "value": "Approximately 25% of the people have a height greater than 62 inches."
+        }
+      ],
+      "expected": {
+        "answer_key": "D"
+      },
+      "seed": null,
+      "difficulty_estimate": 0.5
+    },
+    {
+      "item_id": "CR:U1-PC-MCQ-B-Q08",
+      "source": "curriculum_render",
+      "item_type": "mcq",
+      "unit": 1,
+      "lesson": null,
+      "kc_tags": [
+        "UNC-1.L",
+        "UNC-1.H",
+        "UNC-1.K"
+      ],
+      "prompt": "The following table shows statistics on the ages, in years, of the people who attended a lecture last week. The data are summarized in the boxplot shown. Which of the following statements is supported by the table and boxplot?",
+      "choices": [
+        {
+          "key": "A",
+          "value": "The range of the distribution is 20 years."
+        },
+        {
+          "key": "B",
+          "value": "There were 43 people who attended the lecture."
+        },
+        {
+          "key": "C",
+          "value": "At least 50% of the people who attended the lecture were 43 years or younger."
+        },
+        {
+          "key": "D",
+          "value": "At least 75% of the people who attended the lecture were age 53 years or younger."
+        },
+        {
+          "key": "E",
+          "value": "At least 25% of the people who attended the lecture were 33 years old."
+        }
+      ],
+      "expected": {
+        "answer_key": "D"
+      },
+      "seed": null,
+      "difficulty_estimate": 0.5
+    },
+    {
+      "item_id": "CR:U1-PC-MCQ-B-Q09",
+      "source": "curriculum_render",
+      "item_type": "mcq",
+      "unit": 1,
+      "lesson": null,
+      "kc_tags": [
+        "UNC-1.M",
+        "UNC-1.I",
+        "UNC-1.H"
+      ],
+      "prompt": "The following boxplot summarizes the earnings made on one day at 45 movie theaters. Which of the following best compares the median movie theater earnings with the mean movie theater earnings?",
+      "choices": [
+        {
+          "key": "A",
+          "value": "The median and mean are equal because the distribution is likely symmetric."
+        },
+        {
+          "key": "B",
+          "value": "The median and mean are equal because the distribution is likely skewed to the right."
+        },
+        {
+          "key": "C",
+          "value": "The median is less than the mean because the distribution is likely symmetric."
+        },
+        {
+          "key": "D",
+          "value": "The median is less than the mean because the distribution is likely skewed to the right."
+        },
+        {
+          "key": "E",
+          "value": "The median is less than the mean because the distribution is likely skewed to the left."
+        }
+      ],
+      "expected": {
+        "answer_key": "D"
+      },
+      "seed": null,
+      "difficulty_estimate": 0.5
+    },
+    {
+      "item_id": "CR:U1-PC-MCQ-B-Q10",
+      "source": "curriculum_render",
+      "item_type": "mcq",
+      "unit": 1,
+      "lesson": null,
+      "kc_tags": [
+        "UNC-1.I",
+        "UNC-1.G",
+        "UNC-1.A"
+      ],
+      "prompt": "Researchers studying catfish estimated the number of fingerling catfish and large catfish living in different rivers throughout the country. The following histograms summarize the relative frequency for each type of catfish. Based on the histograms, which of the following is the best comparison of the means and the ranges for the two distributions?",
+      "choices": [
+        {
+          "key": "A",
+          "value": "The mean and range of the fingerling catfish are both equal to those of the large catfish."
+        },
+        {
+          "key": "B",
+          "value": "The mean and range of the fingerling catfish are both less than those of the large catfish."
+        },
+        {
+          "key": "C",
+          "value": "The mean and range of the fingerling catfish are both greater than those of the large catfish."
+        },
+        {
+          "key": "D",
+          "value": "The mean of the fingerling catfish is equal to that of the large catfish, and the range of the fingerling catfish is greater than that of the large catfish."
+        },
+        {
+          "key": "E",
+          "value": "The mean of the fingerling catfish is equal to that of the large catfish, and the range of the fingerling catfish is less than that of the large catfish."
+        }
+      ],
+      "expected": {
+        "answer_key": "C"
+      },
+      "seed": null,
+      "difficulty_estimate": 0.5
+    },
+    {
+      "item_id": "CR:U1-PC-MCQ-B-Q11",
+      "source": "curriculum_render",
+      "item_type": "mcq",
+      "unit": 1,
+      "lesson": null,
+      "kc_tags": [
+        "UNC-1.H",
+        "UNC-1.I",
+        "UNC-1.L"
+      ],
+      "prompt": "A sociologist studying marriage customs collected data on the length of time, in months, between the proposal and wedding. The following boxplots and table give the five-number summary for couples in which at least one person was getting married for the first time and for couples in which both people had been previously married. Based on the summary statistics, which of the following statements is supported by the boxplots and table?",
+      "choices": [
+        {
+          "key": "A",
+          "value": "The mean length of time for first-time couples is 18 months, and the mean length of time for previously married couples is 12 months."
+        },
+        {
+          "key": "B",
+          "value": "There is a gap between 20 and 36 for the first-time married distribution."
+        },
+        {
+          "key": "C",
+          "value": "Because both distributions have a minimum of 0.5 months, the distributions are skewed to the left."
+        },
+        {
+          "key": "D",
+          "value": "The number of first-time couples in the study is greater than the number of previously married couples in the study."
+        },
+        {
+          "key": "E",
+          "value": "The interquartile range of length of time for first-time couples is greater than that of previously married couples."
+        }
+      ],
+      "expected": {
+        "answer_key": "E"
+      },
+      "seed": null,
+      "difficulty_estimate": 0.5
+    },
+    {
+      "item_id": "CR:U1-PC-MCQ-B-Q12",
+      "source": "curriculum_render",
+      "item_type": "mcq",
+      "unit": 1,
+      "lesson": null,
+      "kc_tags": [
+        "UNC-1.L",
+        "UNC-1.I",
+        "UNC-1.K"
+      ],
+      "prompt": "The following table shows summary statistics, in thousands, for the number of electrical workers and the number of concrete workers in the construction industry each month for the past 5 years. Based on the 1.5 × IQR rule for outliers, which of the following statements is a correct comparison of the two distributions?",
+      "choices": [
+        {
+          "key": "A",
+          "value": "The electrical and concrete distributions both have high outliers."
+        },
+        {
+          "key": "B",
+          "value": "The electrical and concrete distributions both have lower outliers."
+        },
+        {
+          "key": "C",
+          "value": "Neither the electrical distribution nor concrete distribution has outliers."
+        },
+        {
+          "key": "D",
+          "value": "The concrete distribution has at least one lower outlier, and the electrical distribution has no lower outliers."
+        },
+        {
+          "key": "E",
+          "value": "The concrete distribution has at least one high outlier, and the electrical distribution has no high outliers."
+        }
+      ],
+      "expected": {
+        "answer_key": "D"
+      },
+      "seed": null,
+      "difficulty_estimate": 0.5
+    },
+    {
+      "item_id": "CR:U1-PC-MCQ-B-Q13",
+      "source": "curriculum_render",
+      "item_type": "mcq",
+      "unit": 1,
+      "lesson": null,
+      "kc_tags": [
+        "VAR-2.A",
+        "VAR-2.B",
+        "UNC-1.K"
+      ],
+      "prompt": "In the Dominican Republic in August, the distribution of daily high temperature is approximately normal with mean 86 degrees Fahrenheit (°F). Approximately 95% of all daily high temperatures are between 83°F and 89°F. What is the standard deviation of the distribution?",
+      "choices": [
+        {
+          "key": "A",
+          "value": "1°F"
+        },
+        {
+          "key": "B",
+          "value": "1.5°F"
+        },
+        {
+          "key": "C",
+          "value": "2°F"
+        },
+        {
+          "key": "D",
+          "value": "3°F"
+        },
+        {
+          "key": "E",
+          "value": "6°F"
+        }
+      ],
+      "expected": {
+        "answer_key": "B"
+      },
+      "seed": null,
+      "difficulty_estimate": 0.5
+    },
+    {
+      "item_id": "CR:U1-PC-MCQ-B-Q14",
+      "source": "curriculum_render",
+      "item_type": "mcq",
+      "unit": 1,
+      "lesson": null,
+      "kc_tags": [
+        "UNC-1.B",
+        "VAR-2.A",
+        "VAR-2.B"
+      ],
+      "prompt": "Which of the following can be reasonably modeled by a normal distribution?",
+      "choices": [
+        {
+          "key": "A",
+          "value": "The favorite colors of students in a kindergarten class"
+        },
+        {
+          "key": "B",
+          "value": "The heights of tomato plants that were all planted on the same day"
+        },
+        {
+          "key": "C",
+          "value": "The percent of employees from a company who attended a company retreat"
+        },
+        {
+          "key": "D",
+          "value": "The average number of siblings of all students at a particular high school"
+        },
+        {
+          "key": "E",
+          "value": "The parental guidance ratings (G, PG, PG-13, R) of movies filmed in 2019"
+        }
+      ],
+      "expected": {
+        "answer_key": "B"
+      },
+      "seed": null,
+      "difficulty_estimate": 0.5
+    },
+    {
+      "item_id": "CR:U1-PC-MCQ-B-Q15",
+      "source": "curriculum_render",
+      "item_type": "mcq",
+      "unit": 1,
+      "lesson": null,
+      "kc_tags": [
+        "VAR-2.A",
+        "VAR-2.B",
+        "UNC-1.K"
+      ],
+      "prompt": "A family has two cats named Gordo and Flaco. Gordo weighs 15 pounds and Flaco weighs 8 pounds. A cat's weight is classified as unhealthy if the weight is located in the top 5% or bottom 5% of all cat weights. The distribution of cat weights is approximately normal with mean 9.5 pounds and standard deviation 1.5 pounds. Which of the following is the best description of Gordo's and Flaco's weights?",
+      "choices": [
+        {
+          "key": "A",
+          "value": "Neither Gordo's nor Flaco's weight is classified as unhealthy."
+        },
+        {
+          "key": "B",
+          "value": "Gordo's weight is classified as unhealthy but Flaco's weight is not."
+        },
+        {
+          "key": "C",
+          "value": "Flaco's weight is classified as unhealthy but Gordo's weight is not."
+        },
+        {
+          "key": "D",
+          "value": "Flaco's weight and Gordo's weight are both classified as unhealthy."
+        },
+        {
+          "key": "E",
+          "value": "The classification of weight cannot be determined without more information."
+        }
+      ],
+      "expected": {
+        "answer_key": "B"
+      },
+      "seed": null,
+      "difficulty_estimate": 0.5
+    },
+    {
+      "item_id": "CR:U1-PC-MCQ-B-Q16",
+      "source": "curriculum_render",
+      "item_type": "mcq",
+      "unit": 1,
+      "lesson": null,
+      "kc_tags": [
+        "VAR-2.A",
+        "VAR-2.B",
+        "UNC-1.G"
+      ],
+      "prompt": "The distribution of the number of transactions performed at a bank each day is approximately normal with mean 478 transactions and standard deviation 64 transactions. Which of the following is closest to the proportion of daily transactions greater than 350?",
+      "choices": [
+        {
+          "key": "A",
+          "value": "0.023"
+        },
+        {
+          "key": "B",
+          "value": "0.046"
+        },
+        {
+          "key": "C",
+          "value": "0.477"
+        },
+        {
+          "key": "D",
+          "value": "0.954"
+        },
+        {
+          "key": "E",
+          "value": "0.977"
+        }
+      ],
+      "expected": {
+        "answer_key": "E"
+      },
+      "seed": null,
+      "difficulty_estimate": 0.5
+    },
+    {
+      "item_id": "CR:U1-PC-MCQ-B-Q17",
+      "source": "curriculum_render",
+      "item_type": "mcq",
+      "unit": 1,
+      "lesson": null,
+      "kc_tags": [
+        "VAR-2.A",
+        "VAR-2.B",
+        "UNC-3.F"
+      ],
+      "prompt": "The distribution of the amount of a customer's purchase at a convenience store is approximately normal, with mean $15.50 and standard deviation $1.72. Which of the following is closest to the proportion of customer purchase amounts between $14.00 and $16.00?",
+      "choices": [
+        {
+          "key": "A",
+          "value": "0.19"
+        },
+        {
+          "key": "B",
+          "value": "0.39"
+        },
+        {
+          "key": "C",
+          "value": "0.42"
+        },
+        {
+          "key": "D",
+          "value": "0.61"
+        },
+        {
+          "key": "E",
+          "value": "0.81"
+        }
+      ],
+      "expected": {
+        "answer_key": "C"
+      },
+      "seed": null,
+      "difficulty_estimate": 0.5
+    },
+    {
+      "item_id": "CR:U1-PC-MCQ-B-Q18",
+      "source": "curriculum_render",
+      "item_type": "mcq",
+      "unit": 1,
+      "lesson": null,
+      "kc_tags": [
+        "VAR-2.A",
+        "VAR-2.B",
+        "UNC-1.M"
+      ],
+      "prompt": "The distribution of the number of moths captured per night by a certain moth trap is approximately normal with mean 103. If 28 percent of the captures fall below 76 per night, which of the following equations can be used to find σ, the standard deviation of the distribution?",
+      "choices": [
+        {
+          "key": "A",
+          "value": "0.28 = (103-76)/σ"
+        },
+        {
+          "key": "B",
+          "value": "0.28 = (76-103)/σ"
+        },
+        {
+          "key": "C",
+          "value": "-0.58 = (103-76)/σ"
+        },
+        {
+          "key": "D",
+          "value": "-0.58 = (76-103)/σ"
+        },
+        {
+          "key": "E",
+          "value": "0.58 = (76-103)/σ"
+        }
+      ],
+      "expected": {
+        "answer_key": "D"
+      },
+      "seed": null,
+      "difficulty_estimate": 0.5
+    }
+  ]
+}

@@ -180,20 +180,46 @@ def load_personas(n_students: int) -> list[StudentPersona]:
     ]
 
 
-def load_items_by_unit(start_unit: int, end_unit: int) -> dict[int, list[dict]]:
-    """Load items grouped by unit."""
-    items_path = PROJECT_ROOT / "data" / "items" / "curriculum_render.json"
-    if not items_path.exists():
-        print(f"ERROR: Items not found at {items_path}", file=sys.stderr)
-        sys.exit(1)
-    with open(items_path, "r", encoding="utf-8") as f:
-        all_items = json.load(f)
+def load_items_by_unit(
+    start_unit: int,
+    end_unit: int,
+    eval_set_pattern: str | None = None,
+) -> dict[int, list[dict]]:
+    """Load items grouped by unit.
 
+    If *eval_set_pattern* is given (e.g. ``"unit_{unit}_dev_v1"``), try
+    to load a frozen eval set per unit from ``eval_sets/``.  The literal
+    ``{unit}`` placeholder is replaced with the unit number.  Units
+    without a matching eval set fall back to the full item file.
+    """
     items_by_unit: dict[int, list[dict]] = {}
-    for it in all_items:
-        u = it.get("unit")
-        if u is not None and start_unit <= u <= end_unit:
-            items_by_unit.setdefault(u, []).append(it)
+
+    # Try eval sets first
+    if eval_set_pattern:
+        for u in range(start_unit, end_unit + 1):
+            es_name = eval_set_pattern.replace("{unit}", str(u))
+            es_path = PROJECT_ROOT / "eval_sets" / f"{es_name}.json"
+            if es_path.exists():
+                with open(es_path, "r", encoding="utf-8") as f:
+                    data = json.load(f)
+                items = data.get("items", data) if isinstance(data, dict) else data
+                items_by_unit[u] = items
+                print(f"  Unit {u}: loaded eval set '{es_name}' ({len(items)} items)")
+
+    # Fill remaining units from the full item file
+    missing = [u for u in range(start_unit, end_unit + 1) if u not in items_by_unit]
+    if missing:
+        items_path = PROJECT_ROOT / "data" / "items" / "curriculum_render.json"
+        if not items_path.exists():
+            print(f"ERROR: Items not found at {items_path}", file=sys.stderr)
+            sys.exit(1)
+        with open(items_path, "r", encoding="utf-8") as f:
+            all_items = json.load(f)
+        for it in all_items:
+            u = it.get("unit")
+            if u is not None and u in missing:
+                items_by_unit.setdefault(u, []).append(it)
+
     return items_by_unit
 
 
@@ -219,7 +245,16 @@ async def run_course(start_unit: int, end_unit: int, config_path: str) -> None:
     optimizer_config = provider.get("optimizer", {})
     n_students = config.get("n_students", 10)
 
-    items_by_unit = load_items_by_unit(start_unit, end_unit)
+    eval_set = config.get("eval_set")
+    # Support both literal eval_set names and {unit} patterns
+    eval_set_pattern = None
+    if eval_set:
+        if "{unit}" in eval_set:
+            eval_set_pattern = eval_set
+        else:
+            # Single eval_set like "unit_1_dev_v1" — use as-is for matching units
+            eval_set_pattern = eval_set
+    items_by_unit = load_items_by_unit(start_unit, end_unit, eval_set_pattern)
     personas = load_personas(n_students)
     cohort = StudentCohort.from_personas(personas)
 

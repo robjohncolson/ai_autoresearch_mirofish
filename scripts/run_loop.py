@@ -201,8 +201,24 @@ def load_personas(n_students: int) -> list[StudentPersona]:
     ]
 
 
-def load_items(unit: int) -> list[dict]:
-    """Load items for a specific unit."""
+def load_items(unit: int, eval_set: str | None = None) -> list[dict]:
+    """Load items for a specific unit.
+
+    If *eval_set* is given, load the frozen eval set from
+    ``eval_sets/{eval_set}.json``.  Otherwise filter the full item file.
+    """
+    if eval_set:
+        es_path = PROJECT_ROOT / "eval_sets" / f"{eval_set}.json"
+        if es_path.exists():
+            with open(es_path, "r", encoding="utf-8") as f:
+                data = json.load(f)
+            items = data.get("items", data) if isinstance(data, dict) else data
+            print(f"Loaded eval set '{eval_set}' ({len(items)} items)")
+            return items
+        else:
+            print(f"WARNING: eval set '{eval_set}' not found at {es_path}, "
+                  "falling back to full item file", file=sys.stderr)
+
     items_path = PROJECT_ROOT / "data" / "items" / "curriculum_render.json"
     if not items_path.exists():
         print(f"ERROR: Items not found at {items_path}", file=sys.stderr)
@@ -237,7 +253,8 @@ async def run_loop(unit: int, max_iterations: int, config_path: str) -> None:
     n_students = config.get("n_students", 10)
 
     # Load items and create cohort
-    items = load_items(unit)
+    eval_set = config.get("eval_set")
+    items = load_items(unit, eval_set=eval_set)
     if not items:
         print(f"No items found for unit {unit}.", file=sys.stderr)
         sys.exit(1)
