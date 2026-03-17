@@ -42,12 +42,14 @@ Where a claim is unverified or volatile, this spec uses it only as direction. Th
 ## 1. System Overview
 
 An autonomous loop where:
-1. **Qwen 3 8B** (non-thinking mode) acts as N synthetic AP Stats students with epistemically-constrained memory
-2. Students interact with curriculum artifacts from `curriculum_render` and `lrsl-driller`
-3. Responses are graded by the existing E/P/I grading stack
-4. Failure patterns are analyzed by a stronger outer model
-5. Curriculum is patched, committed to a git branch, and re-evaluated
-6. Keep if metrics improve, revert if not — iterate indefinitely
+1. The **Agent pipeline** generates curriculum artifacts (worksheets, drills, Blookets) from source material
+2. **Qwen 3 8B** (non-thinking mode) acts as N synthetic AP Stats students with epistemically-constrained, cumulative memory
+3. Students work through the generated artifacts, unit by unit, retaining knowledge across units
+4. Responses are graded by the existing E/P/I grading stack
+5. Failure patterns are analyzed by a stronger outer model
+6. The Agent pipeline **regenerates** the artifacts with targeted improvements
+7. Keep if metrics improve, revert if not — iterate until converged, then advance to the next unit
+8. Students carry all prior-unit knowledge forward, so later units are tested against realistic cumulative understanding
 
 ### Design Principles
 
@@ -59,26 +61,39 @@ An autonomous loop where:
 
 **Bridge existing JS systems before rewriting them.** Your curriculum, grading, and cartridge generation logic already exist in neighboring JavaScript repos. Phase 0 and Phase 1 should call that logic through thin adapters instead of immediately re-implementing it in Python.
 
+**Sequential unit progression with cumulative memory.** Students learn Unit 1 first. Once the loop converges on Unit 1 material, students advance to Unit 2 carrying everything they learned (and partially forgot) from Unit 1. This mirrors how real students experience the course and means later-unit optimization accounts for prerequisite decay — the most valuable signal for curriculum improvement.
+
 ---
 
 ## 2. Architecture
 
 ```
-┌─────────────────────────────────────────────────────────────────┐
-│                    AUTORESEARCH LOOP                            │
-│                                                                 │
-│  ┌──────────┐    ┌──────────────┐    ┌───────────────┐         │
-│  │ Curriculum│───▶│  Synthetic   │───▶│   Grading     │         │
-│  │ (mutable) │    │  Students    │    │   Pipeline    │         │
-│  │           │    │  Qwen3-8B ×N │    │  (frozen)     │         │
-│  └─────▲─────┘    └──────────────┘    └───────┬───────┘         │
-│        │                                       │                │
-│        │          ┌──────────────┐              │                │
-│        └──────────│   Optimizer  │◀─────────────┘                │
-│                   │  (strong LLM)│                               │
-│                   │  + Analysis  │──▶ git commit / revert       │
-│                   └──────────────┘                               │
-└─────────────────────────────────────────────────────────────────┘
+┌─────────────────────────────────────────────────────────────────────┐
+│                    OUTER LOOP (per unit, sequential)                 │
+│                                                                     │
+│  ┌──────────────┐    ┌──────────────┐    ┌───────────────┐         │
+│  │ Agent Pipeline│───▶│  Synthetic   │───▶│   Grading     │         │
+│  │ (generates   │    │  Students    │    │   Pipeline    │         │
+│  │  worksheets, │    │  Qwen3-8B ×N │    │  (frozen)     │         │
+│  │  drills,     │    │  cumulative  │    └───────┬───────┘         │
+│  │  Blookets)   │    │  memory ────────────────────────┐           │
+│  └─────▲─────┘    └──────────────┘              │      │           │
+│        │                                         │      │           │
+│        │          ┌──────────────┐                │      │           │
+│        └──────────│   Optimizer  │◀───────────────┘      │           │
+│                   │  (strong LLM)│                        │           │
+│                   │  + Analysis  │──▶ git commit/revert  │           │
+│                   └──────────────┘                        │           │
+│                                                          │           │
+│  ┌───────────────────────────────────────────────────────▼────────┐ │
+│  │              STUDENT MEMORY (persists across units)             │ │
+│  │  U1 KCs: VAR-1.A=0.75, UNC-1.A=0.40 (decaying)               │ │
+│  │  U2 KCs: UNC-2.A=0.70, UNC-2.B=0.65 (fresh)                  │ │
+│  │  U3 KCs: (not yet learned)                                     │ │
+│  └────────────────────────────────────────────────────────────────┘ │
+│                                                                     │
+│  When Unit N converges → snapshot student memory → advance to N+1   │
+└─────────────────────────────────────────────────────────────────────┘
 ```
 
 ### Repo Boundaries
@@ -86,10 +101,22 @@ An autonomous loop where:
 | Repo | Role in System | Read/Write |
 |------|---------------|------------|
 | `ai_autoresearch_mirofish` | Loop orchestrator, student simulator, analysis engine, experiment logs | **Primary workspace** |
-| `curriculum_render` | Question bank (`data/curriculum.js`), frameworks (`data/frameworks.js`), grading rules (`js/grading/frq-grading-rules.js`) | **Read-only** (canonical source); curriculum patches written as overlays in this repo |
-| `lrsl-driller` | Cartridge generators + manifests | **Read-only** (problem generation) |
-| `Agent` | Task runner patterns, lesson registry | **Pattern reference** (may integrate later) |
+| `curriculum_render` | Question bank, frameworks, grading rules | **Read** for eval items + grading; **Write** when converged improvements are promoted to production |
+| `lrsl-driller` | Cartridge manifests, generators, grading rules | **Read** for problem generation + grading; **Write** when converged cartridge improvements are promoted |
+| `apstats-follow-along` | Follow-along worksheets | **Write** target — regenerated by Agent pipeline with optimized content |
+| `Agent` | Lesson-prep pipeline orchestrator (video ingest → worksheet → drills → Blooket → Schoology) | **Direct integration** — the autoresearch loop wraps around the Agent pipeline, using it to regenerate artifacts each iteration |
 | `grid-bot-v3` | Belief engine / consensus patterns | **Pattern reference** (port weighting logic) |
+
+### How the Agent pipeline fits in
+
+The Agent repo's `lesson-prep.mjs` already has a 10-step pipeline: video ingest → worksheet generation → drill cartridge generation → Manim animations → Blooket upload → Schoology posting. The autoresearch loop does NOT replace this pipeline — it wraps around it:
+
+1. **Agent pipeline generates** the initial artifacts for a unit/lesson
+2. **Autoresearch loop tests** those artifacts with synthetic students
+3. **Optimizer proposes** targeted improvements (better exposition, reordered scaffolding, clearer hints)
+4. **Agent pipeline regenerates** the artifacts incorporating those improvements
+5. **Loop re-tests** — keep if better, revert if not
+6. When converged, promote the best version to the production repos
 
 ---
 
@@ -364,39 +391,85 @@ class IterationMetrics:
 
 ## 7. Autoresearch Loop
 
-### 7.1 Loop Mechanics (ported from Karpathy's pattern)
+### 7.1 Two-Level Loop Structure
 
+The system has two nested loops:
+
+**Outer loop: unit-by-unit progression (sequential)**
 ```
-WHILE True:
-  1. LOAD current curriculum version (mutable files)
-  2. RUN synthetic student cohort through evaluation set
-  3. GRADE all responses
+FOR unit = 1 TO 9:
+  1. INITIALIZE or RESTORE student memory snapshots from previous unit
+  2. RUN inner loop on this unit until converged (or max iterations)
+  3. SNAPSHOT all student memory states (KC strengths, misconceptions)
+  4. PROMOTE converged artifacts to production repos
+  5. ADVANCE to next unit — students carry cumulative memory
+```
+
+**Inner loop: keep-if-better iteration (per unit, ported from Karpathy)**
+```
+WHILE not converged AND iteration < max:
+  1. Agent pipeline GENERATES artifacts (worksheet, drills, Blooket) for this unit
+  2. RUN synthetic student cohort through the generated material
+     - Students already "know" everything from prior units (with decay)
+  3. GRADE all responses via existing E/P/I stack
   4. COMPUTE iteration metrics
   5. IF metrics improved over best-known:
        KEEP commit (advance best pointer)
      ELSE:
        REVERT to best commit
   6. ANALYZE failure patterns (strong outer model)
-  7. GENERATE curriculum patch (targeted edits)
-  8. APPLY patch + COMMIT to autoresearch branch
+     - Distinguish: is the failure from NEW material or FORGOTTEN prerequisite?
+  7. GENERATE targeted improvements to the artifacts
+  8. COMMIT to autoresearch branch
   9. GOTO 1
 ```
 
 ### 7.2 Mutable vs Frozen Surfaces
 
-**Mutable (what the loop may edit):**
-- `curriculum_patches/{unit}/{lesson}/exposition.json` — rewritten explanations, examples
-- `curriculum_patches/{unit}/{lesson}/hints.json` — improved hint text
-- `curriculum_patches/{unit}/{lesson}/sequencing.json` — prereq ordering, spacing
-- `curriculum_patches/{unit}/{lesson}/scaffolding.json` — step-by-step breakdowns
+**Mutable (what the loop may edit via the Agent pipeline):**
+- `apstats-follow-along` worksheets — exposition text, worked examples, scaffolding
+- `lrsl-driller` cartridges — hint text, mode sequencing, generator parameters, difficulty ramps
+- `curriculum_render` question bank — prompt wording, choice distractors, FRQ rubric hints
+- Blooket question sets — regenerated with improved question text
+- `curriculum_patches/{unit}/{lesson}/` — intermediate overlay files (pre-promotion)
 
 **Frozen (must not change during a run):**
 - Evaluation sets (item bank + seeds)
-- Grading rules and rubrics
+- Grading rules and rubrics (the scoring logic itself)
 - Student persona distribution
 - The loop orchestrator itself
+- Student memory snapshots from completed prior units
 
-### 7.3 Git Strategy
+### 7.3 Cumulative Memory Across Units
+
+When the loop finishes Unit N and advances to Unit N+1:
+
+```python
+# Snapshot student memory after Unit N converges
+for student in cohort:
+    snapshot = {
+        "persona_id": student.persona_id,
+        "unit_completed": N,
+        "kc_states": student.get_all_kc_states(),  # full KC map with strengths
+        "timestamp": now()
+    }
+    save_snapshot(f"snapshots/unit_{N}/{student.persona_id}.json", snapshot)
+
+# Restore when starting Unit N+1
+for student in cohort:
+    prior = load_snapshot(f"snapshots/unit_{N}/{student.persona_id}.json")
+    student.restore_kc_states(prior["kc_states"])
+    student.apply_forgetting(elapsed_time=INTER_UNIT_GAP)  # simulate time between units
+```
+
+**Why this matters:** If Unit 5 (Sampling Distributions) fails because students forgot Unit 1 (describing distributions), the optimizer can respond by:
+- Adding a review scaffold at the start of Unit 5's worksheet
+- Strengthening the Unit 1 exposition (re-run Unit 1's loop with tighter targets)
+- Adjusting the Unit 5 drill cartridge to include prerequisite warm-up problems
+
+This is signal you cannot get without cumulative memory.
+
+### 7.4 Git Strategy
 
 ```bash
 # Branch naming
@@ -409,7 +482,7 @@ git commit -m "iter-047: mean_score 2.31→2.38, patched U3 exposition (sampling
 # On regression: git reset --hard to best commit, try different patch
 ```
 
-### 7.4 Improvement Metric (multi-objective)
+### 7.5 Improvement Metric (multi-objective)
 
 Single-scalar selection criterion with guardrails:
 
@@ -457,12 +530,22 @@ Top 10 failure KCs:
 ## AP FRAMEWORK REQUIREMENTS
 {relevant learning objectives from frameworks.js}
 
+## FAILURE SOURCE ANALYSIS
+For each failing KC, classify the root cause:
+- "new_material": the current unit's exposition/examples are unclear
+- "prerequisite_decay": student forgot a prior-unit concept (specify which KC)
+- "misconception": student holds a specific wrong mental model
+- "question_wording": the question prompt is ambiguous or misleading
+
 ## TASK
-1. Diagnose WHY students are failing on these KCs (pedagogical root cause)
-2. Propose SPECIFIC edits to the curriculum exposition text
-3. Output as a JSON patch: {"unit": N, "lesson": N, "field": "exposition", "old_text": "...", "new_text": "..."}
-4. Keep changes minimal and targeted — one concept fix per patch
-5. Do NOT change the questions or grading rules
+1. Diagnose WHY students are failing on these KCs (pedagogical root cause + source)
+2. Propose SPECIFIC edits to the appropriate artifact:
+   - Worksheet exposition → {"target": "worksheet", "unit": N, "lesson": N, ...}
+   - Drill hint/scaffolding → {"target": "driller_cartridge", "cartridge_id": "...", ...}
+   - Blooket question text → {"target": "blooket", "unit": N, "lesson": N, ...}
+   - Prerequisite review insert → {"target": "worksheet", "unit": N, "section": "prereq_review", ...}
+3. Keep changes minimal and targeted — one concept fix per patch
+4. Do NOT change the grading rules or evaluation items
 ```
 
 ### 8.2 Patch Application
@@ -486,24 +569,39 @@ def apply_curriculum_patch(patch: dict, branch: str) -> str:
 
 ## 9. Integration Patterns (from existing repos)
 
-### 9.1 Task Runner Pattern (from Agent)
+### 9.1 Agent Pipeline Integration (primary)
 
-Port the topological sort + wave execution for multi-step experiment runs:
+The Agent repo's `lesson-prep.mjs` pipeline is the artifact generation engine. Each autoresearch iteration invokes relevant steps of this pipeline with improvement parameters:
 
 ```python
-# Simplified pipeline for this repo
-PIPELINE_STEPS = [
-    {"task": "load_curriculum",    "depends_on": []},
-    {"task": "generate_items",     "depends_on": ["load_curriculum"]},
-    {"task": "run_students",       "depends_on": ["generate_items"]},        # parallelizable per student
+# One autoresearch iteration = Agent pipeline generate + student test + analyze
+ITERATION_STEPS = [
+    # --- GENERATION (via Agent pipeline) ---
+    {"task": "agent_generate",     "depends_on": [],
+     "desc": "Call Agent lesson-prep pipeline to generate/regenerate artifacts"},
+
+    # --- EVALUATION (this repo) ---
+    {"task": "load_artifacts",     "depends_on": ["agent_generate"],
+     "desc": "Load generated worksheet, drills, Blooket items as canonical items"},
+    {"task": "restore_memory",     "depends_on": [],
+     "desc": "Restore student KC states from prior-unit snapshots"},
+    {"task": "run_students",       "depends_on": ["load_artifacts", "restore_memory"]},
     {"task": "grade_responses",    "depends_on": ["run_students"]},
     {"task": "compute_metrics",    "depends_on": ["grade_responses"]},
+
+    # --- DECISION ---
     {"task": "decide_keep_revert", "depends_on": ["compute_metrics"]},
-    {"task": "analyze_failures",   "depends_on": ["compute_metrics"]},       # only if keeping
-    {"task": "generate_patch",     "depends_on": ["analyze_failures"]},
-    {"task": "apply_and_commit",   "depends_on": ["generate_patch"]},
+
+    # --- OPTIMIZATION (if keeping) ---
+    {"task": "analyze_failures",   "depends_on": ["decide_keep_revert"],
+     "desc": "Classify failures: new material vs prerequisite decay vs misconception"},
+    {"task": "generate_improvements", "depends_on": ["analyze_failures"],
+     "desc": "Produce targeted improvement params for next Agent pipeline run"},
+    {"task": "commit_and_loop",    "depends_on": ["generate_improvements"]},
 ]
 ```
+
+The key difference from vanilla autoresearch: the mutable surface is not a single file — it's the **generation parameters** fed to the Agent pipeline. The pipeline regenerates real artifacts (worksheets, drills, Blookets) each iteration.
 
 ### 9.2 Multi-Source Consensus Pattern (from grid-bot-v3)
 
@@ -549,38 +647,50 @@ ai_autoresearch_mirofish/
 │   ├── experiment.json             # Current experiment config (N students, eval set, etc.)
 │   ├── personas.json               # Student persona definitions
 │   └── provider.json               # Ollama/cloud endpoint config
-├── curriculum_patches/             # Mutable surface (what the loop edits)
-│   ├── 1/
-│   │   ├── 1/
-│   │   │   ├── exposition.json
-│   │   │   ├── hints.json
-│   │   │   └── scaffolding.json
+├── curriculum_patches/             # Intermediate improvement overlays (pre-promotion)
+│   ├── 1/                          # Unit 1
+│   │   ├── 1/                      # Lesson 1
+│   │   │   ├── exposition.json     # Worksheet exposition improvements
+│   │   │   ├── hints.json          # Drill hint improvements
+│   │   │   ├── scaffolding.json    # Step-by-step breakdown improvements
+│   │   │   └── blooket.json        # Blooket question improvements
 │   │   └── ...
 │   └── ...
+├── snapshots/                      # Student memory snapshots (persist across units)
+│   ├── unit_1/                     # KC states after Unit 1 converges
+│   │   ├── student_tier1_001.json
+│   │   ├── student_tier2_001.json
+│   │   └── ...
+│   ├── unit_2/
+│   └── ...
 ├── eval_sets/                      # Frozen evaluation sets
-│   ├── dev_v1.json
-│   ├── holdout_v1.json
+│   ├── unit_1_dev_v1.json          # Per-unit dev sets
+│   ├── unit_2_dev_v1.json
+│   ├── holdout_v1.json             # Full-course holdout (all 9 units)
 │   └── real_anchor_v1.json         # Derived from Supabase classroom data
 ├── adapters/                       # Thin bridges into existing JS repos
 │   ├── curriculum_render/
 │   │   ├── extract_items.mjs       # Read data/curriculum.js -> canonical items
 │   │   ├── grade_frq.mjs           # Reuse existing FRQ grading rules/engine
 │   │   └── grade_mcq.mjs           # Exact-match MCQ grading wrapper
-│   └── lrsl_driller/
-│       ├── generate_item.mjs       # Call cartridge generators with seeds
-│       └── grade_answers.mjs       # Reuse cartridge grading rules/engine
+│   ├── lrsl_driller/
+│   │   ├── generate_item.mjs       # Call cartridge generators with seeds
+│   │   └── grade_answers.mjs       # Reuse cartridge grading rules/engine
+│   └── agent_pipeline/
+│       └── invoke_lesson_prep.mjs  # Call Agent lesson-prep steps with improvement params
 ├── simulator/                      # Synthetic student engine
 │   ├── student.py                  # Student class (persona + KC state + forgetting)
 │   ├── memory.py                   # KC state machine + forgetting curves
-│   ├── cohort.py                   # Manages N students, parallel execution
+│   ├── cohort.py                   # Manages N students, parallel execution, snapshots
 │   └── prompts.py                  # System prompt templates
 ├── optimizer/                      # Outer loop (analysis + patching)
-│   ├── analyzer.py                 # Failure pattern clustering
-│   ├── patcher.py                  # Curriculum patch generation
+│   ├── analyzer.py                 # Failure pattern clustering + source classification
+│   ├── patcher.py                  # Targeted improvement generation (per artifact type)
 │   ├── consensus.py                # Multi-model patch weighting (ported from grid-bot)
 │   └── gates.py                    # Patch quality gates
 ├── loop/                           # Autoresearch loop orchestrator
-│   ├── runner.py                   # Main loop (load -> run -> grade -> decide -> patch)
+│   ├── runner.py                   # Inner loop (per-unit keep-if-better)
+│   ├── progression.py              # Outer loop (unit-by-unit advancement + memory carry)
 │   ├── metrics.py                  # Score computation + improvement check
 │   └── git_ops.py                  # Branch management, commit, revert
 ├── data/                           # Canonical curriculum + item data
@@ -591,23 +701,27 @@ ai_autoresearch_mirofish/
 │   └── kc_tags.json                # KC tag vocabulary + question mappings
 ├── logs/                           # Experiment logs (gitignored for large runs)
 │   ├── runs/
-│   │   └── 20260316_001/
+│   │   └── 20260316_unit1_001/
 │   │       ├── config.json
 │   │       ├── responses.jsonl
 │   │       ├── grades.jsonl
 │   │       ├── metrics.json
+│   │       ├── failure_analysis.json  # Source-classified failures
 │   │       └── patches.json
 │   └── summary.tsv                 # One line per iteration (like autoresearch results.tsv)
 ├── scripts/
-│   ├── run_experiment.py           # Single iteration
-│   ├── run_loop.py                 # Full autoresearch loop
+│   ├── run_experiment.py           # Single iteration (one unit)
+│   ├── run_loop.py                 # Full autoresearch inner loop (one unit)
+│   ├── run_course.py               # Full outer loop (all units sequential)
 │   ├── extract_items.py            # Python orchestrator over JS adapters
 │   ├── tag_kcs.py                  # LLM-assisted KC tagging
+│   ├── promote.py                  # Push converged improvements to production repos
 │   └── calibrate.py                # Compare synthetic vs real student distributions
 └── tests/
     ├── test_student.py
     ├── test_adapters.py
     ├── test_memory.py
+    ├── test_snapshots.py
     └── test_loop.py
 ```
 
@@ -660,60 +774,69 @@ iteration	commit	mean_score	mcq_acc	frq_e	frq_p	frq_i	holdout	kept	patch_desc	ti
 3. LLM-assisted KC tagging: for each question, assign `kc_tags[]` from framework vocabulary
 4. Generate sample items from `lrsl-driller` cartridges → `data/items/lrsl_driller.json`
 5. Build Node adapters that call existing grading and generation code in `curriculum_render` and `lrsl-driller`
-6. Build `eval_sets/dev_v1.json` (20–40 items, mix of MCQ + FRQ, all 9 units)
-7. Decide whether any grading logic actually needs a later Python port; do not assume that up front
+6. Build `eval_sets/dev_v1.json` — Unit 1 items only (20–40 items, mix of MCQ + FRQ)
+7. Verify Agent pipeline can be invoked programmatically for a single unit/lesson
+8. Decide whether any grading logic actually needs a later Python port; do not assume that up front
 
-### Phase 1: MVP — Single Iteration (weekend build)
+### Phase 1: MVP — Single Iteration on Unit 1 (weekend build)
 
-**Goal:** 10 synthetic students, 1 unit, measure pass rate, one round of improvement
+**Goal:** 10 synthetic students, Unit 1 only, measure pass rate, one round of improvement
 
 1. Install Ollama + pull `qwen3:8b`
-2. Implement `simulator/student.py` with basic persona + KC state
+2. Implement `simulator/student.py` with basic persona + KC state + forgetting curve
 3. Implement `simulator/prompts.py` with system prompt template
 4. Implement adapter-backed grading calls so the MVP reuses the JS grading logic already in the neighboring repos
 5. Implement `loop/metrics.py` (score aggregation)
-6. Implement `scripts/run_experiment.py` — single pass: load items → prompt students → grade → report
+6. Implement `scripts/run_experiment.py` — single pass: load Unit 1 items → prompt students → grade → report
 7. Run once, inspect outputs, validate grading correctness
+8. Verify KC states update correctly after the run (strengths increase for correct, misconceptions for incorrect)
 
-**Exit criteria:** Can run 10 students through dev eval set and get plausible E/P/I distributions.
+**Exit criteria:** Can run 10 students through Unit 1 eval set and get plausible E/P/I distributions. KC states reflect what was learned.
 
-### Phase 2: Autoresearch Loop (overnight build)
+### Phase 2: Autoresearch Loop on Unit 1 (overnight build)
 
-**Goal:** Full loop running 8 hours unattended, iterating on curriculum
+**Goal:** Full keep-if-better loop running 8 hours unattended on Unit 1, regenerating real artifacts
 
-1. Implement `loop/runner.py` — main autoresearch loop
+1. Implement `loop/runner.py` — inner autoresearch loop
 2. Implement `loop/git_ops.py` — branch management, commit, revert
-3. Implement `optimizer/analyzer.py` — failure pattern analysis (calls whichever stronger optimizer endpoint is configured)
-4. Implement `optimizer/patcher.py` — curriculum patch generation
-5. Implement `optimizer/gates.py` — patch quality gates
-6. Scale to 50–100 students
-7. Run overnight on Unit 1, measure if mean_score improves
+3. Implement Agent pipeline integration — call `lesson-prep.mjs` steps to regenerate worksheets, drills, Blookets with improvement parameters
+4. Implement `optimizer/analyzer.py` — failure pattern analysis with source classification (new material vs prerequisite vs misconception)
+5. Implement `optimizer/patcher.py` — targeted improvement generation for each artifact type
+6. Implement `optimizer/gates.py` — patch quality gates
+7. Scale to 50–100 students
+8. Run overnight on Unit 1, measure if mean_score improves across worksheet + drill + Blooket
 
-**Exit criteria:** Automated loop runs unattended, keeps improving commits, reverts regressions.
+**Exit criteria:** Automated loop runs unattended, regenerates real artifacts, keeps improving commits, reverts regressions. Unit 1 material measurably better.
 
-### Phase 3: Calibration + Validation
+### Phase 3: Unit-by-Unit Progression (Units 1–3)
 
-**Goal:** Synthetic student failures match real student failure patterns
+**Goal:** Sequential unit progression with cumulative student memory
 
-1. Export real student data from Supabase (anonymized)
-2. Compute per-item difficulty and per-KC mastery rates from real data
-3. Implement `scripts/calibrate.py` — adjust persona parameters to match distributions
-4. Build `eval_sets/real_anchor_v1.json` from real error patterns
-5. Compute item-difficulty correlation (real vs synthetic)
-6. Compute misconception confusion matrix overlap
+1. After Unit 1 converges, snapshot all student KC states
+2. Advance to Unit 2 — students carry Unit 1 knowledge (with decay)
+3. Run autoresearch loop on Unit 2
+   - Failures are classified: "Unit 2 material unclear" vs "forgot Unit 1 prerequisite"
+   - If prerequisite decay is the problem, optimizer can either:
+     a. Add review scaffolding to Unit 2's worksheet
+     b. Flag Unit 1 material for re-optimization
+4. After Unit 2 converges, snapshot again (now carrying Units 1+2)
+5. Repeat for Unit 3
+6. Implement `scripts/calibrate.py` — compare synthetic vs real student error patterns using anonymized Supabase data
 
-**Exit criteria:** Spearman correlation > 0.7 between real and synthetic item difficulties.
+**Exit criteria:** Students carry knowledge across 3 units. Failure analysis correctly distinguishes new-material vs prerequisite-decay failures. Spearman correlation > 0.7 between real and synthetic item difficulties for Units 1–3.
 
-### Phase 4: Scale + Multi-Unit + Cloud
+### Phase 4: Full Course + Scale (Units 1–9)
 
-**Goal:** Full 9-unit curriculum optimization at scale
+**Goal:** Complete AP Statistics curriculum optimization with all artifacts polished
 
-1. Switch to a verified high-throughput deployment path for throughput, with RunPod + vLLM/SGLang as the default assumption unless hosted model availability is re-verified at implementation time
-2. Scale to 500–1000 students per iteration
-3. Run across all 9 units simultaneously
+1. Extend to all 9 units sequentially with cumulative memory
+2. Switch to verified high-throughput deployment (RunPod + vLLM/SGLang) for overnight runs
+3. Scale to 500–1000 students per iteration
 4. Implement multi-model optimizer consensus (ported from grid-bot belief engine)
-5. Implement holdout evaluation on full practice AP exam
-6. A/B test improved curriculum on real students
+5. Implement holdout evaluation on full practice AP exam (all 9 units)
+6. Promote converged artifacts to production repos (`curriculum_render`, `lrsl-driller`, `apstats-follow-along`)
+7. A/B test improved curriculum on real students
+8. Feed real-student results back into persona calibration for next year's run
 
 ---
 
@@ -776,3 +899,13 @@ For paired comparisons (same persona seeds, different curriculum versions):
 4. **What's the right "AP score" mapping from E/P/I to 1–5?** Need to define a rubric-to-score conversion that matches AP scoring guidelines.
 
 5. **FERPA compliance:** Real student data used for calibration must be anonymized. Define anonymization protocol before Phase 3.
+
+6. **How to invoke the Agent pipeline programmatically?** The Agent's `lesson-prep.mjs` currently runs interactively. Need to define a headless invocation path that accepts improvement parameters and returns generated artifact paths. May require a thin wrapper in the Agent repo or a new pipeline mode.
+
+7. **Inter-unit gap timing for forgetting curves.** How much simulated time elapses between units? Real students have ~2 weeks per unit. The forgetting curve decay needs this parameter. Should it be configurable per experiment?
+
+8. **When to re-optimize prior units.** If Unit 5 failures are traced to Unit 1 prerequisite decay, should the loop automatically re-enter Unit 1's inner loop? Or just flag it for manual review? Re-entering risks infinite recursion; flagging risks ignoring the problem.
+
+9. **Promotion workflow.** When converged improvements are pushed to production repos, what's the git strategy? Feature branch + PR? Direct commit to main? The production repos have their own CI and deployment pipelines to respect.
+
+10. **Convergence criteria.** What defines "converged" for a unit? Options: N consecutive iterations with no improvement, mean_score above threshold, or improvement rate below epsilon. Need to define this before Phase 2.
