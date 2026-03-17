@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "batch_name": "phase0-phase1-scaffold",
+  "target_branch": "master",
+  "codex_approval_mode": "full-auto",
+  "note_on_parallelism": "D depends on A+B interfaces, E depends on D's IterationMetrics. All 5 were run simultaneously in this batch because interface contracts are embedded in each prompt. A strict runner should respect depends_on.",
+  "agents": [
+    {
+      "name": "data-adapters",
+      "description": "JS adapter modules bridging curriculum_render and lrsl-driller, plus Python orchestrator",
+      "prompt_file": "dispatch/prompts/agent-a-data-adapters.md",
+      "owned_paths": ["adapters/**/*", "scripts/extract_items.py"],
+      "depends_on": []
+    },
+    {
+      "name": "simulator-core",
+      "description": "Synthetic student engine: KC memory, forgetting curves, prompts, student class, cohort manager",
+      "prompt_file": "dispatch/prompts/agent-b-simulator-core.md",
+      "owned_paths": ["simulator/**/*"],
+      "depends_on": []
+    },
+    {
+      "name": "config-data",
+      "description": "Configuration files, persona definitions, framework extraction, KC vocabulary",
+      "prompt_file": "dispatch/prompts/agent-c-config-data.md",
+      "owned_paths": ["config/**/*", "data/**/*"],
+      "depends_on": []
+    },
+    {
+      "name": "loop-engine",
+      "description": "Autoresearch loop: metrics, git ops, inner runner, outer progression",
+      "prompt_file": "dispatch/prompts/agent-d-loop-engine.md",
+      "owned_paths": ["loop/**/*"],
+      "depends_on": ["data-adapters", "simulator-core"]
+    },
+    {
+      "name": "optimizer",
+      "description": "Failure analysis, patch generation, quality gates, multi-model consensus",
+      "prompt_file": "dispatch/prompts/agent-e-optimizer.md",
+      "owned_paths": ["optimizer/**/*"],
+      "depends_on": ["loop-engine"]
+    },
+    {
+      "name": "scripts-and-tests",
+      "description": "Entry point scripts (run_experiment, run_loop, run_course, tag_kcs, promote, calibrate) and test files",
+      "prompt_file": "dispatch/prompts/agent-f-scripts-tests.md",
+      "owned_paths": [
+        "scripts/run_experiment.py",
+        "scripts/run_loop.py",
+        "scripts/run_course.py",
+        "scripts/tag_kcs.py",
+        "scripts/promote.py",
+        "scripts/calibrate.py",
+        "tests/**/*"
+      ],
+      "depends_on": ["data-adapters", "simulator-core", "config-data", "loop-engine", "optimizer"]
+    }
+  ]
+}

@@ -1,0 +1,2844 @@
+[
+  {
+    "item_id": "DR:lsrl-calculations:calc-zscore:1933",
+    "source": "lrsl_driller",
+    "item_type": "numeric",
+    "unit": 1,
+    "lesson": 5,
+    "kc_tags": [],
+    "prompt": "Calculate the z-score for the given value.",
+    "choices": [],
+    "expected": {
+      "zscore": -1
+    },
+    "seed": 1933,
+    "difficulty_estimate": 0.5,
+    "_raw": {
+      "given": {
+        "x": 60,
+        "mean": 80,
+        "sd": 20
+      },
+      "answers": {
+        "zscore": {
+          "value": -1,
+          "formula": "(60 − 80) / 20",
+          "steps": [
+            "x − μ = 60 − 80 = -20",
+            "z = -20 / 20 = -1"
+          ],
+          "interpretation": "This value is 1 standard deviations below the mean."
+        }
+      },
+      "validation": {
+        "zscore": {
+          "expected": -1,
+          "tolerance": "tight"
+        }
+      },
+      "graphConfig": {
+        "type": "normal-curve",
+        "mean": 80,
+        "sd": 20,
+        "markedValue": 60,
+        "labels": {
+          "x": "Value"
+        }
+      }
+    }
+  },
+  {
+    "item_id": "DR:lsrl-calculations:calc-zscore:2933",
+    "source": "lrsl_driller",
+    "item_type": "numeric",
+    "unit": 1,
+    "lesson": 5,
+    "kc_tags": [],
+    "prompt": "Calculate the z-score for the given value.",
+    "choices": [],
+    "expected": {
+      "zscore": -1.5
+    },
+    "seed": 2933,
+    "difficulty_estimate": 0.5,
+    "_raw": {
+      "given": {
+        "x": 65,
+        "mean": 80,
+        "sd": 10
+      },
+      "answers": {
+        "zscore": {
+          "value": -1.5,
+          "formula": "(65 − 80) / 10",
+          "steps": [
+            "x − μ = 65 − 80 = -15",
+            "z = -15 / 10 = -1.5"
+          ],
+          "interpretation": "This value is 1.5 standard deviations below the mean."
+        }
+      },
+      "validation": {
+        "zscore": {
+          "expected": -1.5,
+          "tolerance": "tight"
+        }
+      },
+      "graphConfig": {
+        "type": "normal-curve",
+        "mean": 80,
+        "sd": 10,
+        "markedValue": 65,
+        "labels": {
+          "x": "Value"
+        }
+      }
+    }
+  },
+  {
+    "item_id": "DR:lsrl-calculations:calc-zscore:3933",
+    "source": "lrsl_driller",
+    "item_type": "numeric",
+    "unit": 1,
+    "lesson": 5,
+    "kc_tags": [],
+    "prompt": "Calculate the z-score for the given value.",
+    "choices": [],
+    "expected": {
+      "zscore": 2
+    },
+    "seed": 3933,
+    "difficulty_estimate": 0.5,
+    "_raw": {
+      "given": {
+        "x": 90,
+        "mean": 60,
+        "sd": 15
+      },
+      "answers": {
+        "zscore": {
+          "value": 2,
+          "formula": "(90 − 60) / 15",
+          "steps": [
+            "x − μ = 90 − 60 = 30",
+            "z = 30 / 15 = 2"
+          ],
+          "interpretation": "This value is 2 standard deviations above the mean."
+        }
+      },
+      "validation": {
+        "zscore": {
+          "expected": 2,
+          "tolerance": "tight"
+        }
+      },
+      "graphConfig": {
+        "type": "normal-curve",
+        "mean": 60,
+        "sd": 15,
+        "markedValue": 90,
+        "labels": {
+          "x": "Value"
+        }
+      }
+    }
+  },
+  {
+    "item_id": "DR:lsrl-calculations:calc-zscore:4933",
+    "source": "lrsl_driller",
+    "item_type": "numeric",
+    "unit": 1,
+    "lesson": 5,
+    "kc_tags": [],
+    "prompt": "Calculate the z-score for the given value.",
+    "choices": [],
+    "expected": {
+      "zscore": -1.5
+    },
+    "seed": 4933,
+    "difficulty_estimate": 0.5,
+    "_raw": {
+      "given": {
+        "x": 70,
+        "mean": 100,
+        "sd": 20
+      },
+      "answers": {
+        "zscore": {
+          "value": -1.5,
+          "formula": "(70 − 100) / 20",
+          "steps": [
+            "x − μ = 70 − 100 = -30",
+            "z = -30 / 20 = -1.5"
+          ],
+          "interpretation": "This value is 1.5 standard deviations below the mean."
+        }
+      },
+      "validation": {
+        "zscore": {
+          "expected": -1.5,
+          "tolerance": "tight"
+        }
+      },
+      "graphConfig": {
+        "type": "normal-curve",
+        "mean": 100,
+        "sd": 20,
+        "markedValue": 70,
+        "labels": {
+          "x": "Value"
+        }
+      }
+    }
+  },
+  {
+    "item_id": "DR:lsrl-calculations:calc-zscore:5933",
+    "source": "lrsl_driller",
+    "item_type": "numeric",
+    "unit": 1,
+    "lesson": 5,
+    "kc_tags": [],
+    "prompt": "Calculate the z-score for the given value.",
+    "choices": [],
+    "expected": {
+      "zscore": -1
+    },
+    "seed": 5933,
+    "difficulty_estimate": 0.5,
+    "_raw": {
+      "given": {
+        "x": 45,
+        "mean": 50,
+        "sd": 5
+      },
+      "answers": {
+        "zscore": {
+          "value": -1,
+          "formula": "(45 − 50) / 5",
+          "steps": [
+            "x − μ = 45 − 50 = -5",
+            "z = -5 / 5 = -1"
+          ],
+          "interpretation": "This value is 1 standard deviations below the mean."
+        }
+      },
+      "validation": {
+        "zscore": {
+          "expected": -1,
+          "tolerance": "tight"
+        }
+      },
+      "graphConfig": {
+        "type": "normal-curve",
+        "mean": 50,
+        "sd": 5,
+        "markedValue": 45,
+        "labels": {
+          "x": "Value"
+        }
+      }
+    }
+  },
+  {
+    "item_id": "DR:lsrl-calculations:find-raw:1613",
+    "source": "lrsl_driller",
+    "item_type": "numeric",
+    "unit": 1,
+    "lesson": 5,
+    "kc_tags": [],
+    "prompt": "Find the value that corresponds to the given z-score.",
+    "choices": [],
+    "expected": {
+      "x": 50
+    },
+    "seed": 1613,
+    "difficulty_estimate": 0.5,
+    "_raw": {
+      "given": {
+        "zscore": -1.5,
+        "mean": 80,
+        "sd": 20
+      },
+      "answers": {
+        "x": {
+          "value": 50,
+          "formula": "80 + (-1.5 × 20)",
+          "steps": [
+            "z × σ = -1.5 × 20 = -30",
+            "x = μ + z × σ = 80 + -30 = 50"
+          ]
+        }
+      },
+      "validation": {
+        "x": {
+          "expected": 50,
+          "tolerance": "tight"
+        }
+      },
+      "graphConfig": {
+        "type": "normal-curve",
+        "mean": 80,
+        "sd": 20,
+        "markedValue": null,
+        "showXUnknown": true,
+        "labels": {
+          "x": "Value"
+        }
+      }
+    }
+  },
+  {
+    "item_id": "DR:lsrl-calculations:find-raw:2613",
+    "source": "lrsl_driller",
+    "item_type": "numeric",
+    "unit": 1,
+    "lesson": 5,
+    "kc_tags": [],
+    "prompt": "Find the value that corresponds to the given z-score.",
+    "choices": [],
+    "expected": {
+      "x": 67.5
+    },
+    "seed": 2613,
+    "difficulty_estimate": 0.5,
+    "_raw": {
+      "given": {
+        "zscore": 1.5,
+        "mean": 60,
+        "sd": 5
+      },
+      "answers": {
+        "x": {
+          "value": 67.5,
+          "formula": "60 + (1.5 × 5)",
+          "steps": [
+            "z × σ = 1.5 × 5 = 7.5",
+            "x = μ + z × σ = 60 + 7.5 = 67.5"
+          ]
+        }
+      },
+      "validation": {
+        "x": {
+          "expected": 67.5,
+          "tolerance": "tight"
+        }
+      },
+      "graphConfig": {
+        "type": "normal-curve",
+        "mean": 60,
+        "sd": 5,
+        "markedValue": null,
+        "showXUnknown": true,
+        "labels": {
+          "x": "Value"
+        }
+      }
+    }
+  },
+  {
+    "item_id": "DR:lsrl-calculations:find-raw:3613",
+    "source": "lrsl_driller",
+    "item_type": "numeric",
+    "unit": 1,
+    "lesson": 5,
+    "kc_tags": [],
+    "prompt": "Find the value that corresponds to the given z-score.",
+    "choices": [],
+    "expected": {
+      "x": 100
+    },
+    "seed": 3613,
+    "difficulty_estimate": 0.5,
+    "_raw": {
+      "given": {
+        "zscore": 1,
+        "mean": 75,
+        "sd": 25
+      },
+      "answers": {
+        "x": {
+          "value": 100,
+          "formula": "75 + (1 × 25)",
+          "steps": [
+            "z × σ = 1 × 25 = 25",
+            "x = μ + z × σ = 75 + 25 = 100"
+          ]
+        }
+      },
+      "validation": {
+        "x": {
+          "expected": 100,
+          "tolerance": "tight"
+        }
+      },
+      "graphConfig": {
+        "type": "normal-curve",
+        "mean": 75,
+        "sd": 25,
+        "markedValue": null,
+        "showXUnknown": true,
+        "labels": {
+          "x": "Value"
+        }
+      }
+    }
+  },
+  {
+    "item_id": "DR:lsrl-calculations:find-raw:4613",
+    "source": "lrsl_driller",
+    "item_type": "numeric",
+    "unit": 1,
+    "lesson": 5,
+    "kc_tags": [],
+    "prompt": "Find the value that corresponds to the given z-score.",
+    "choices": [],
+    "expected": {
+      "x": 67.5
+    },
+    "seed": 4613,
+    "difficulty_estimate": 0.5,
+    "_raw": {
+      "given": {
+        "zscore": 0.5,
+        "mean": 60,
+        "sd": 15
+      },
+      "answers": {
+        "x": {
+          "value": 67.5,
+          "formula": "60 + (0.5 × 15)",
+          "steps": [
+            "z × σ = 0.5 × 15 = 7.5",
+            "x = μ + z × σ = 60 + 7.5 = 67.5"
+          ]
+        }
+      },
+      "validation": {
+        "x": {
+          "expected": 67.5,
+          "tolerance": "tight"
+        }
+      },
+      "graphConfig": {
+        "type": "normal-curve",
+        "mean": 60,
+        "sd": 15,
+        "markedValue": null,
+        "showXUnknown": true,
+        "labels": {
+          "x": "Value"
+        }
+      }
+    }
+  },
+  {
+    "item_id": "DR:lsrl-calculations:find-raw:5613",
+    "source": "lrsl_driller",
+    "item_type": "numeric",
+    "unit": 1,
+    "lesson": 5,
+    "kc_tags": [],
+    "prompt": "Find the value that corresponds to the given z-score.",
+    "choices": [],
+    "expected": {
+      "x": 107.5
+    },
+    "seed": 5613,
+    "difficulty_estimate": 0.5,
+    "_raw": {
+      "given": {
+        "zscore": 1.5,
+        "mean": 70,
+        "sd": 25
+      },
+      "answers": {
+        "x": {
+          "value": 107.5,
+          "formula": "70 + (1.5 × 25)",
+          "steps": [
+            "z × σ = 1.5 × 25 = 37.5",
+            "x = μ + z × σ = 70 + 37.5 = 107.5"
+          ]
+        }
+      },
+      "validation": {
+        "x": {
+          "expected": 107.5,
+          "tolerance": "tight"
+        }
+      },
+      "graphConfig": {
+        "type": "normal-curve",
+        "mean": 70,
+        "sd": 25,
+        "markedValue": null,
+        "showXUnknown": true,
+        "labels": {
+          "x": "Value"
+        }
+      }
+    }
+  },
+  {
+    "item_id": "DR:lsrl-calculations:compare-zscores:1058",
+    "source": "lrsl_driller",
+    "item_type": "numeric",
+    "unit": 1,
+    "lesson": 5,
+    "kc_tags": [],
+    "prompt": "Compare these two values from different distributions. Calculate each z-score, then determine which value is more extreme (further from its mean in standard deviation units).",
+    "choices": [],
+    "expected": {
+      "z1": 0.5,
+      "z2": 1,
+      "comparison": "B"
+    },
+    "seed": 1058,
+    "difficulty_estimate": 0.5,
+    "_raw": {
+      "given": {
+        "x1": 70,
+        "mean1": 60,
+        "sd1": 20,
+        "x2": 85,
+        "mean2": 70,
+        "sd2": 15
+      },
+      "answers": {
+        "z1": {
+          "value": 0.5,
+          "formula": "(70 − 60) / 20",
+          "steps": [
+            "x − μ = 70 − 60 = 10",
+            "z = 10 / 20 = 0.5"
+          ]
+        },
+        "z2": {
+          "value": 1,
+          "formula": "(85 − 70) / 15",
+          "steps": [
+            "x − μ = 85 − 70 = 15",
+            "z = 15 / 15 = 1"
+          ]
+        },
+        "comparison": {
+          "value": "B",
+          "explanation": "|z₂| = 1.00 > |z₁| = 0.50, so B is more extreme."
+        }
+      },
+      "validation": {
+        "z1": {
+          "expected": 0.5,
+          "tolerance": "tight"
+        },
+        "z2": {
+          "expected": 1,
+          "tolerance": "tight"
+        },
+        "comparison": {
+          "expected": "B",
+          "type": "exact"
+        }
+      },
+      "graphConfig": {
+        "type": "dual-normal-curve",
+        "distributions": [
+          {
+            "mean": 60,
+            "sd": 20,
+            "markedValue": 70,
+            "label": "Distribution A"
+          },
+          {
+            "mean": 70,
+            "sd": 15,
+            "markedValue": 85,
+            "label": "Distribution B"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "item_id": "DR:lsrl-calculations:compare-zscores:2058",
+    "source": "lrsl_driller",
+    "item_type": "numeric",
+    "unit": 1,
+    "lesson": 5,
+    "kc_tags": [],
+    "prompt": "Compare these two values from different distributions. Calculate each z-score, then determine which value is more extreme (further from its mean in standard deviation units).",
+    "choices": [],
+    "expected": {
+      "z1": -2,
+      "z2": 1.5,
+      "comparison": "A"
+    },
+    "seed": 2058,
+    "difficulty_estimate": 0.5,
+    "_raw": {
+      "given": {
+        "x1": 60,
+        "mean1": 70,
+        "sd1": 5,
+        "x2": 97.5,
+        "mean2": 60,
+        "sd2": 25
+      },
+      "answers": {
+        "z1": {
+          "value": -2,
+          "formula": "(60 − 70) / 5",
+          "steps": [
+            "x − μ = 60 − 70 = -10",
+            "z = -10 / 5 = -2"
+          ]
+        },
+        "z2": {
+          "value": 1.5,
+          "formula": "(97.5 − 60) / 25",
+          "steps": [
+            "x − μ = 97.5 − 60 = 37.5",
+            "z = 37.5 / 25 = 1.5"
+          ]
+        },
+        "comparison": {
+          "value": "A",
+          "explanation": "|z₁| = 2.00 > |z₂| = 1.50, so A is more extreme."
+        }
+      },
+      "validation": {
+        "z1": {
+          "expected": -2,
+          "tolerance": "tight"
+        },
+        "z2": {
+          "expected": 1.5,
+          "tolerance": "tight"
+        },
+        "comparison": {
+          "expected": "A",
+          "type": "exact"
+        }
+      },
+      "graphConfig": {
+        "type": "dual-normal-curve",
+        "distributions": [
+          {
+            "mean": 70,
+            "sd": 5,
+            "markedValue": 60,
+            "label": "Distribution A"
+          },
+          {
+            "mean": 60,
+            "sd": 25,
+            "markedValue": 97.5,
+            "label": "Distribution B"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "item_id": "DR:lsrl-calculations:compare-zscores:3058",
+    "source": "lrsl_driller",
+    "item_type": "numeric",
+    "unit": 1,
+    "lesson": 5,
+    "kc_tags": [],
+    "prompt": "Compare these two values from different distributions. Calculate each z-score, then determine which value is more extreme (further from its mean in standard deviation units).",
+    "choices": [],
+    "expected": {
+      "z1": 2,
+      "z2": -1.5,
+      "comparison": "A"
+    },
+    "seed": 3058,
+    "difficulty_estimate": 0.5,
+    "_raw": {
+      "given": {
+        "x1": 110,
+        "mean1": 80,
+        "sd1": 15,
+        "x2": 52.5,
+        "mean2": 60,
+        "sd2": 5
+      },
+      "answers": {
+        "z1": {
+          "value": 2,
+          "formula": "(110 − 80) / 15",
+          "steps": [
+            "x − μ = 110 − 80 = 30",
+            "z = 30 / 15 = 2"
+          ]
+        },
+        "z2": {
+          "value": -1.5,
+          "formula": "(52.5 − 60) / 5",
+          "steps": [
+            "x − μ = 52.5 − 60 = -7.5",
+            "z = -7.5 / 5 = -1.5"
+          ]
+        },
+        "comparison": {
+          "value": "A",
+          "explanation": "|z₁| = 2.00 > |z₂| = 1.50, so A is more extreme."
+        }
+      },
+      "validation": {
+        "z1": {
+          "expected": 2,
+          "tolerance": "tight"
+        },
+        "z2": {
+          "expected": -1.5,
+          "tolerance": "tight"
+        },
+        "comparison": {
+          "expected": "A",
+          "type": "exact"
+        }
+      },
+      "graphConfig": {
+        "type": "dual-normal-curve",
+        "distributions": [
+          {
+            "mean": 80,
+            "sd": 15,
+            "markedValue": 110,
+            "label": "Distribution A"
+          },
+          {
+            "mean": 60,
+            "sd": 5,
+            "markedValue": 52.5,
+            "label": "Distribution B"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "item_id": "DR:lsrl-calculations:compare-zscores:4058",
+    "source": "lrsl_driller",
+    "item_type": "numeric",
+    "unit": 1,
+    "lesson": 5,
+    "kc_tags": [],
+    "prompt": "Compare these two values from different distributions. Calculate each z-score, then determine which value is more extreme (further from its mean in standard deviation units).",
+    "choices": [],
+    "expected": {
+      "z1": -0.5,
+      "z2": -0.5,
+      "comparison": "same"
+    },
+    "seed": 4058,
+    "difficulty_estimate": 0.5,
+    "_raw": {
+      "given": {
+        "x1": 75,
+        "mean1": 80,
+        "sd1": 10,
+        "x2": 72.5,
+        "mean2": 75,
+        "sd2": 5
+      },
+      "answers": {
+        "z1": {
+          "value": -0.5,
+          "formula": "(75 − 80) / 10",
+          "steps": [
+            "x − μ = 75 − 80 = -5",
+            "z = -5 / 10 = -0.5"
+          ]
+        },
+        "z2": {
+          "value": -0.5,
+          "formula": "(72.5 − 75) / 5",
+          "steps": [
+            "x − μ = 72.5 − 75 = -2.5",
+            "z = -2.5 / 5 = -0.5"
+          ]
+        },
+        "comparison": {
+          "value": "same",
+          "explanation": "Both z-scores have the same absolute value (|-0.5| = |-0.5| ≈ 0.50), so they are equally extreme."
+        }
+      },
+      "validation": {
+        "z1": {
+          "expected": -0.5,
+          "tolerance": "tight"
+        },
+        "z2": {
+          "expected": -0.5,
+          "tolerance": "tight"
+        },
+        "comparison": {
+          "expected": "same",
+          "type": "exact"
+        }
+      },
+      "graphConfig": {
+        "type": "dual-normal-curve",
+        "distributions": [
+          {
+            "mean": 80,
+            "sd": 10,
+            "markedValue": 75,
+            "label": "Distribution A"
+          },
+          {
+            "mean": 75,
+            "sd": 5,
+            "markedValue": 72.5,
+            "label": "Distribution B"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "item_id": "DR:lsrl-calculations:compare-zscores:5058",
+    "source": "lrsl_driller",
+    "item_type": "numeric",
+    "unit": 1,
+    "lesson": 5,
+    "kc_tags": [],
+    "prompt": "Compare these two values from different distributions. Calculate each z-score, then determine which value is more extreme (further from its mean in standard deviation units).",
+    "choices": [],
+    "expected": {
+      "z1": -0.5,
+      "z2": 1,
+      "comparison": "B"
+    },
+    "seed": 5058,
+    "difficulty_estimate": 0.5,
+    "_raw": {
+      "given": {
+        "x1": 65,
+        "mean1": 70,
+        "sd1": 10,
+        "x2": 95,
+        "mean2": 80,
+        "sd2": 15
+      },
+      "answers": {
+        "z1": {
+          "value": -0.5,
+          "formula": "(65 − 70) / 10",
+          "steps": [
+            "x − μ = 65 − 70 = -5",
+            "z = -5 / 10 = -0.5"
+          ]
+        },
+        "z2": {
+          "value": 1,
+          "formula": "(95 − 80) / 15",
+          "steps": [
+            "x − μ = 95 − 80 = 15",
+            "z = 15 / 15 = 1"
+          ]
+        },
+        "comparison": {
+          "value": "B",
+          "explanation": "|z₂| = 1.00 > |z₁| = 0.50, so B is more extreme."
+        }
+      },
+      "validation": {
+        "z1": {
+          "expected": -0.5,
+          "tolerance": "tight"
+        },
+        "z2": {
+          "expected": 1,
+          "tolerance": "tight"
+        },
+        "comparison": {
+          "expected": "B",
+          "type": "exact"
+        }
+      },
+      "graphConfig": {
+        "type": "dual-normal-curve",
+        "distributions": [
+          {
+            "mean": 70,
+            "sd": 10,
+            "markedValue": 65,
+            "label": "Distribution A"
+          },
+          {
+            "mean": 80,
+            "sd": 15,
+            "markedValue": 95,
+            "label": "Distribution B"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "item_id": "DR:lsrl-calculations:find-b:1706",
+    "source": "lrsl_driller",
+    "item_type": "numeric",
+    "unit": 1,
+    "lesson": 5,
+    "kc_tags": [],
+    "prompt": "Given the following summary statistics, calculate the slope (b) of the least-squares regression line.",
+    "choices": [],
+    "expected": {
+      "b": 1.6
+    },
+    "seed": 1706,
+    "difficulty_estimate": 0.5,
+    "_raw": {
+      "given": {
+        "r": 0.8,
+        "sx": 6,
+        "sy": 12
+      },
+      "answers": {
+        "b": {
+          "value": 1.6,
+          "formula": "0.8 × (12 / 6)",
+          "steps": [
+            "sᵧ / sₓ = 12 / 6 = 2",
+            "b = r × (sᵧ / sₓ) = 0.8 × 2 = 1.6"
+          ]
+        }
+      },
+      "validation": {
+        "b": {
+          "expected": 1.6,
+          "tolerance": "tight"
+        }
+      },
+      "graphConfig": {
+        "type": "scatterplot",
+        "points": [
+          {
+            "x": 39.2,
+            "y": 48.3
+          },
+          {
+            "x": 42.8,
+            "y": 46.1
+          },
+          {
+            "x": 46.4,
+            "y": 58.5
+          },
+          {
+            "x": 50,
+            "y": 65.1
+          },
+          {
+            "x": 53.6,
+            "y": 66.1
+          },
+          {
+            "x": 57.2,
+            "y": 71.5
+          },
+          {
+            "x": 60.8,
+            "y": 83
+          }
+        ],
+        "regression": {
+          "a": -20,
+          "b": 1.6,
+          "show": true
+        },
+        "showSlope": false,
+        "showIntercept": false,
+        "xLabel": "x",
+        "yLabel": "y"
+      }
+    }
+  },
+  {
+    "item_id": "DR:lsrl-calculations:find-b:2706",
+    "source": "lrsl_driller",
+    "item_type": "numeric",
+    "unit": 1,
+    "lesson": 5,
+    "kc_tags": [],
+    "prompt": "Given the following summary statistics, calculate the slope (b) of the least-squares regression line.",
+    "choices": [],
+    "expected": {
+      "b": 0.45
+    },
+    "seed": 2706,
+    "difficulty_estimate": 0.5,
+    "_raw": {
+      "given": {
+        "r": 0.9,
+        "sx": 20,
+        "sy": 10
+      },
+      "answers": {
+        "b": {
+          "value": 0.45,
+          "formula": "0.9 × (10 / 20)",
+          "steps": [
+            "sᵧ / sₓ = 10 / 20 = 0.5",
+            "b = r × (sᵧ / sₓ) = 0.9 × 0.5 = 0.45"
+          ]
+        }
+      },
+      "validation": {
+        "b": {
+          "expected": 0.45,
+          "tolerance": "tight"
+        }
+      },
+      "graphConfig": {
+        "type": "scatterplot",
+        "points": [
+          {
+            "x": 14,
+            "y": 44.1
+          },
+          {
+            "x": 26,
+            "y": 47.5
+          },
+          {
+            "x": 38,
+            "y": 51.9
+          },
+          {
+            "x": 50,
+            "y": 62.3
+          },
+          {
+            "x": 62,
+            "y": 62.2
+          },
+          {
+            "x": 74,
+            "y": 70.7
+          },
+          {
+            "x": 86,
+            "y": 78.1
+          }
+        ],
+        "regression": {
+          "a": 37.5,
+          "b": 0.45,
+          "show": true
+        },
+        "showSlope": false,
+        "showIntercept": false,
+        "xLabel": "x",
+        "yLabel": "y"
+      }
+    }
+  },
+  {
+    "item_id": "DR:lsrl-calculations:find-b:3706",
+    "source": "lrsl_driller",
+    "item_type": "numeric",
+    "unit": 1,
+    "lesson": 5,
+    "kc_tags": [],
+    "prompt": "Given the following summary statistics, calculate the slope (b) of the least-squares regression line.",
+    "choices": [],
+    "expected": {
+      "b": 1.8
+    },
+    "seed": 3706,
+    "difficulty_estimate": 0.5,
+    "_raw": {
+      "given": {
+        "r": 0.6,
+        "sx": 10,
+        "sy": 30
+      },
+      "answers": {
+        "b": {
+          "value": 1.8,
+          "formula": "0.6 × (30 / 10)",
+          "steps": [
+            "sᵧ / sₓ = 30 / 10 = 3",
+            "b = r × (sᵧ / sₓ) = 0.6 × 3 = 1.8"
+          ]
+        }
+      },
+      "validation": {
+        "b": {
+          "expected": 1.8,
+          "tolerance": "tight"
+        }
+      },
+      "graphConfig": {
+        "type": "scatterplot",
+        "points": [
+          {
+            "x": 32,
+            "y": 25
+          },
+          {
+            "x": 38,
+            "y": 38
+          },
+          {
+            "x": 44,
+            "y": 39.8
+          },
+          {
+            "x": 50,
+            "y": 59.7
+          },
+          {
+            "x": 56,
+            "y": 69.2
+          },
+          {
+            "x": 62,
+            "y": 88.2
+          },
+          {
+            "x": 68,
+            "y": 85.4
+          }
+        ],
+        "regression": {
+          "a": -30,
+          "b": 1.8,
+          "show": true
+        },
+        "showSlope": false,
+        "showIntercept": false,
+        "xLabel": "x",
+        "yLabel": "y"
+      }
+    }
+  },
+  {
+    "item_id": "DR:lsrl-calculations:find-b:4706",
+    "source": "lrsl_driller",
+    "item_type": "numeric",
+    "unit": 1,
+    "lesson": 5,
+    "kc_tags": [],
+    "prompt": "Given the following summary statistics, calculate the slope (b) of the least-squares regression line.",
+    "choices": [],
+    "expected": {
+      "b": 1.2
+    },
+    "seed": 4706,
+    "difficulty_estimate": 0.5,
+    "_raw": {
+      "given": {
+        "r": 0.6,
+        "sx": 8,
+        "sy": 16
+      },
+      "answers": {
+        "b": {
+          "value": 1.2,
+          "formula": "0.6 × (16 / 8)",
+          "steps": [
+            "sᵧ / sₓ = 16 / 8 = 2",
+            "b = r × (sᵧ / sₓ) = 0.6 × 2 = 1.2"
+          ]
+        }
+      },
+      "validation": {
+        "b": {
+          "expected": 1.2,
+          "tolerance": "tight"
+        }
+      },
+      "graphConfig": {
+        "type": "scatterplot",
+        "points": [
+          {
+            "x": 35.6,
+            "y": 44.3
+          },
+          {
+            "x": 40.4,
+            "y": 39.1
+          },
+          {
+            "x": 45.2,
+            "y": 46.9
+          },
+          {
+            "x": 50,
+            "y": 69.5
+          },
+          {
+            "x": 54.8,
+            "y": 59.2
+          },
+          {
+            "x": 59.6,
+            "y": 63.8
+          },
+          {
+            "x": 64.4,
+            "y": 75.5
+          }
+        ],
+        "regression": {
+          "a": 0,
+          "b": 1.2,
+          "show": true
+        },
+        "showSlope": false,
+        "showIntercept": false,
+        "xLabel": "x",
+        "yLabel": "y"
+      }
+    }
+  },
+  {
+    "item_id": "DR:lsrl-calculations:find-b:5706",
+    "source": "lrsl_driller",
+    "item_type": "numeric",
+    "unit": 1,
+    "lesson": 5,
+    "kc_tags": [],
+    "prompt": "Given the following summary statistics, calculate the slope (b) of the least-squares regression line.",
+    "choices": [],
+    "expected": {
+      "b": -1.8
+    },
+    "seed": 5706,
+    "difficulty_estimate": 0.5,
+    "_raw": {
+      "given": {
+        "r": -0.9,
+        "sx": 5,
+        "sy": 10
+      },
+      "answers": {
+        "b": {
+          "value": -1.8,
+          "formula": "-0.9 × (10 / 5)",
+          "steps": [
+            "sᵧ / sₓ = 10 / 5 = 2",
+            "b = r × (sᵧ / sₓ) = -0.9 × 2 = -1.8"
+          ]
+        }
+      },
+      "validation": {
+        "b": {
+          "expected": -1.8,
+          "tolerance": "tight"
+        }
+      },
+      "graphConfig": {
+        "type": "scatterplot",
+        "points": [
+          {
+            "x": 41,
+            "y": 73.5
+          },
+          {
+            "x": 44,
+            "y": 72.2
+          },
+          {
+            "x": 47,
+            "y": 68.6
+          },
+          {
+            "x": 50,
+            "y": 59.6
+          },
+          {
+            "x": 53,
+            "y": 57.3
+          },
+          {
+            "x": 56,
+            "y": 51
+          },
+          {
+            "x": 59,
+            "y": 45.6
+          }
+        ],
+        "regression": {
+          "a": 150,
+          "b": -1.8,
+          "show": true
+        },
+        "showSlope": false,
+        "showIntercept": false,
+        "xLabel": "x",
+        "yLabel": "y"
+      }
+    }
+  },
+  {
+    "item_id": "DR:lsrl-calculations:find-a:1491",
+    "source": "lrsl_driller",
+    "item_type": "numeric",
+    "unit": 1,
+    "lesson": 5,
+    "kc_tags": [],
+    "prompt": "Given the following summary statistics, calculate the y-intercept (a) of the least-squares regression line.",
+    "choices": [],
+    "expected": {
+      "a": 50
+    },
+    "seed": 1491,
+    "difficulty_estimate": 0.5,
+    "_raw": {
+      "given": {
+        "xBar": 25,
+        "yBar": 100,
+        "b": 2
+      },
+      "answers": {
+        "a": {
+          "value": 50,
+          "formula": "100 − (2 × 25)",
+          "steps": [
+            "b × x̄ = 2 × 25 = 50",
+            "a = ȳ − b × x̄ = 100 − 50 = 50"
+          ]
+        }
+      },
+      "validation": {
+        "a": {
+          "expected": 50,
+          "tolerance": "tight"
+        }
+      },
+      "graphConfig": {
+        "type": "scatterplot",
+        "points": [
+          {
+            "x": 7,
+            "y": 68.7
+          },
+          {
+            "x": 13,
+            "y": 84.1
+          },
+          {
+            "x": 19,
+            "y": 97.4
+          },
+          {
+            "x": 25,
+            "y": 97.9
+          },
+          {
+            "x": 31,
+            "y": 103.9
+          },
+          {
+            "x": 37,
+            "y": 115.8
+          },
+          {
+            "x": 43,
+            "y": 121.8
+          }
+        ],
+        "regression": {
+          "a": 50,
+          "b": 2,
+          "show": true
+        },
+        "centroid": {
+          "x": 25,
+          "y": 100,
+          "show": true,
+          "label": "(x̄, ȳ)"
+        },
+        "showSlope": false,
+        "showIntercept": false,
+        "xLabel": "x",
+        "yLabel": "y"
+      }
+    }
+  },
+  {
+    "item_id": "DR:lsrl-calculations:find-a:2491",
+    "source": "lrsl_driller",
+    "item_type": "numeric",
+    "unit": 1,
+    "lesson": 5,
+    "kc_tags": [],
+    "prompt": "Given the following summary statistics, calculate the y-intercept (a) of the least-squares regression line.",
+    "choices": [],
+    "expected": {
+      "a": 90
+    },
+    "seed": 2491,
+    "difficulty_estimate": 0.5,
+    "_raw": {
+      "given": {
+        "xBar": 20,
+        "yBar": 60,
+        "b": -1.5
+      },
+      "answers": {
+        "a": {
+          "value": 90,
+          "formula": "60 − (-1.5 × 20)",
+          "steps": [
+            "b × x̄ = -1.5 × 20 = -30",
+            "a = ȳ − b × x̄ = 60 − -30 = 90"
+          ],
+          "note": "Watch out: subtracting a negative! 60 − (-30) = 60 + 30 = 90"
+        }
+      },
+      "validation": {
+        "a": {
+          "expected": 90,
+          "tolerance": "tight"
+        }
+      },
+      "graphConfig": {
+        "type": "scatterplot",
+        "points": [
+          {
+            "x": 2,
+            "y": 85.2
+          },
+          {
+            "x": 8,
+            "y": 71.4
+          },
+          {
+            "x": 14,
+            "y": 65.9
+          },
+          {
+            "x": 20,
+            "y": 64.3
+          },
+          {
+            "x": 26,
+            "y": 57.4
+          },
+          {
+            "x": 32,
+            "y": 47.6
+          },
+          {
+            "x": 38,
+            "y": 41.8
+          }
+        ],
+        "regression": {
+          "a": 90,
+          "b": -1.5,
+          "show": true
+        },
+        "centroid": {
+          "x": 20,
+          "y": 60,
+          "show": true,
+          "label": "(x̄, ȳ)"
+        },
+        "showSlope": false,
+        "showIntercept": false,
+        "xLabel": "x",
+        "yLabel": "y"
+      }
+    }
+  },
+  {
+    "item_id": "DR:lsrl-calculations:find-a:3491",
+    "source": "lrsl_driller",
+    "item_type": "numeric",
+    "unit": 1,
+    "lesson": 5,
+    "kc_tags": [],
+    "prompt": "Given the following summary statistics, calculate the y-intercept (a) of the least-squares regression line.",
+    "choices": [],
+    "expected": {
+      "a": 50
+    },
+    "seed": 3491,
+    "difficulty_estimate": 0.5,
+    "_raw": {
+      "given": {
+        "xBar": 20,
+        "yBar": 80,
+        "b": 1.5
+      },
+      "answers": {
+        "a": {
+          "value": 50,
+          "formula": "80 − (1.5 × 20)",
+          "steps": [
+            "b × x̄ = 1.5 × 20 = 30",
+            "a = ȳ − b × x̄ = 80 − 30 = 50"
+          ]
+        }
+      },
+      "validation": {
+        "a": {
+          "expected": 50,
+          "tolerance": "tight"
+        }
+      },
+      "graphConfig": {
+        "type": "scatterplot",
+        "points": [
+          {
+            "x": 2,
+            "y": 64
+          },
+          {
+            "x": 8,
+            "y": 69.6
+          },
+          {
+            "x": 14,
+            "y": 70.7
+          },
+          {
+            "x": 20,
+            "y": 78.6
+          },
+          {
+            "x": 26,
+            "y": 88.9
+          },
+          {
+            "x": 32,
+            "y": 88
+          },
+          {
+            "x": 38,
+            "y": 96.8
+          }
+        ],
+        "regression": {
+          "a": 50,
+          "b": 1.5,
+          "show": true
+        },
+        "centroid": {
+          "x": 20,
+          "y": 80,
+          "show": true,
+          "label": "(x̄, ȳ)"
+        },
+        "showSlope": false,
+        "showIntercept": false,
+        "xLabel": "x",
+        "yLabel": "y"
+      }
+    }
+  },
+  {
+    "item_id": "DR:lsrl-calculations:find-a:4491",
+    "source": "lrsl_driller",
+    "item_type": "numeric",
+    "unit": 1,
+    "lesson": 5,
+    "kc_tags": [],
+    "prompt": "Given the following summary statistics, calculate the y-intercept (a) of the least-squares regression line.",
+    "choices": [],
+    "expected": {
+      "a": 60
+    },
+    "seed": 4491,
+    "difficulty_estimate": 0.5,
+    "_raw": {
+      "given": {
+        "xBar": 20,
+        "yBar": 90,
+        "b": 1.5
+      },
+      "answers": {
+        "a": {
+          "value": 60,
+          "formula": "90 − (1.5 × 20)",
+          "steps": [
+            "b × x̄ = 1.5 × 20 = 30",
+            "a = ȳ − b × x̄ = 90 − 30 = 60"
+          ]
+        }
+      },
+      "validation": {
+        "a": {
+          "expected": 60,
+          "tolerance": "tight"
+        }
+      },
+      "graphConfig": {
+        "type": "scatterplot",
+        "points": [
+          {
+            "x": 2,
+            "y": 64.8
+          },
+          {
+            "x": 8,
+            "y": 82.7
+          },
+          {
+            "x": 14,
+            "y": 77.3
+          },
+          {
+            "x": 20,
+            "y": 95.9
+          },
+          {
+            "x": 26,
+            "y": 100.3
+          },
+          {
+            "x": 32,
+            "y": 104.1
+          },
+          {
+            "x": 38,
+            "y": 107.7
+          }
+        ],
+        "regression": {
+          "a": 60,
+          "b": 1.5,
+          "show": true
+        },
+        "centroid": {
+          "x": 20,
+          "y": 90,
+          "show": true,
+          "label": "(x̄, ȳ)"
+        },
+        "showSlope": false,
+        "showIntercept": false,
+        "xLabel": "x",
+        "yLabel": "y"
+      }
+    }
+  },
+  {
+    "item_id": "DR:lsrl-calculations:find-a:5491",
+    "source": "lrsl_driller",
+    "item_type": "numeric",
+    "unit": 1,
+    "lesson": 5,
+    "kc_tags": [],
+    "prompt": "Given the following summary statistics, calculate the y-intercept (a) of the least-squares regression line.",
+    "choices": [],
+    "expected": {
+      "a": 40
+    },
+    "seed": 5491,
+    "difficulty_estimate": 0.5,
+    "_raw": {
+      "given": {
+        "xBar": 15,
+        "yBar": 70,
+        "b": 2
+      },
+      "answers": {
+        "a": {
+          "value": 40,
+          "formula": "70 − (2 × 15)",
+          "steps": [
+            "b × x̄ = 2 × 15 = 30",
+            "a = ȳ − b × x̄ = 70 − 30 = 40"
+          ]
+        }
+      },
+      "validation": {
+        "a": {
+          "expected": 40,
+          "tolerance": "tight"
+        }
+      },
+      "graphConfig": {
+        "type": "scatterplot",
+        "points": [
+          {
+            "x": -3,
+            "y": 34.2
+          },
+          {
+            "x": 3,
+            "y": 55.3
+          },
+          {
+            "x": 9,
+            "y": 57.3
+          },
+          {
+            "x": 15,
+            "y": 68.4
+          },
+          {
+            "x": 21,
+            "y": 77.2
+          },
+          {
+            "x": 27,
+            "y": 86.4
+          },
+          {
+            "x": 33,
+            "y": 100.4
+          }
+        ],
+        "regression": {
+          "a": 40,
+          "b": 2,
+          "show": true
+        },
+        "centroid": {
+          "x": 15,
+          "y": 70,
+          "show": true,
+          "label": "(x̄, ȳ)"
+        },
+        "showSlope": false,
+        "showIntercept": false,
+        "xLabel": "x",
+        "yLabel": "y"
+      }
+    }
+  },
+  {
+    "item_id": "DR:lsrl-calculations:full-lsrl:1603",
+    "source": "lrsl_driller",
+    "item_type": "numeric",
+    "unit": 1,
+    "lesson": 5,
+    "kc_tags": [],
+    "prompt": "Given the following summary statistics, find the complete LSRL equation by calculating both the slope (b) and y-intercept (a).",
+    "choices": [],
+    "expected": {
+      "b": 1.4,
+      "a": 36
+    },
+    "seed": 1603,
+    "difficulty_estimate": 0.5,
+    "_raw": {
+      "given": {
+        "r": 0.7,
+        "sx": 10,
+        "sy": 20,
+        "xBar": 10,
+        "yBar": 50
+      },
+      "answers": {
+        "b": {
+          "value": 1.4,
+          "formula": "0.7 × (20 / 10)",
+          "steps": [
+            "sᵧ / sₓ = 20 / 10 = 2",
+            "b = r × (sᵧ / sₓ) = 0.7 × 2 = 1.4"
+          ]
+        },
+        "a": {
+          "value": 36,
+          "formula": "50 − (1.4 × 10)",
+          "steps": [
+            "b × x̄ = 1.4 × 10 = 14",
+            "a = ȳ − b × x̄ = 50 − 14 = 36"
+          ]
+        },
+        "equation": "ŷ = 36 + 1.4x"
+      },
+      "validation": {
+        "b": {
+          "expected": 1.4,
+          "tolerance": "tight"
+        },
+        "a": {
+          "expected": 36,
+          "tolerance": "standard"
+        }
+      },
+      "graphConfig": null
+    }
+  },
+  {
+    "item_id": "DR:lsrl-calculations:full-lsrl:2603",
+    "source": "lrsl_driller",
+    "item_type": "numeric",
+    "unit": 1,
+    "lesson": 5,
+    "kc_tags": [],
+    "prompt": "Given the following summary statistics, find the complete LSRL equation by calculating both the slope (b) and y-intercept (a).",
+    "choices": [],
+    "expected": {
+      "b": -1.6,
+      "a": 66
+    },
+    "seed": 2603,
+    "difficulty_estimate": 0.5,
+    "_raw": {
+      "given": {
+        "r": -0.8,
+        "sx": 5,
+        "sy": 10,
+        "xBar": 10,
+        "yBar": 50
+      },
+      "answers": {
+        "b": {
+          "value": -1.6,
+          "formula": "-0.8 × (10 / 5)",
+          "steps": [
+            "sᵧ / sₓ = 10 / 5 = 2",
+            "b = r × (sᵧ / sₓ) = -0.8 × 2 = -1.6"
+          ]
+        },
+        "a": {
+          "value": 66,
+          "formula": "50 − (-1.6 × 10)",
+          "steps": [
+            "b × x̄ = -1.6 × 10 = -16",
+            "a = ȳ − b × x̄ = 50 − -16 = 66"
+          ]
+        },
+        "equation": "ŷ = 66 + -1.6x"
+      },
+      "validation": {
+        "b": {
+          "expected": -1.6,
+          "tolerance": "tight"
+        },
+        "a": {
+          "expected": 66,
+          "tolerance": "standard"
+        }
+      },
+      "graphConfig": null
+    }
+  },
+  {
+    "item_id": "DR:lsrl-calculations:full-lsrl:3603",
+    "source": "lrsl_driller",
+    "item_type": "numeric",
+    "unit": 1,
+    "lesson": 5,
+    "kc_tags": [],
+    "prompt": "Given the following summary statistics, find the complete LSRL equation by calculating both the slope (b) and y-intercept (a).",
+    "choices": [],
+    "expected": {
+      "b": 1,
+      "a": 40
+    },
+    "seed": 3603,
+    "difficulty_estimate": 0.5,
+    "_raw": {
+      "given": {
+        "r": 0.5,
+        "sx": 10,
+        "sy": 20,
+        "xBar": 20,
+        "yBar": 60
+      },
+      "answers": {
+        "b": {
+          "value": 1,
+          "formula": "0.5 × (20 / 10)",
+          "steps": [
+            "sᵧ / sₓ = 20 / 10 = 2",
+            "b = r × (sᵧ / sₓ) = 0.5 × 2 = 1"
+          ]
+        },
+        "a": {
+          "value": 40,
+          "formula": "60 − (1 × 20)",
+          "steps": [
+            "b × x̄ = 1 × 20 = 20",
+            "a = ȳ − b × x̄ = 60 − 20 = 40"
+          ]
+        },
+        "equation": "ŷ = 40 + 1x"
+      },
+      "validation": {
+        "b": {
+          "expected": 1,
+          "tolerance": "tight"
+        },
+        "a": {
+          "expected": 40,
+          "tolerance": "standard"
+        }
+      },
+      "graphConfig": null
+    }
+  },
+  {
+    "item_id": "DR:lsrl-calculations:full-lsrl:4603",
+    "source": "lrsl_driller",
+    "item_type": "numeric",
+    "unit": 1,
+    "lesson": 5,
+    "kc_tags": [],
+    "prompt": "Given the following summary statistics, find the complete LSRL equation by calculating both the slope (b) and y-intercept (a).",
+    "choices": [],
+    "expected": {
+      "b": 1.2,
+      "a": 28
+    },
+    "seed": 4603,
+    "difficulty_estimate": 0.5,
+    "_raw": {
+      "given": {
+        "r": 0.8,
+        "sx": 10,
+        "sy": 15,
+        "xBar": 10,
+        "yBar": 40
+      },
+      "answers": {
+        "b": {
+          "value": 1.2,
+          "formula": "0.8 × (15 / 10)",
+          "steps": [
+            "sᵧ / sₓ = 15 / 10 = 1.5",
+            "b = r × (sᵧ / sₓ) = 0.8 × 1.5 = 1.2"
+          ]
+        },
+        "a": {
+          "value": 28,
+          "formula": "40 − (1.2 × 10)",
+          "steps": [
+            "b × x̄ = 1.2 × 10 = 12",
+            "a = ȳ − b × x̄ = 40 − 12 = 28"
+          ]
+        },
+        "equation": "ŷ = 28 + 1.2x"
+      },
+      "validation": {
+        "b": {
+          "expected": 1.2,
+          "tolerance": "tight"
+        },
+        "a": {
+          "expected": 28,
+          "tolerance": "standard"
+        }
+      },
+      "graphConfig": null
+    }
+  },
+  {
+    "item_id": "DR:lsrl-calculations:full-lsrl:5603",
+    "source": "lrsl_driller",
+    "item_type": "numeric",
+    "unit": 1,
+    "lesson": 5,
+    "kc_tags": [],
+    "prompt": "Given the following summary statistics, find the complete LSRL equation by calculating both the slope (b) and y-intercept (a).",
+    "choices": [],
+    "expected": {
+      "b": -1,
+      "a": 100
+    },
+    "seed": 5603,
+    "difficulty_estimate": 0.5,
+    "_raw": {
+      "given": {
+        "r": -0.5,
+        "sx": 10,
+        "sy": 20,
+        "xBar": 20,
+        "yBar": 80
+      },
+      "answers": {
+        "b": {
+          "value": -1,
+          "formula": "-0.5 × (20 / 10)",
+          "steps": [
+            "sᵧ / sₓ = 20 / 10 = 2",
+            "b = r × (sᵧ / sₓ) = -0.5 × 2 = -1"
+          ]
+        },
+        "a": {
+          "value": 100,
+          "formula": "80 − (-1 × 20)",
+          "steps": [
+            "b × x̄ = -1 × 20 = -20",
+            "a = ȳ − b × x̄ = 80 − -20 = 100"
+          ]
+        },
+        "equation": "ŷ = 100 + -1x"
+      },
+      "validation": {
+        "b": {
+          "expected": -1,
+          "tolerance": "tight"
+        },
+        "a": {
+          "expected": 100,
+          "tolerance": "standard"
+        }
+      },
+      "graphConfig": null
+    }
+  },
+  {
+    "item_id": "DR:lsrl-calculations:std-dev:1905",
+    "source": "lrsl_driller",
+    "item_type": "numeric",
+    "unit": 1,
+    "lesson": 5,
+    "kc_tags": [],
+    "prompt": "Calculate the sample standard deviation step-by-step.",
+    "choices": [],
+    "expected": {
+      "mean": 10,
+      "deviations": "-3, 0, 3",
+      "deviationsSquared": "9, 0, 9",
+      "sumSquaredDev": 18,
+      "df": 2,
+      "variance": 9,
+      "stdDev": 3
+    },
+    "seed": 1905,
+    "difficulty_estimate": 0.5,
+    "_raw": {
+      "given": {
+        "dataset": [
+          7,
+          10,
+          13
+        ],
+        "n": 3
+      },
+      "answers": {
+        "mean": {
+          "value": 10,
+          "formula": "(7 + 10 + 13) / 3 = 30 / 3 = 10"
+        },
+        "deviations": {
+          "value": "-3, 0, 3",
+          "display": "-3, 0, 3",
+          "explanation": "Subtract mean from each: 7 - 10 = -3, 10 - 10 = 0, 13 - 10 = 3"
+        },
+        "deviationsSquared": {
+          "value": "9, 0, 9",
+          "display": "9, 0, 9",
+          "explanation": "Square each deviation: -3² = 9, 0² = 0, 3² = 9"
+        },
+        "sumSquaredDev": {
+          "value": 18,
+          "formula": "9 + 0 + 9 = 18"
+        },
+        "df": {
+          "value": 2,
+          "formula": "n - 1 = 3 - 1 = 2"
+        },
+        "variance": {
+          "value": 9,
+          "formula": "18 / 2 = 9"
+        },
+        "stdDev": {
+          "value": 3,
+          "formula": "√9 = 3"
+        }
+      },
+      "validation": {
+        "mean": {
+          "expected": 10,
+          "tolerance": "tight"
+        },
+        "deviations": {
+          "expected": "-3, 0, 3",
+          "type": "list"
+        },
+        "deviationsSquared": {
+          "expected": "9, 0, 9",
+          "type": "list"
+        },
+        "sumSquaredDev": {
+          "expected": 18,
+          "tolerance": "tight"
+        },
+        "df": {
+          "expected": 2,
+          "tolerance": "tight"
+        },
+        "variance": {
+          "expected": 9,
+          "tolerance": "standard"
+        },
+        "stdDev": {
+          "expected": 3,
+          "tolerance": "standard"
+        }
+      },
+      "graphConfig": null
+    }
+  },
+  {
+    "item_id": "DR:lsrl-calculations:std-dev:2905",
+    "source": "lrsl_driller",
+    "item_type": "numeric",
+    "unit": 1,
+    "lesson": 5,
+    "kc_tags": [],
+    "prompt": "Calculate the sample standard deviation step-by-step.",
+    "choices": [],
+    "expected": {
+      "mean": 5,
+      "deviations": "-2, 0, 2",
+      "deviationsSquared": "4, 0, 4",
+      "sumSquaredDev": 8,
+      "df": 2,
+      "variance": 4,
+      "stdDev": 2
+    },
+    "seed": 2905,
+    "difficulty_estimate": 0.5,
+    "_raw": {
+      "given": {
+        "dataset": [
+          3,
+          5,
+          7
+        ],
+        "n": 3
+      },
+      "answers": {
+        "mean": {
+          "value": 5,
+          "formula": "(3 + 5 + 7) / 3 = 15 / 3 = 5"
+        },
+        "deviations": {
+          "value": "-2, 0, 2",
+          "display": "-2, 0, 2",
+          "explanation": "Subtract mean from each: 3 - 5 = -2, 5 - 5 = 0, 7 - 5 = 2"
+        },
+        "deviationsSquared": {
+          "value": "4, 0, 4",
+          "display": "4, 0, 4",
+          "explanation": "Square each deviation: -2² = 4, 0² = 0, 2² = 4"
+        },
+        "sumSquaredDev": {
+          "value": 8,
+          "formula": "4 + 0 + 4 = 8"
+        },
+        "df": {
+          "value": 2,
+          "formula": "n - 1 = 3 - 1 = 2"
+        },
+        "variance": {
+          "value": 4,
+          "formula": "8 / 2 = 4"
+        },
+        "stdDev": {
+          "value": 2,
+          "formula": "√4 = 2"
+        }
+      },
+      "validation": {
+        "mean": {
+          "expected": 5,
+          "tolerance": "tight"
+        },
+        "deviations": {
+          "expected": "-2, 0, 2",
+          "type": "list"
+        },
+        "deviationsSquared": {
+          "expected": "4, 0, 4",
+          "type": "list"
+        },
+        "sumSquaredDev": {
+          "expected": 8,
+          "tolerance": "tight"
+        },
+        "df": {
+          "expected": 2,
+          "tolerance": "tight"
+        },
+        "variance": {
+          "expected": 4,
+          "tolerance": "standard"
+        },
+        "stdDev": {
+          "expected": 2,
+          "tolerance": "standard"
+        }
+      },
+      "graphConfig": null
+    }
+  },
+  {
+    "item_id": "DR:lsrl-calculations:std-dev:3905",
+    "source": "lrsl_driller",
+    "item_type": "numeric",
+    "unit": 1,
+    "lesson": 5,
+    "kc_tags": [],
+    "prompt": "Calculate the sample standard deviation step-by-step.",
+    "choices": [],
+    "expected": {
+      "mean": 5,
+      "deviations": "-3, -1, 1, 3",
+      "deviationsSquared": "9, 1, 1, 9",
+      "sumSquaredDev": 20,
+      "df": 3,
+      "variance": 6.67,
+      "stdDev": 2.58
+    },
+    "seed": 3905,
+    "difficulty_estimate": 0.5,
+    "_raw": {
+      "given": {
+        "dataset": [
+          2,
+          4,
+          6,
+          8
+        ],
+        "n": 4
+      },
+      "answers": {
+        "mean": {
+          "value": 5,
+          "formula": "(2 + 4 + 6 + 8) / 4 = 20 / 4 = 5"
+        },
+        "deviations": {
+          "value": "-3, -1, 1, 3",
+          "display": "-3, -1, 1, 3",
+          "explanation": "Subtract mean from each: 2 - 5 = -3, 4 - 5 = -1, 6 - 5 = 1, 8 - 5 = 3"
+        },
+        "deviationsSquared": {
+          "value": "9, 1, 1, 9",
+          "display": "9, 1, 1, 9",
+          "explanation": "Square each deviation: -3² = 9, -1² = 1, 1² = 1, 3² = 9"
+        },
+        "sumSquaredDev": {
+          "value": 20,
+          "formula": "9 + 1 + 1 + 9 = 20"
+        },
+        "df": {
+          "value": 3,
+          "formula": "n - 1 = 4 - 1 = 3"
+        },
+        "variance": {
+          "value": 6.67,
+          "formula": "20 / 3 = 6.67"
+        },
+        "stdDev": {
+          "value": 2.58,
+          "formula": "√6.67 = 2.58"
+        }
+      },
+      "validation": {
+        "mean": {
+          "expected": 5,
+          "tolerance": "tight"
+        },
+        "deviations": {
+          "expected": "-3, -1, 1, 3",
+          "type": "list"
+        },
+        "deviationsSquared": {
+          "expected": "9, 1, 1, 9",
+          "type": "list"
+        },
+        "sumSquaredDev": {
+          "expected": 20,
+          "tolerance": "tight"
+        },
+        "df": {
+          "expected": 3,
+          "tolerance": "tight"
+        },
+        "variance": {
+          "expected": 6.67,
+          "tolerance": "standard"
+        },
+        "stdDev": {
+          "expected": 2.58,
+          "tolerance": "standard"
+        }
+      },
+      "graphConfig": null
+    }
+  },
+  {
+    "item_id": "DR:lsrl-calculations:std-dev:4905",
+    "source": "lrsl_driller",
+    "item_type": "numeric",
+    "unit": 1,
+    "lesson": 5,
+    "kc_tags": [],
+    "prompt": "Calculate the sample standard deviation step-by-step.",
+    "choices": [],
+    "expected": {
+      "mean": 4,
+      "deviations": "-3, 0, 3",
+      "deviationsSquared": "9, 0, 9",
+      "sumSquaredDev": 18,
+      "df": 2,
+      "variance": 9,
+      "stdDev": 3
+    },
+    "seed": 4905,
+    "difficulty_estimate": 0.5,
+    "_raw": {
+      "given": {
+        "dataset": [
+          1,
+          4,
+          7
+        ],
+        "n": 3
+      },
+      "answers": {
+        "mean": {
+          "value": 4,
+          "formula": "(1 + 4 + 7) / 3 = 12 / 3 = 4"
+        },
+        "deviations": {
+          "value": "-3, 0, 3",
+          "display": "-3, 0, 3",
+          "explanation": "Subtract mean from each: 1 - 4 = -3, 4 - 4 = 0, 7 - 4 = 3"
+        },
+        "deviationsSquared": {
+          "value": "9, 0, 9",
+          "display": "9, 0, 9",
+          "explanation": "Square each deviation: -3² = 9, 0² = 0, 3² = 9"
+        },
+        "sumSquaredDev": {
+          "value": 18,
+          "formula": "9 + 0 + 9 = 18"
+        },
+        "df": {
+          "value": 2,
+          "formula": "n - 1 = 3 - 1 = 2"
+        },
+        "variance": {
+          "value": 9,
+          "formula": "18 / 2 = 9"
+        },
+        "stdDev": {
+          "value": 3,
+          "formula": "√9 = 3"
+        }
+      },
+      "validation": {
+        "mean": {
+          "expected": 4,
+          "tolerance": "tight"
+        },
+        "deviations": {
+          "expected": "-3, 0, 3",
+          "type": "list"
+        },
+        "deviationsSquared": {
+          "expected": "9, 0, 9",
+          "type": "list"
+        },
+        "sumSquaredDev": {
+          "expected": 18,
+          "tolerance": "tight"
+        },
+        "df": {
+          "expected": 2,
+          "tolerance": "tight"
+        },
+        "variance": {
+          "expected": 9,
+          "tolerance": "standard"
+        },
+        "stdDev": {
+          "expected": 3,
+          "tolerance": "standard"
+        }
+      },
+      "graphConfig": null
+    }
+  },
+  {
+    "item_id": "DR:lsrl-calculations:std-dev:5905",
+    "source": "lrsl_driller",
+    "item_type": "numeric",
+    "unit": 1,
+    "lesson": 5,
+    "kc_tags": [],
+    "prompt": "Calculate the sample standard deviation step-by-step.",
+    "choices": [],
+    "expected": {
+      "mean": 10,
+      "deviations": "-3, 0, 3",
+      "deviationsSquared": "9, 0, 9",
+      "sumSquaredDev": 18,
+      "df": 2,
+      "variance": 9,
+      "stdDev": 3
+    },
+    "seed": 5905,
+    "difficulty_estimate": 0.5,
+    "_raw": {
+      "given": {
+        "dataset": [
+          7,
+          10,
+          13
+        ],
+        "n": 3
+      },
+      "answers": {
+        "mean": {
+          "value": 10,
+          "formula": "(7 + 10 + 13) / 3 = 30 / 3 = 10"
+        },
+        "deviations": {
+          "value": "-3, 0, 3",
+          "display": "-3, 0, 3",
+          "explanation": "Subtract mean from each: 7 - 10 = -3, 10 - 10 = 0, 13 - 10 = 3"
+        },
+        "deviationsSquared": {
+          "value": "9, 0, 9",
+          "display": "9, 0, 9",
+          "explanation": "Square each deviation: -3² = 9, 0² = 0, 3² = 9"
+        },
+        "sumSquaredDev": {
+          "value": 18,
+          "formula": "9 + 0 + 9 = 18"
+        },
+        "df": {
+          "value": 2,
+          "formula": "n - 1 = 3 - 1 = 2"
+        },
+        "variance": {
+          "value": 9,
+          "formula": "18 / 2 = 9"
+        },
+        "stdDev": {
+          "value": 3,
+          "formula": "√9 = 3"
+        }
+      },
+      "validation": {
+        "mean": {
+          "expected": 10,
+          "tolerance": "tight"
+        },
+        "deviations": {
+          "expected": "-3, 0, 3",
+          "type": "list"
+        },
+        "deviationsSquared": {
+          "expected": "9, 0, 9",
+          "type": "list"
+        },
+        "sumSquaredDev": {
+          "expected": 18,
+          "tolerance": "tight"
+        },
+        "df": {
+          "expected": 2,
+          "tolerance": "tight"
+        },
+        "variance": {
+          "expected": 9,
+          "tolerance": "standard"
+        },
+        "stdDev": {
+          "expected": 3,
+          "tolerance": "standard"
+        }
+      },
+      "graphConfig": null
+    }
+  },
+  {
+    "item_id": "DR:lsrl-calculations:sign-check:1383",
+    "source": "lrsl_driller",
+    "item_type": "mcq",
+    "unit": 1,
+    "lesson": 5,
+    "kc_tags": [],
+    "prompt": "Without calculating, predict the sign of the slope based on the correlation coefficient.",
+    "choices": [],
+    "expected": {
+      "slopeSign": "positive"
+    },
+    "seed": 1383,
+    "difficulty_estimate": 0.5,
+    "_raw": {
+      "given": {
+        "r": 0.6
+      },
+      "answers": {
+        "slopeSign": {
+          "value": "positive",
+          "explanation": "Since r = 0.6 is positive, the slope b will also be positive. The sign of b always matches the sign of r."
+        }
+      },
+      "validation": {
+        "slopeSign": {
+          "expected": "positive",
+          "type": "exact"
+        }
+      },
+      "graphConfig": null
+    }
+  },
+  {
+    "item_id": "DR:lsrl-calculations:sign-check:2383",
+    "source": "lrsl_driller",
+    "item_type": "mcq",
+    "unit": 1,
+    "lesson": 5,
+    "kc_tags": [],
+    "prompt": "Without calculating, predict the sign of the slope based on the correlation coefficient.",
+    "choices": [],
+    "expected": {
+      "slopeSign": "positive"
+    },
+    "seed": 2383,
+    "difficulty_estimate": 0.5,
+    "_raw": {
+      "given": {
+        "r": 0.45
+      },
+      "answers": {
+        "slopeSign": {
+          "value": "positive",
+          "explanation": "Since r = 0.45 is positive, the slope b will also be positive. The sign of b always matches the sign of r."
+        }
+      },
+      "validation": {
+        "slopeSign": {
+          "expected": "positive",
+          "type": "exact"
+        }
+      },
+      "graphConfig": null
+    }
+  },
+  {
+    "item_id": "DR:lsrl-calculations:sign-check:3383",
+    "source": "lrsl_driller",
+    "item_type": "mcq",
+    "unit": 1,
+    "lesson": 5,
+    "kc_tags": [],
+    "prompt": "Without calculating, predict the sign of the slope based on the correlation coefficient.",
+    "choices": [],
+    "expected": {
+      "slopeSign": "positive"
+    },
+    "seed": 3383,
+    "difficulty_estimate": 0.5,
+    "_raw": {
+      "given": {
+        "r": 0.85
+      },
+      "answers": {
+        "slopeSign": {
+          "value": "positive",
+          "explanation": "Since r = 0.85 is positive, the slope b will also be positive. The sign of b always matches the sign of r."
+        }
+      },
+      "validation": {
+        "slopeSign": {
+          "expected": "positive",
+          "type": "exact"
+        }
+      },
+      "graphConfig": null
+    }
+  },
+  {
+    "item_id": "DR:lsrl-calculations:sign-check:4383",
+    "source": "lrsl_driller",
+    "item_type": "mcq",
+    "unit": 1,
+    "lesson": 5,
+    "kc_tags": [],
+    "prompt": "Without calculating, predict the sign of the slope based on the correlation coefficient.",
+    "choices": [],
+    "expected": {
+      "slopeSign": "negative"
+    },
+    "seed": 4383,
+    "difficulty_estimate": 0.5,
+    "_raw": {
+      "given": {
+        "r": -0.8
+      },
+      "answers": {
+        "slopeSign": {
+          "value": "negative",
+          "explanation": "Since r = -0.8 is negative, the slope b will also be negative. The sign of b always matches the sign of r."
+        }
+      },
+      "validation": {
+        "slopeSign": {
+          "expected": "negative",
+          "type": "exact"
+        }
+      },
+      "graphConfig": null
+    }
+  },
+  {
+    "item_id": "DR:lsrl-calculations:sign-check:5383",
+    "source": "lrsl_driller",
+    "item_type": "mcq",
+    "unit": 1,
+    "lesson": 5,
+    "kc_tags": [],
+    "prompt": "Without calculating, predict the sign of the slope based on the correlation coefficient.",
+    "choices": [],
+    "expected": {
+      "slopeSign": "negative"
+    },
+    "seed": 5383,
+    "difficulty_estimate": 0.5,
+    "_raw": {
+      "given": {
+        "r": -0.9
+      },
+      "answers": {
+        "slopeSign": {
+          "value": "negative",
+          "explanation": "Since r = -0.9 is negative, the slope b will also be negative. The sign of b always matches the sign of r."
+        }
+      },
+      "validation": {
+        "slopeSign": {
+          "expected": "negative",
+          "type": "exact"
+        }
+      },
+      "graphConfig": null
+    }
+  },
+  {
+    "item_id": "DR:lsrl-calculations:ratio-check:1129",
+    "source": "lrsl_driller",
+    "item_type": "numeric",
+    "unit": 1,
+    "lesson": 5,
+    "kc_tags": [],
+    "prompt": "Calculate the slope. Notice the relationship between sₓ and sᵧ.",
+    "choices": [],
+    "expected": {
+      "b": 0.6,
+      "insight": "r"
+    },
+    "seed": 1129,
+    "difficulty_estimate": 0.5,
+    "_raw": {
+      "given": {
+        "r": 0.6,
+        "sx": 15,
+        "sy": 15
+      },
+      "answers": {
+        "b": {
+          "value": 0.6,
+          "formula": "b = 0.6 × (15/15) = 0.6 × 1 = 0.6"
+        },
+        "insight": {
+          "value": "r",
+          "explanation": "When sₓ = sᵧ, b = r"
+        }
+      },
+      "validation": {
+        "b": {
+          "expected": 0.6,
+          "tolerance": "tight"
+        },
+        "insight": {
+          "expected": "r",
+          "type": "exact"
+        }
+      },
+      "graphConfig": null
+    }
+  },
+  {
+    "item_id": "DR:lsrl-calculations:ratio-check:2129",
+    "source": "lrsl_driller",
+    "item_type": "numeric",
+    "unit": 1,
+    "lesson": 5,
+    "kc_tags": [],
+    "prompt": "Calculate the slope. Notice the relationship between sₓ and sᵧ.",
+    "choices": [],
+    "expected": {
+      "b": 0.8,
+      "insight": "r"
+    },
+    "seed": 2129,
+    "difficulty_estimate": 0.5,
+    "_raw": {
+      "given": {
+        "r": 0.8,
+        "sx": 10,
+        "sy": 10
+      },
+      "answers": {
+        "b": {
+          "value": 0.8,
+          "formula": "b = 0.8 × (10/10) = 0.8 × 1 = 0.8"
+        },
+        "insight": {
+          "value": "r",
+          "explanation": "When sₓ = sᵧ, b = r"
+        }
+      },
+      "validation": {
+        "b": {
+          "expected": 0.8,
+          "tolerance": "tight"
+        },
+        "insight": {
+          "expected": "r",
+          "type": "exact"
+        }
+      },
+      "graphConfig": null
+    }
+  },
+  {
+    "item_id": "DR:lsrl-calculations:ratio-check:3129",
+    "source": "lrsl_driller",
+    "item_type": "numeric",
+    "unit": 1,
+    "lesson": 5,
+    "kc_tags": [],
+    "prompt": "Calculate the slope. Notice the relationship between sₓ and sᵧ.",
+    "choices": [],
+    "expected": {
+      "b": 0.8,
+      "insight": "2r"
+    },
+    "seed": 3129,
+    "difficulty_estimate": 0.5,
+    "_raw": {
+      "given": {
+        "r": 0.4,
+        "sx": 5,
+        "sy": 10
+      },
+      "answers": {
+        "b": {
+          "value": 0.8,
+          "formula": "b = 0.4 × (10/5) = 0.4 × 2 = 0.8"
+        },
+        "insight": {
+          "value": "2r",
+          "explanation": "When sᵧ = 2sₓ, b = 2r"
+        }
+      },
+      "validation": {
+        "b": {
+          "expected": 0.8,
+          "tolerance": "tight"
+        },
+        "insight": {
+          "expected": "2r",
+          "type": "exact"
+        }
+      },
+      "graphConfig": null
+    }
+  },
+  {
+    "item_id": "DR:lsrl-calculations:ratio-check:4129",
+    "source": "lrsl_driller",
+    "item_type": "numeric",
+    "unit": 1,
+    "lesson": 5,
+    "kc_tags": [],
+    "prompt": "Calculate the slope. Notice the relationship between sₓ and sᵧ.",
+    "choices": [],
+    "expected": {
+      "b": -0.4,
+      "insight": "r"
+    },
+    "seed": 4129,
+    "difficulty_estimate": 0.5,
+    "_raw": {
+      "given": {
+        "r": -0.4,
+        "sx": 15,
+        "sy": 15
+      },
+      "answers": {
+        "b": {
+          "value": -0.4,
+          "formula": "b = -0.4 × (15/15) = -0.4 × 1 = -0.4"
+        },
+        "insight": {
+          "value": "r",
+          "explanation": "When sₓ = sᵧ, b = r"
+        }
+      },
+      "validation": {
+        "b": {
+          "expected": -0.4,
+          "tolerance": "tight"
+        },
+        "insight": {
+          "expected": "r",
+          "type": "exact"
+        }
+      },
+      "graphConfig": null
+    }
+  },
+  {
+    "item_id": "DR:lsrl-calculations:ratio-check:5129",
+    "source": "lrsl_driller",
+    "item_type": "numeric",
+    "unit": 1,
+    "lesson": 5,
+    "kc_tags": [],
+    "prompt": "Calculate the slope. Notice the relationship between sₓ and sᵧ.",
+    "choices": [],
+    "expected": {
+      "b": 0.5,
+      "insight": "r"
+    },
+    "seed": 5129,
+    "difficulty_estimate": 0.5,
+    "_raw": {
+      "given": {
+        "r": 0.5,
+        "sx": 10,
+        "sy": 10
+      },
+      "answers": {
+        "b": {
+          "value": 0.5,
+          "formula": "b = 0.5 × (10/10) = 0.5 × 1 = 0.5"
+        },
+        "insight": {
+          "value": "r",
+          "explanation": "When sₓ = sᵧ, b = r"
+        }
+      },
+      "validation": {
+        "b": {
+          "expected": 0.5,
+          "tolerance": "tight"
+        },
+        "insight": {
+          "expected": "r",
+          "type": "exact"
+        }
+      },
+      "graphConfig": null
+    }
+  }
+]

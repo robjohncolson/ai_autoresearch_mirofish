@@ -1,0 +1,1103 @@
+{
+  "description": "Knowledge Component tag vocabulary from AP Statistics framework",
+  "total_tags": 169,
+  "total_skills": 20,
+  "tags": [
+    {
+      "id": "VAR-1.A",
+      "unit": 1,
+      "lesson": 1,
+      "text": "Identify questions to be answered, based on variation in one-variable data"
+    },
+    {
+      "id": "VAR-1.B",
+      "unit": 1,
+      "lesson": 2,
+      "text": "Identify variables in a set of data"
+    },
+    {
+      "id": "VAR-1.C",
+      "unit": 1,
+      "lesson": 2,
+      "text": "Classify types of variables"
+    },
+    {
+      "id": "UNC-1.A",
+      "unit": 1,
+      "lesson": 3,
+      "text": "Represent categorical data using frequency or relative frequency tables"
+    },
+    {
+      "id": "UNC-1.B",
+      "unit": 1,
+      "lesson": 3,
+      "text": "Describe categorical data represented in frequency or relative tables"
+    },
+    {
+      "id": "UNC-1.C",
+      "unit": 1,
+      "lesson": 4,
+      "text": "Represent categorical data graphically"
+    },
+    {
+      "id": "UNC-1.D",
+      "unit": 1,
+      "lesson": 4,
+      "text": "Describe categorical data represented graphically"
+    },
+    {
+      "id": "UNC-1.E",
+      "unit": 1,
+      "lesson": 4,
+      "text": "Compare multiple sets of categorical data"
+    },
+    {
+      "id": "UNC-1.F",
+      "unit": 1,
+      "lesson": 5,
+      "text": "Classify types of quantitative variables"
+    },
+    {
+      "id": "UNC-1.G",
+      "unit": 1,
+      "lesson": 5,
+      "text": "Represent quantitative data graphically"
+    },
+    {
+      "id": "UNC-1.H",
+      "unit": 1,
+      "lesson": 6,
+      "text": "Describe the characteristics of quantitative data distributions"
+    },
+    {
+      "id": "UNC-1.I",
+      "unit": 1,
+      "lesson": 7,
+      "text": "Calculate measures of center and position for quantitative data"
+    },
+    {
+      "id": "UNC-1.J",
+      "unit": 1,
+      "lesson": 7,
+      "text": "Calculate measures of variability for quantitative data"
+    },
+    {
+      "id": "UNC-1.K",
+      "unit": 1,
+      "lesson": 7,
+      "text": "Explain the selection of a particular measure of center and/or variability"
+    },
+    {
+      "id": "UNC-1.L",
+      "unit": 1,
+      "lesson": 8,
+      "text": "Represent summary statistics for quantitative data graphically"
+    },
+    {
+      "id": "UNC-1.M",
+      "unit": 1,
+      "lesson": 8,
+      "text": "Describe summary statistics of quantitative data represented graphically"
+    },
+    {
+      "id": "UNC-1.N",
+      "unit": 1,
+      "lesson": 9,
+      "text": "Compare graphical representations for multiple sets of quantitative data"
+    },
+    {
+      "id": "UNC-1.O",
+      "unit": 1,
+      "lesson": 9,
+      "text": "Compare summary statistics for multiple sets of quantitative data"
+    },
+    {
+      "id": "VAR-2.A",
+      "unit": 1,
+      "lesson": 10,
+      "text": "Compare a data distribution to the normal distribution model"
+    },
+    {
+      "id": "VAR-2.B",
+      "unit": 1,
+      "lesson": 10,
+      "text": "Determine proportions and percentiles from a normal distribution"
+    },
+    {
+      "id": "VAR-2.C",
+      "unit": 1,
+      "lesson": 10,
+      "text": "Compare measures of relative position in data sets"
+    },
+    {
+      "id": "VAR-1.D",
+      "unit": 2,
+      "lesson": 1,
+      "text": "Identify questions to be answered about possible relationships in data"
+    },
+    {
+      "id": "UNC-1.P",
+      "unit": 2,
+      "lesson": 2,
+      "text": "Compare numerical and graphical representations for two categorical variables"
+    },
+    {
+      "id": "UNC-1.Q",
+      "unit": 2,
+      "lesson": 3,
+      "text": "Calculate statistics for two categorical variables"
+    },
+    {
+      "id": "UNC-1.R",
+      "unit": 2,
+      "lesson": 3,
+      "text": "Compare statistics for two categorical variables"
+    },
+    {
+      "id": "DAT-1.A",
+      "unit": 2,
+      "lesson": 4,
+      "text": "Describe the characteristics of a scatter plot"
+    },
+    {
+      "id": "UNC-1.S",
+      "unit": 2,
+      "lesson": 4,
+      "text": "Represent bivariate quantitative data using scatterplots"
+    },
+    {
+      "id": "DAT-1.B",
+      "unit": 2,
+      "lesson": 5,
+      "text": "Determine the correlation for a linear relationship"
+    },
+    {
+      "id": "DAT-1.C",
+      "unit": 2,
+      "lesson": 5,
+      "text": "Interpret the correlation for a linear relationship"
+    },
+    {
+      "id": "DAT-1.D",
+      "unit": 2,
+      "lesson": 6,
+      "text": "Calculate a predicted response value using a linear regression model"
+    },
+    {
+      "id": "DAT-1.E",
+      "unit": 2,
+      "lesson": 7,
+      "text": "Represent differences between measured and predicted responses using residual plots"
+    },
+    {
+      "id": "DAT-1.F",
+      "unit": 2,
+      "lesson": 7,
+      "text": "Describe the form of association of bivariate data using residual plots"
+    },
+    {
+      "id": "DAT-1.G",
+      "unit": 2,
+      "lesson": 8,
+      "text": "Estimate parameters for the least-squares regression line model"
+    },
+    {
+      "id": "DAT-1.H",
+      "unit": 2,
+      "lesson": 8,
+      "text": "Interpret coefficients for the least-squares regression line model"
+    },
+    {
+      "id": "DAT-1.I",
+      "unit": 2,
+      "lesson": 9,
+      "text": "Identify influential points in regression"
+    },
+    {
+      "id": "DAT-1.J",
+      "unit": 2,
+      "lesson": 9,
+      "text": "Calculate a predicted response using a least-squares regression line for a transformed data set"
+    },
+    {
+      "id": "VAR-1.E",
+      "unit": 3,
+      "lesson": 1,
+      "text": "Identify questions to be answered about data collection methods"
+    },
+    {
+      "id": "DAT-2.A",
+      "unit": 3,
+      "lesson": 2,
+      "text": "Identify the type of a study"
+    },
+    {
+      "id": "DAT-2.B",
+      "unit": 3,
+      "lesson": 2,
+      "text": "Identify appropriate generalizations and determinations based on observational studies"
+    },
+    {
+      "id": "DAT-2.C",
+      "unit": 3,
+      "lesson": 3,
+      "text": "Identify a sampling method, given a description of a study"
+    },
+    {
+      "id": "DAT-2.D",
+      "unit": 3,
+      "lesson": 3,
+      "text": "Explain why a particular sampling method is or is not appropriate for a given situation"
+    },
+    {
+      "id": "DAT-2.E",
+      "unit": 3,
+      "lesson": 4,
+      "text": "Identify potential sources of bias in sampling methods"
+    },
+    {
+      "id": "VAR-3.A",
+      "unit": 3,
+      "lesson": 5,
+      "text": "Identify the components of an experiment"
+    },
+    {
+      "id": "VAR-3.B",
+      "unit": 3,
+      "lesson": 5,
+      "text": "Describe elements of a well-designed experiment"
+    },
+    {
+      "id": "VAR-3.C",
+      "unit": 3,
+      "lesson": 5,
+      "text": "Compare experimental designs and methods"
+    },
+    {
+      "id": "VAR-3.C",
+      "unit": 3,
+      "lesson": 6,
+      "text": "Compare experimental designs and methods (continued)"
+    },
+    {
+      "id": "VAR-3.D",
+      "unit": 3,
+      "lesson": 6,
+      "text": "Explain why a particular experimental design is appropriate"
+    },
+    {
+      "id": "VAR-3.E",
+      "unit": 3,
+      "lesson": 7,
+      "text": "Interpret the results of a well-designed experiment"
+    },
+    {
+      "id": "VAR-1.F",
+      "unit": 4,
+      "lesson": 1,
+      "text": "Identify questions suggested by patterns in data"
+    },
+    {
+      "id": "UNC-2.A",
+      "unit": 4,
+      "lesson": 2,
+      "text": "Estimate probabilities using simulation"
+    },
+    {
+      "id": "VAR-4.A",
+      "unit": 4,
+      "lesson": 3,
+      "text": "Calculate probabilities for events and their complements"
+    },
+    {
+      "id": "VAR-4.B",
+      "unit": 4,
+      "lesson": 3,
+      "text": "Interpret probabilities for events"
+    },
+    {
+      "id": "VAR-4.C",
+      "unit": 4,
+      "lesson": 4,
+      "text": "Explain why two events are (or are not) mutually exclusive"
+    },
+    {
+      "id": "VAR-4.D",
+      "unit": 4,
+      "lesson": 5,
+      "text": "Calculate conditional probabilities"
+    },
+    {
+      "id": "VAR-4.E",
+      "unit": 4,
+      "lesson": 6,
+      "text": "Calculate probabilities for independent events and for the union of two events"
+    },
+    {
+      "id": "VAR-5.A",
+      "unit": 4,
+      "lesson": 7,
+      "text": "Represent the probability distribution for a discrete random variable"
+    },
+    {
+      "id": "VAR-5.B",
+      "unit": 4,
+      "lesson": 7,
+      "text": "Interpret a probability distribution"
+    },
+    {
+      "id": "VAR-5.C",
+      "unit": 4,
+      "lesson": 8,
+      "text": "Calculate parameters for a discrete random variable"
+    },
+    {
+      "id": "VAR-5.D",
+      "unit": 4,
+      "lesson": 8,
+      "text": "Interpret parameters for a discrete random variable"
+    },
+    {
+      "id": "VAR-5.E",
+      "unit": 4,
+      "lesson": 9,
+      "text": "Calculate parameters for linear combinations of random variables"
+    },
+    {
+      "id": "VAR-5.F",
+      "unit": 4,
+      "lesson": 9,
+      "text": "Describe the effects of linear transformations of parameters of random variables"
+    },
+    {
+      "id": "UNC-3.A",
+      "unit": 4,
+      "lesson": 10,
+      "text": "Estimate probabilities of binomial random variables using data from a simulation"
+    },
+    {
+      "id": "UNC-3.B",
+      "unit": 4,
+      "lesson": 10,
+      "text": "Calculate probabilities for a binomial distribution"
+    },
+    {
+      "id": "UNC-3.C",
+      "unit": 4,
+      "lesson": 11,
+      "text": "Calculate parameters for a binomial distribution"
+    },
+    {
+      "id": "UNC-3.D",
+      "unit": 4,
+      "lesson": 11,
+      "text": "Interpret probabilities and parameters for a binomial distribution"
+    },
+    {
+      "id": "UNC-3.E",
+      "unit": 4,
+      "lesson": 12,
+      "text": "Calculate probabilities for geometric random variables"
+    },
+    {
+      "id": "UNC-3.F",
+      "unit": 4,
+      "lesson": 12,
+      "text": "Calculate parameters of a geometric distribution"
+    },
+    {
+      "id": "UNC-3.G",
+      "unit": 4,
+      "lesson": 12,
+      "text": "Interpret probabilities and parameters for a geometric distribution"
+    },
+    {
+      "id": "VAR-1.G",
+      "unit": 5,
+      "lesson": 1,
+      "text": "Identify questions suggested by variation in statistics for samples collected from the same population"
+    },
+    {
+      "id": "VAR-6.A",
+      "unit": 5,
+      "lesson": 2,
+      "text": "Calculate the probability that a particular value lies in a given interval of a normal distribution"
+    },
+    {
+      "id": "VAR-6.B",
+      "unit": 5,
+      "lesson": 2,
+      "text": "Determine the interval associated with a given area in a normal distribution"
+    },
+    {
+      "id": "VAR-6.C",
+      "unit": 5,
+      "lesson": 2,
+      "text": "Determine the appropriateness of using the normal distribution to approximate probabilities for unknown distributions"
+    },
+    {
+      "id": "UNC-3.H",
+      "unit": 5,
+      "lesson": 3,
+      "text": "Estimate sampling distributions using simulation"
+    },
+    {
+      "id": "UNC-3.I",
+      "unit": 5,
+      "lesson": 4,
+      "text": "Explain why an estimator is or is not unbiased"
+    },
+    {
+      "id": "UNC-3.J",
+      "unit": 5,
+      "lesson": 4,
+      "text": "Calculate estimates for a population parameter"
+    },
+    {
+      "id": "UNC-3.K",
+      "unit": 5,
+      "lesson": 5,
+      "text": "Determine parameters of a sampling distribution for sample proportions"
+    },
+    {
+      "id": "UNC-3.L",
+      "unit": 5,
+      "lesson": 5,
+      "text": "Determine whether a sampling distribution for a sample proportion can be described as approximately normal"
+    },
+    {
+      "id": "UNC-3.M",
+      "unit": 5,
+      "lesson": 5,
+      "text": "Interpret probabilities and parameters for a sampling distribution for a sample proportion"
+    },
+    {
+      "id": "UNC-3.N",
+      "unit": 5,
+      "lesson": 6,
+      "text": "Determine parameters of a sampling distribution for a difference in sample proportions"
+    },
+    {
+      "id": "UNC-3.O",
+      "unit": 5,
+      "lesson": 6,
+      "text": "Determine whether a sampling distribution for a difference of sample proportions can be described as approximately normal"
+    },
+    {
+      "id": "UNC-3.P",
+      "unit": 5,
+      "lesson": 6,
+      "text": "Interpret probabilities and parameters for a sampling distribution for a difference in proportions"
+    },
+    {
+      "id": "UNC-3.Q",
+      "unit": 5,
+      "lesson": 7,
+      "text": "Determine parameters for a sampling distribution for sample means"
+    },
+    {
+      "id": "UNC-3.R",
+      "unit": 5,
+      "lesson": 7,
+      "text": "Determine whether a sampling distribution of a sample mean can be described as approximately normal"
+    },
+    {
+      "id": "UNC-3.S",
+      "unit": 5,
+      "lesson": 7,
+      "text": "Interpret probabilities and parameters for a sampling distribution for a sample mean"
+    },
+    {
+      "id": "UNC-3.T",
+      "unit": 5,
+      "lesson": 8,
+      "text": "Determine parameters of a sampling distribution for a difference in sample means"
+    },
+    {
+      "id": "UNC-3.U",
+      "unit": 5,
+      "lesson": 8,
+      "text": "Determine whether a sampling distribution of a difference in sample means can be described as approximately normal"
+    },
+    {
+      "id": "UNC-3.V",
+      "unit": 5,
+      "lesson": 8,
+      "text": "Interpret probabilities and parameters for a sampling distribution for a difference in sample means"
+    },
+    {
+      "id": "VAR-1.H",
+      "unit": 6,
+      "lesson": 1,
+      "text": "Identify questions suggested by variation in the shapes of distributions of samples taken from the same population"
+    },
+    {
+      "id": "UNC-4.A",
+      "unit": 6,
+      "lesson": 2,
+      "text": "Identify an appropriate confidence interval procedure for a population proportion"
+    },
+    {
+      "id": "UNC-4.B",
+      "unit": 6,
+      "lesson": 2,
+      "text": "Verify the conditions for calculating confidence intervals for a population proportion"
+    },
+    {
+      "id": "UNC-4.C",
+      "unit": 6,
+      "lesson": 2,
+      "text": "Determine the margin of error"
+    },
+    {
+      "id": "UNC-4.D",
+      "unit": 6,
+      "lesson": 2,
+      "text": "Calculate an appropriate confidence interval for a population proportion"
+    },
+    {
+      "id": "UNC-4.F",
+      "unit": 6,
+      "lesson": 3,
+      "text": "Interpret a confidence interval for a population proportion"
+    },
+    {
+      "id": "UNC-4.G",
+      "unit": 6,
+      "lesson": 3,
+      "text": "Justify a claim based on a confidence interval"
+    },
+    {
+      "id": "UNC-4.H",
+      "unit": 6,
+      "lesson": 3,
+      "text": "Identify relationships between sample size, width, and confidence level"
+    },
+    {
+      "id": "VAR-6.D",
+      "unit": 6,
+      "lesson": 4,
+      "text": "Identify the null and alternative hypotheses for a population proportion"
+    },
+    {
+      "id": "VAR-6.F",
+      "unit": 6,
+      "lesson": 4,
+      "text": "Verify the conditions for making statistical inferences when testing a population proportion"
+    },
+    {
+      "id": "DAT-3.A",
+      "unit": 6,
+      "lesson": 5,
+      "text": "Interpret the p-value of a significance test for a population proportion"
+    },
+    {
+      "id": "VAR-6.G",
+      "unit": 6,
+      "lesson": 5,
+      "text": "Calculate an appropriate test statistic and p-value for a population proportion"
+    },
+    {
+      "id": "DAT-3.B",
+      "unit": 6,
+      "lesson": 6,
+      "text": "Justify a claim about the population based on the results of a significance test"
+    },
+    {
+      "id": "UNC-5.A",
+      "unit": 6,
+      "lesson": 7,
+      "text": "Identify Type I and Type II errors"
+    },
+    {
+      "id": "UNC-5.B",
+      "unit": 6,
+      "lesson": 7,
+      "text": "Calculate the probability of a Type I and Type II errors"
+    },
+    {
+      "id": "UNC-5.C",
+      "unit": 6,
+      "lesson": 7,
+      "text": "Identify factors that affect the probability of errors"
+    },
+    {
+      "id": "UNC-4.I",
+      "unit": 6,
+      "lesson": 8,
+      "text": "Identify an appropriate confidence interval procedure for a comparison of population proportions"
+    },
+    {
+      "id": "UNC-4.J",
+      "unit": 6,
+      "lesson": 8,
+      "text": "Verify the conditions for calculating confidence intervals for a difference between population proportions"
+    },
+    {
+      "id": "UNC-4.K",
+      "unit": 6,
+      "lesson": 8,
+      "text": "Calculate an appropriate confidence interval for a comparison of population proportions"
+    },
+    {
+      "id": "UNC-4.N",
+      "unit": 6,
+      "lesson": 9,
+      "text": "Justify a claim based on a confidence interval for a difference of proportions"
+    },
+    {
+      "id": "VAR-6.H",
+      "unit": 6,
+      "lesson": 10,
+      "text": "Identify the null and alternative hypotheses for a difference of two population proportions"
+    },
+    {
+      "id": "VAR-6.J",
+      "unit": 6,
+      "lesson": 10,
+      "text": "Verify the conditions for making statistical inferences when testing a difference of two population proportions"
+    },
+    {
+      "id": "VAR-6.K",
+      "unit": 6,
+      "lesson": 11,
+      "text": "Calculate an appropriate test statistic for the difference of two population proportions"
+    },
+    {
+      "id": "VAR-1.I",
+      "unit": 7,
+      "lesson": 1,
+      "text": "Identify questions suggested by probabilities of errors in statistical inference"
+    },
+    {
+      "id": "UNC-4.O",
+      "unit": 7,
+      "lesson": 2,
+      "text": "Identify an appropriate confidence interval procedure for a population mean"
+    },
+    {
+      "id": "UNC-4.P",
+      "unit": 7,
+      "lesson": 2,
+      "text": "Verify the conditions for calculating confidence intervals for a population mean"
+    },
+    {
+      "id": "UNC-4.Q",
+      "unit": 7,
+      "lesson": 2,
+      "text": "Determine the margin of error for a given sample size for a one-sample t-interval"
+    },
+    {
+      "id": "UNC-4.R",
+      "unit": 7,
+      "lesson": 2,
+      "text": "Calculate an appropriate confidence interval for a population mean"
+    },
+    {
+      "id": "VAR-7.A",
+      "unit": 7,
+      "lesson": 2,
+      "text": "Describe t-distributions"
+    },
+    {
+      "id": "UNC-4.S",
+      "unit": 7,
+      "lesson": 3,
+      "text": "Interpret a confidence interval for a population mean"
+    },
+    {
+      "id": "UNC-4.T",
+      "unit": 7,
+      "lesson": 3,
+      "text": "Justify a claim based on a confidence interval for a population mean"
+    },
+    {
+      "id": "UNC-4.U",
+      "unit": 7,
+      "lesson": 3,
+      "text": "Identify the relationships between sample size, width, confidence level, and margin of error"
+    },
+    {
+      "id": "VAR-7.B",
+      "unit": 7,
+      "lesson": 4,
+      "text": "Identify an appropriate testing method for a population mean with unknown σ"
+    },
+    {
+      "id": "VAR-7.C",
+      "unit": 7,
+      "lesson": 4,
+      "text": "Identify the null and alternative hypotheses for a population mean"
+    },
+    {
+      "id": "VAR-7.D",
+      "unit": 7,
+      "lesson": 4,
+      "text": "Verify the conditions for the test for a population mean"
+    },
+    {
+      "id": "DAT-3.E",
+      "unit": 7,
+      "lesson": 5,
+      "text": "Interpret the p-value of a significance test for a population mean"
+    },
+    {
+      "id": "DAT-3.F",
+      "unit": 7,
+      "lesson": 5,
+      "text": "Justify a claim about the population based on the results of a significance test"
+    },
+    {
+      "id": "VAR-7.E",
+      "unit": 7,
+      "lesson": 5,
+      "text": "Calculate an appropriate test statistic for a population mean"
+    },
+    {
+      "id": "UNC-4.V",
+      "unit": 7,
+      "lesson": 6,
+      "text": "Identify an appropriate confidence interval procedure for a difference of two population means"
+    },
+    {
+      "id": "UNC-4.W",
+      "unit": 7,
+      "lesson": 6,
+      "text": "Verify the conditions to calculate confidence intervals for the difference of two population means"
+    },
+    {
+      "id": "UNC-4.X",
+      "unit": 7,
+      "lesson": 6,
+      "text": "Determine the margin of error for the difference of two population means"
+    },
+    {
+      "id": "UNC-4.Y",
+      "unit": 7,
+      "lesson": 6,
+      "text": "Calculate an appropriate confidence interval for a difference of two population means"
+    },
+    {
+      "id": "UNC-4.AA",
+      "unit": 7,
+      "lesson": 7,
+      "text": "Justify a claim based on a confidence interval for a difference of population means"
+    },
+    {
+      "id": "UNC-4.Z",
+      "unit": 7,
+      "lesson": 7,
+      "text": "Interpret a confidence interval for a difference of population means"
+    },
+    {
+      "id": "VAR-7.F",
+      "unit": 7,
+      "lesson": 8,
+      "text": "Identify an appropriate selection of a testing method for a difference of two population means"
+    },
+    {
+      "id": "VAR-7.G",
+      "unit": 7,
+      "lesson": 8,
+      "text": "Identify the null and alternative hypotheses for a difference of two population means"
+    },
+    {
+      "id": "VAR-7.H",
+      "unit": 7,
+      "lesson": 8,
+      "text": "Verify the conditions for the significance test for the difference of two population means"
+    },
+    {
+      "id": "DAT-3.G",
+      "unit": 7,
+      "lesson": 9,
+      "text": "Interpret the p-value of a significance test for a difference of population means"
+    },
+    {
+      "id": "DAT-3.H",
+      "unit": 7,
+      "lesson": 9,
+      "text": "Justify a claim about the population based on the results of a significance test for a difference of two population means"
+    },
+    {
+      "id": "VAR-7.I",
+      "unit": 7,
+      "lesson": 9,
+      "text": "Calculate an appropriate test statistic for a difference of two means"
+    },
+    {
+      "id": "VAR-1.J",
+      "unit": 8,
+      "lesson": 1,
+      "text": "Identify questions suggested by variation between observed and expected counts in categorical data"
+    },
+    {
+      "id": "VAR-8.A",
+      "unit": 8,
+      "lesson": 2,
+      "text": "Describe chi-square distributions"
+    },
+    {
+      "id": "VAR-8.B",
+      "unit": 8,
+      "lesson": 2,
+      "text": "Identify the null and alternative hypotheses in a test for a distribution of proportions in a set of categorical data"
+    },
+    {
+      "id": "VAR-8.C",
+      "unit": 8,
+      "lesson": 2,
+      "text": "Identify an appropriate testing method for a distribution of proportions in a set of categorical data"
+    },
+    {
+      "id": "VAR-8.D",
+      "unit": 8,
+      "lesson": 2,
+      "text": "Calculate expected counts for the chi-square test for goodness of fit"
+    },
+    {
+      "id": "VAR-8.E",
+      "unit": 8,
+      "lesson": 2,
+      "text": "Verify the conditions for making statistical inferences when testing goodness of fit for a chi-square distribution"
+    },
+    {
+      "id": "DAT-3.I",
+      "unit": 8,
+      "lesson": 3,
+      "text": "Interpret the p-value for the chi-square test for goodness of fit"
+    },
+    {
+      "id": "DAT-3.J",
+      "unit": 8,
+      "lesson": 3,
+      "text": "Justify a claim about the population based on the results of a chi-square test for goodness of fit"
+    },
+    {
+      "id": "VAR-8.F",
+      "unit": 8,
+      "lesson": 3,
+      "text": "Calculate the appropriate statistic for the chi-square test for goodness of fit"
+    },
+    {
+      "id": "VAR-8.G",
+      "unit": 8,
+      "lesson": 3,
+      "text": "Determine the p-value for chi-square test for goodness of fit significance test"
+    },
+    {
+      "id": "VAR-8.H",
+      "unit": 8,
+      "lesson": 4,
+      "text": "Calculate expected counts for two-way tables of categorical data"
+    },
+    {
+      "id": "VAR-8.I",
+      "unit": 8,
+      "lesson": 5,
+      "text": "Identify the null and alternative hypotheses for a chi-square test for homogeneity or independence"
+    },
+    {
+      "id": "VAR-8.J",
+      "unit": 8,
+      "lesson": 5,
+      "text": "Identify an appropriate testing method for comparing distributions in two-way tables of categorical data"
+    },
+    {
+      "id": "VAR-8.K",
+      "unit": 8,
+      "lesson": 5,
+      "text": "Verify the conditions for making statistical inferences when testing a chi-square distribution for independence or homogeneity"
+    },
+    {
+      "id": "DAT-3.K",
+      "unit": 8,
+      "lesson": 6,
+      "text": "Interpret the p-value for the chi-square test for homogeneity or independence"
+    },
+    {
+      "id": "DAT-3.L",
+      "unit": 8,
+      "lesson": 6,
+      "text": "Justify a claim about the population based on the results of a chi-square test for homogeneity or independence"
+    },
+    {
+      "id": "VAR-8.L",
+      "unit": 8,
+      "lesson": 6,
+      "text": "Calculate the appropriate statistic for a chi-square test for homogeneity or independence"
+    },
+    {
+      "id": "VAR-8.M",
+      "unit": 8,
+      "lesson": 6,
+      "text": "Determine the p-value for a chi-square significance test for independence or homogeneity"
+    },
+    {
+      "id": "VAR-1.K",
+      "unit": 9,
+      "lesson": 1,
+      "text": "Identify questions suggested by variation in scatter plots"
+    },
+    {
+      "id": "UNC-4.AC",
+      "unit": 9,
+      "lesson": 2,
+      "text": "Identify an appropriate confidence interval procedure for a slope of a regression model"
+    },
+    {
+      "id": "UNC-4.AD",
+      "unit": 9,
+      "lesson": 2,
+      "text": "Verify the conditions to calculate confidence intervals for the slope of a regression model"
+    },
+    {
+      "id": "UNC-4.AE",
+      "unit": 9,
+      "lesson": 2,
+      "text": "Determine the given margin of error for the slope of a regression model"
+    },
+    {
+      "id": "UNC-4.AF",
+      "unit": 9,
+      "lesson": 2,
+      "text": "Calculate an appropriate confidence interval for the slope of a regression model"
+    },
+    {
+      "id": "UNC-4.AG",
+      "unit": 9,
+      "lesson": 3,
+      "text": "Interpret a confidence interval for the slope of a regression model"
+    },
+    {
+      "id": "UNC-4.AH",
+      "unit": 9,
+      "lesson": 3,
+      "text": "Justify a claim based on a confidence interval for the slope of a regression model"
+    },
+    {
+      "id": "UNC-4.AI",
+      "unit": 9,
+      "lesson": 3,
+      "text": "Identify the effects of sample size on the width of a confidence interval for the slope"
+    },
+    {
+      "id": "VAR-7.J",
+      "unit": 9,
+      "lesson": 4,
+      "text": "Identify the appropriate selection of a testing method for a slope of a regression model"
+    },
+    {
+      "id": "VAR-7.K",
+      "unit": 9,
+      "lesson": 4,
+      "text": "Identify appropriate null and alternative hypotheses for a slope of a regression model"
+    },
+    {
+      "id": "VAR-7.L",
+      "unit": 9,
+      "lesson": 4,
+      "text": "Verify the conditions for the significance test for the slope of a regression model"
+    },
+    {
+      "id": "DAT-3.M",
+      "unit": 9,
+      "lesson": 5,
+      "text": "Interpret the p-value of a significance test for the slope of a regression model"
+    },
+    {
+      "id": "DAT-3.N",
+      "unit": 9,
+      "lesson": 5,
+      "text": "Justify a claim about the population based on the results of a significance test for the slope"
+    },
+    {
+      "id": "VAR-7.M",
+      "unit": 9,
+      "lesson": 5,
+      "text": "Calculate an appropriate test statistic for the slope of a regression model"
+    }
+  ],
+  "skills": [
+    {
+      "id": "1.A",
+      "text": "Identify the question to be answered or problem to be solved"
+    },
+    {
+      "id": "1.B",
+      "text": "Identify key and relevant information to answer a question or solve a problem"
+    },
+    {
+      "id": "1.C",
+      "text": "Describe an appropriate method for gathering and representing data"
+    },
+    {
+      "id": "1.D",
+      "text": "Identify an appropriate inference method for confidence intervals"
+    },
+    {
+      "id": "1.E",
+      "text": "Identify an appropriate inference method for significance tests"
+    },
+    {
+      "id": "1.F",
+      "text": "Identify null and alternative hypotheses"
+    },
+    {
+      "id": "2.A",
+      "text": "Describe data presented numerically or graphically"
+    },
+    {
+      "id": "2.B",
+      "text": "Construct numerical or graphical representations of distributions"
+    },
+    {
+      "id": "2.C",
+      "text": "Calculate summary statistics, relative positions, correlation, and predicted response"
+    },
+    {
+      "id": "2.D",
+      "text": "Compare distributions or relative positions of points within a distribution"
+    },
+    {
+      "id": "3.A",
+      "text": "Determine relative frequencies, proportions, or probabilities using simulation or calculations"
+    },
+    {
+      "id": "3.B",
+      "text": "Determine parameters for probability distributions"
+    },
+    {
+      "id": "3.C",
+      "text": "Describe probability distributions"
+    },
+    {
+      "id": "3.D",
+      "text": "Construct a confidence interval, provided conditions for inference are met"
+    },
+    {
+      "id": "3.E",
+      "text": "Calculate a test statistic and find a p-value"
+    },
+    {
+      "id": "4.A",
+      "text": "Make an appropriate claim or draw an appropriate conclusion"
+    },
+    {
+      "id": "4.B",
+      "text": "Interpret statistical calculations and findings to assign meaning or assess a claim"
+    },
+    {
+      "id": "4.C",
+      "text": "Verify that inference procedures apply in a given situation"
+    },
+    {
+      "id": "4.D",
+      "text": "Justify a claim based on a confidence interval"
+    },
+    {
+      "id": "4.E",
+      "text": "Justify a claim using a decision based on significance tests"
+    }
+  ]
+}

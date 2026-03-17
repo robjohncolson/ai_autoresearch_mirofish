@@ -1,0 +1,1043 @@
+{
+  "description": "Student persona definitions calibrated to AP Statistics score distribution",
+  "default_cohort_size": 100,
+  "tier_distribution": {
+    "1": {
+      "target_ap_score": 1,
+      "population_pct": 0.15,
+      "count": 15,
+      "acquisition_rate": 0.05,
+      "carelessness": 0.1
+    },
+    "2": {
+      "target_ap_score": 2,
+      "population_pct": 0.2,
+      "count": 20,
+      "acquisition_rate": 0.1,
+      "carelessness": 0.08
+    },
+    "3": {
+      "target_ap_score": 3,
+      "population_pct": 0.25,
+      "count": 25,
+      "acquisition_rate": 0.15,
+      "carelessness": 0.06
+    },
+    "4": {
+      "target_ap_score": 4,
+      "population_pct": 0.25,
+      "count": 25,
+      "acquisition_rate": 0.22,
+      "carelessness": 0.04
+    },
+    "5": {
+      "target_ap_score": 5,
+      "population_pct": 0.15,
+      "count": 15,
+      "acquisition_rate": 0.3,
+      "carelessness": 0.02
+    }
+  },
+  "personas": [
+    {
+      "persona_id": "tier1_001",
+      "ability_tier": 1,
+      "kc_acquisition_rate": 0.05,
+      "carelessness": 0.1,
+      "guess_strategy": "random",
+      "misconception_persistence": 0.9,
+      "reading_comprehension": 0.6,
+      "working_memory_slots": 3
+    },
+    {
+      "persona_id": "tier1_002",
+      "ability_tier": 1,
+      "kc_acquisition_rate": 0.05,
+      "carelessness": 0.1,
+      "guess_strategy": "random",
+      "misconception_persistence": 0.9,
+      "reading_comprehension": 0.61,
+      "working_memory_slots": 3
+    },
+    {
+      "persona_id": "tier1_003",
+      "ability_tier": 1,
+      "kc_acquisition_rate": 0.05,
+      "carelessness": 0.1,
+      "guess_strategy": "random",
+      "misconception_persistence": 0.91,
+      "reading_comprehension": 0.61,
+      "working_memory_slots": 3
+    },
+    {
+      "persona_id": "tier1_004",
+      "ability_tier": 1,
+      "kc_acquisition_rate": 0.05,
+      "carelessness": 0.1,
+      "guess_strategy": "random",
+      "misconception_persistence": 0.91,
+      "reading_comprehension": 0.62,
+      "working_memory_slots": 3
+    },
+    {
+      "persona_id": "tier1_005",
+      "ability_tier": 1,
+      "kc_acquisition_rate": 0.05,
+      "carelessness": 0.1,
+      "guess_strategy": "random",
+      "misconception_persistence": 0.91,
+      "reading_comprehension": 0.63,
+      "working_memory_slots": 3
+    },
+    {
+      "persona_id": "tier1_006",
+      "ability_tier": 1,
+      "kc_acquisition_rate": 0.05,
+      "carelessness": 0.1,
+      "guess_strategy": "random",
+      "misconception_persistence": 0.92,
+      "reading_comprehension": 0.64,
+      "working_memory_slots": 3
+    },
+    {
+      "persona_id": "tier1_007",
+      "ability_tier": 1,
+      "kc_acquisition_rate": 0.05,
+      "carelessness": 0.1,
+      "guess_strategy": "random",
+      "misconception_persistence": 0.92,
+      "reading_comprehension": 0.64,
+      "working_memory_slots": 3
+    },
+    {
+      "persona_id": "tier1_008",
+      "ability_tier": 1,
+      "kc_acquisition_rate": 0.05,
+      "carelessness": 0.1,
+      "guess_strategy": "random",
+      "misconception_persistence": 0.93,
+      "reading_comprehension": 0.65,
+      "working_memory_slots": 4
+    },
+    {
+      "persona_id": "tier1_009",
+      "ability_tier": 1,
+      "kc_acquisition_rate": 0.05,
+      "carelessness": 0.1,
+      "guess_strategy": "random",
+      "misconception_persistence": 0.93,
+      "reading_comprehension": 0.66,
+      "working_memory_slots": 4
+    },
+    {
+      "persona_id": "tier1_010",
+      "ability_tier": 1,
+      "kc_acquisition_rate": 0.05,
+      "carelessness": 0.1,
+      "guess_strategy": "random",
+      "misconception_persistence": 0.93,
+      "reading_comprehension": 0.66,
+      "working_memory_slots": 4
+    },
+    {
+      "persona_id": "tier1_011",
+      "ability_tier": 1,
+      "kc_acquisition_rate": 0.05,
+      "carelessness": 0.1,
+      "guess_strategy": "random",
+      "misconception_persistence": 0.94,
+      "reading_comprehension": 0.67,
+      "working_memory_slots": 4
+    },
+    {
+      "persona_id": "tier1_012",
+      "ability_tier": 1,
+      "kc_acquisition_rate": 0.05,
+      "carelessness": 0.1,
+      "guess_strategy": "random",
+      "misconception_persistence": 0.94,
+      "reading_comprehension": 0.68,
+      "working_memory_slots": 4
+    },
+    {
+      "persona_id": "tier1_013",
+      "ability_tier": 1,
+      "kc_acquisition_rate": 0.05,
+      "carelessness": 0.1,
+      "guess_strategy": "random",
+      "misconception_persistence": 0.94,
+      "reading_comprehension": 0.69,
+      "working_memory_slots": 4
+    },
+    {
+      "persona_id": "tier1_014",
+      "ability_tier": 1,
+      "kc_acquisition_rate": 0.05,
+      "carelessness": 0.1,
+      "guess_strategy": "random",
+      "misconception_persistence": 0.95,
+      "reading_comprehension": 0.69,
+      "working_memory_slots": 4
+    },
+    {
+      "persona_id": "tier1_015",
+      "ability_tier": 1,
+      "kc_acquisition_rate": 0.05,
+      "carelessness": 0.1,
+      "guess_strategy": "random",
+      "misconception_persistence": 0.95,
+      "reading_comprehension": 0.7,
+      "working_memory_slots": 4
+    },
+    {
+      "persona_id": "tier2_001",
+      "ability_tier": 2,
+      "kc_acquisition_rate": 0.1,
+      "carelessness": 0.08,
+      "guess_strategy": "random",
+      "misconception_persistence": 0.85,
+      "reading_comprehension": 0.65,
+      "working_memory_slots": 3
+    },
+    {
+      "persona_id": "tier2_002",
+      "ability_tier": 2,
+      "kc_acquisition_rate": 0.1,
+      "carelessness": 0.08,
+      "guess_strategy": "random",
+      "misconception_persistence": 0.85,
+      "reading_comprehension": 0.66,
+      "working_memory_slots": 3
+    },
+    {
+      "persona_id": "tier2_003",
+      "ability_tier": 2,
+      "kc_acquisition_rate": 0.1,
+      "carelessness": 0.08,
+      "guess_strategy": "random",
+      "misconception_persistence": 0.86,
+      "reading_comprehension": 0.66,
+      "working_memory_slots": 3
+    },
+    {
+      "persona_id": "tier2_004",
+      "ability_tier": 2,
+      "kc_acquisition_rate": 0.1,
+      "carelessness": 0.08,
+      "guess_strategy": "random",
+      "misconception_persistence": 0.86,
+      "reading_comprehension": 0.67,
+      "working_memory_slots": 3
+    },
+    {
+      "persona_id": "tier2_005",
+      "ability_tier": 2,
+      "kc_acquisition_rate": 0.1,
+      "carelessness": 0.08,
+      "guess_strategy": "random",
+      "misconception_persistence": 0.86,
+      "reading_comprehension": 0.67,
+      "working_memory_slots": 3
+    },
+    {
+      "persona_id": "tier2_006",
+      "ability_tier": 2,
+      "kc_acquisition_rate": 0.1,
+      "carelessness": 0.08,
+      "guess_strategy": "random",
+      "misconception_persistence": 0.86,
+      "reading_comprehension": 0.68,
+      "working_memory_slots": 4
+    },
+    {
+      "persona_id": "tier2_007",
+      "ability_tier": 2,
+      "kc_acquisition_rate": 0.1,
+      "carelessness": 0.08,
+      "guess_strategy": "random",
+      "misconception_persistence": 0.87,
+      "reading_comprehension": 0.68,
+      "working_memory_slots": 4
+    },
+    {
+      "persona_id": "tier2_008",
+      "ability_tier": 2,
+      "kc_acquisition_rate": 0.1,
+      "carelessness": 0.08,
+      "guess_strategy": "random",
+      "misconception_persistence": 0.87,
+      "reading_comprehension": 0.69,
+      "working_memory_slots": 4
+    },
+    {
+      "persona_id": "tier2_009",
+      "ability_tier": 2,
+      "kc_acquisition_rate": 0.1,
+      "carelessness": 0.08,
+      "guess_strategy": "random",
+      "misconception_persistence": 0.87,
+      "reading_comprehension": 0.69,
+      "working_memory_slots": 4
+    },
+    {
+      "persona_id": "tier2_010",
+      "ability_tier": 2,
+      "kc_acquisition_rate": 0.1,
+      "carelessness": 0.08,
+      "guess_strategy": "random",
+      "misconception_persistence": 0.87,
+      "reading_comprehension": 0.7,
+      "working_memory_slots": 4
+    },
+    {
+      "persona_id": "tier2_011",
+      "ability_tier": 2,
+      "kc_acquisition_rate": 0.1,
+      "carelessness": 0.08,
+      "guess_strategy": "random",
+      "misconception_persistence": 0.88,
+      "reading_comprehension": 0.7,
+      "working_memory_slots": 4
+    },
+    {
+      "persona_id": "tier2_012",
+      "ability_tier": 2,
+      "kc_acquisition_rate": 0.1,
+      "carelessness": 0.08,
+      "guess_strategy": "random",
+      "misconception_persistence": 0.88,
+      "reading_comprehension": 0.71,
+      "working_memory_slots": 4
+    },
+    {
+      "persona_id": "tier2_013",
+      "ability_tier": 2,
+      "kc_acquisition_rate": 0.1,
+      "carelessness": 0.08,
+      "guess_strategy": "random",
+      "misconception_persistence": 0.88,
+      "reading_comprehension": 0.71,
+      "working_memory_slots": 4
+    },
+    {
+      "persona_id": "tier2_014",
+      "ability_tier": 2,
+      "kc_acquisition_rate": 0.1,
+      "carelessness": 0.08,
+      "guess_strategy": "random",
+      "misconception_persistence": 0.88,
+      "reading_comprehension": 0.72,
+      "working_memory_slots": 4
+    },
+    {
+      "persona_id": "tier2_015",
+      "ability_tier": 2,
+      "kc_acquisition_rate": 0.1,
+      "carelessness": 0.08,
+      "guess_strategy": "random",
+      "misconception_persistence": 0.89,
+      "reading_comprehension": 0.72,
+      "working_memory_slots": 4
+    },
+    {
+      "persona_id": "tier2_016",
+      "ability_tier": 2,
+      "kc_acquisition_rate": 0.1,
+      "carelessness": 0.08,
+      "guess_strategy": "partial_knowledge",
+      "misconception_persistence": 0.89,
+      "reading_comprehension": 0.73,
+      "working_memory_slots": 5
+    },
+    {
+      "persona_id": "tier2_017",
+      "ability_tier": 2,
+      "kc_acquisition_rate": 0.1,
+      "carelessness": 0.08,
+      "guess_strategy": "partial_knowledge",
+      "misconception_persistence": 0.89,
+      "reading_comprehension": 0.73,
+      "working_memory_slots": 5
+    },
+    {
+      "persona_id": "tier2_018",
+      "ability_tier": 2,
+      "kc_acquisition_rate": 0.1,
+      "carelessness": 0.08,
+      "guess_strategy": "partial_knowledge",
+      "misconception_persistence": 0.89,
+      "reading_comprehension": 0.74,
+      "working_memory_slots": 5
+    },
+    {
+      "persona_id": "tier2_019",
+      "ability_tier": 2,
+      "kc_acquisition_rate": 0.1,
+      "carelessness": 0.08,
+      "guess_strategy": "partial_knowledge",
+      "misconception_persistence": 0.9,
+      "reading_comprehension": 0.74,
+      "working_memory_slots": 5
+    },
+    {
+      "persona_id": "tier2_020",
+      "ability_tier": 2,
+      "kc_acquisition_rate": 0.1,
+      "carelessness": 0.08,
+      "guess_strategy": "partial_knowledge",
+      "misconception_persistence": 0.9,
+      "reading_comprehension": 0.75,
+      "working_memory_slots": 5
+    },
+    {
+      "persona_id": "tier3_001",
+      "ability_tier": 3,
+      "kc_acquisition_rate": 0.15,
+      "carelessness": 0.06,
+      "guess_strategy": "random",
+      "misconception_persistence": 0.75,
+      "reading_comprehension": 0.75,
+      "working_memory_slots": 4
+    },
+    {
+      "persona_id": "tier3_002",
+      "ability_tier": 3,
+      "kc_acquisition_rate": 0.15,
+      "carelessness": 0.06,
+      "guess_strategy": "random",
+      "misconception_persistence": 0.75,
+      "reading_comprehension": 0.75,
+      "working_memory_slots": 4
+    },
+    {
+      "persona_id": "tier3_003",
+      "ability_tier": 3,
+      "kc_acquisition_rate": 0.15,
+      "carelessness": 0.06,
+      "guess_strategy": "random",
+      "misconception_persistence": 0.76,
+      "reading_comprehension": 0.76,
+      "working_memory_slots": 4
+    },
+    {
+      "persona_id": "tier3_004",
+      "ability_tier": 3,
+      "kc_acquisition_rate": 0.15,
+      "carelessness": 0.06,
+      "guess_strategy": "random",
+      "misconception_persistence": 0.76,
+      "reading_comprehension": 0.76,
+      "working_memory_slots": 4
+    },
+    {
+      "persona_id": "tier3_005",
+      "ability_tier": 3,
+      "kc_acquisition_rate": 0.15,
+      "carelessness": 0.06,
+      "guess_strategy": "random",
+      "misconception_persistence": 0.77,
+      "reading_comprehension": 0.77,
+      "working_memory_slots": 4
+    },
+    {
+      "persona_id": "tier3_006",
+      "ability_tier": 3,
+      "kc_acquisition_rate": 0.15,
+      "carelessness": 0.06,
+      "guess_strategy": "random",
+      "misconception_persistence": 0.77,
+      "reading_comprehension": 0.77,
+      "working_memory_slots": 4
+    },
+    {
+      "persona_id": "tier3_007",
+      "ability_tier": 3,
+      "kc_acquisition_rate": 0.15,
+      "carelessness": 0.06,
+      "guess_strategy": "random",
+      "misconception_persistence": 0.78,
+      "reading_comprehension": 0.78,
+      "working_memory_slots": 5
+    },
+    {
+      "persona_id": "tier3_008",
+      "ability_tier": 3,
+      "kc_acquisition_rate": 0.15,
+      "carelessness": 0.06,
+      "guess_strategy": "random",
+      "misconception_persistence": 0.78,
+      "reading_comprehension": 0.78,
+      "working_memory_slots": 5
+    },
+    {
+      "persona_id": "tier3_009",
+      "ability_tier": 3,
+      "kc_acquisition_rate": 0.15,
+      "carelessness": 0.06,
+      "guess_strategy": "random",
+      "misconception_persistence": 0.78,
+      "reading_comprehension": 0.78,
+      "working_memory_slots": 5
+    },
+    {
+      "persona_id": "tier3_010",
+      "ability_tier": 3,
+      "kc_acquisition_rate": 0.15,
+      "carelessness": 0.06,
+      "guess_strategy": "random",
+      "misconception_persistence": 0.79,
+      "reading_comprehension": 0.79,
+      "working_memory_slots": 5
+    },
+    {
+      "persona_id": "tier3_011",
+      "ability_tier": 3,
+      "kc_acquisition_rate": 0.15,
+      "carelessness": 0.06,
+      "guess_strategy": "random",
+      "misconception_persistence": 0.79,
+      "reading_comprehension": 0.79,
+      "working_memory_slots": 5
+    },
+    {
+      "persona_id": "tier3_012",
+      "ability_tier": 3,
+      "kc_acquisition_rate": 0.15,
+      "carelessness": 0.06,
+      "guess_strategy": "random",
+      "misconception_persistence": 0.8,
+      "reading_comprehension": 0.8,
+      "working_memory_slots": 5
+    },
+    {
+      "persona_id": "tier3_013",
+      "ability_tier": 3,
+      "kc_acquisition_rate": 0.15,
+      "carelessness": 0.06,
+      "guess_strategy": "partial_knowledge",
+      "misconception_persistence": 0.8,
+      "reading_comprehension": 0.8,
+      "working_memory_slots": 5
+    },
+    {
+      "persona_id": "tier3_014",
+      "ability_tier": 3,
+      "kc_acquisition_rate": 0.15,
+      "carelessness": 0.06,
+      "guess_strategy": "partial_knowledge",
+      "misconception_persistence": 0.8,
+      "reading_comprehension": 0.8,
+      "working_memory_slots": 5
+    },
+    {
+      "persona_id": "tier3_015",
+      "ability_tier": 3,
+      "kc_acquisition_rate": 0.15,
+      "carelessness": 0.06,
+      "guess_strategy": "partial_knowledge",
+      "misconception_persistence": 0.81,
+      "reading_comprehension": 0.81,
+      "working_memory_slots": 5
+    },
+    {
+      "persona_id": "tier3_016",
+      "ability_tier": 3,
+      "kc_acquisition_rate": 0.15,
+      "carelessness": 0.06,
+      "guess_strategy": "partial_knowledge",
+      "misconception_persistence": 0.81,
+      "reading_comprehension": 0.81,
+      "working_memory_slots": 5
+    },
+    {
+      "persona_id": "tier3_017",
+      "ability_tier": 3,
+      "kc_acquisition_rate": 0.15,
+      "carelessness": 0.06,
+      "guess_strategy": "partial_knowledge",
+      "misconception_persistence": 0.82,
+      "reading_comprehension": 0.82,
+      "working_memory_slots": 5
+    },
+    {
+      "persona_id": "tier3_018",
+      "ability_tier": 3,
+      "kc_acquisition_rate": 0.15,
+      "carelessness": 0.06,
+      "guess_strategy": "partial_knowledge",
+      "misconception_persistence": 0.82,
+      "reading_comprehension": 0.82,
+      "working_memory_slots": 5
+    },
+    {
+      "persona_id": "tier3_019",
+      "ability_tier": 3,
+      "kc_acquisition_rate": 0.15,
+      "carelessness": 0.06,
+      "guess_strategy": "partial_knowledge",
+      "misconception_persistence": 0.83,
+      "reading_comprehension": 0.83,
+      "working_memory_slots": 6
+    },
+    {
+      "persona_id": "tier3_020",
+      "ability_tier": 3,
+      "kc_acquisition_rate": 0.15,
+      "carelessness": 0.06,
+      "guess_strategy": "partial_knowledge",
+      "misconception_persistence": 0.83,
+      "reading_comprehension": 0.83,
+      "working_memory_slots": 6
+    },
+    {
+      "persona_id": "tier3_021",
+      "ability_tier": 3,
+      "kc_acquisition_rate": 0.15,
+      "carelessness": 0.06,
+      "guess_strategy": "partial_knowledge",
+      "misconception_persistence": 0.83,
+      "reading_comprehension": 0.83,
+      "working_memory_slots": 6
+    },
+    {
+      "persona_id": "tier3_022",
+      "ability_tier": 3,
+      "kc_acquisition_rate": 0.15,
+      "carelessness": 0.06,
+      "guess_strategy": "partial_knowledge",
+      "misconception_persistence": 0.84,
+      "reading_comprehension": 0.84,
+      "working_memory_slots": 6
+    },
+    {
+      "persona_id": "tier3_023",
+      "ability_tier": 3,
+      "kc_acquisition_rate": 0.15,
+      "carelessness": 0.06,
+      "guess_strategy": "partial_knowledge",
+      "misconception_persistence": 0.84,
+      "reading_comprehension": 0.84,
+      "working_memory_slots": 6
+    },
+    {
+      "persona_id": "tier3_024",
+      "ability_tier": 3,
+      "kc_acquisition_rate": 0.15,
+      "carelessness": 0.06,
+      "guess_strategy": "partial_knowledge",
+      "misconception_persistence": 0.85,
+      "reading_comprehension": 0.85,
+      "working_memory_slots": 6
+    },
+    {
+      "persona_id": "tier3_025",
+      "ability_tier": 3,
+      "kc_acquisition_rate": 0.15,
+      "carelessness": 0.06,
+      "guess_strategy": "partial_knowledge",
+      "misconception_persistence": 0.85,
+      "reading_comprehension": 0.85,
+      "working_memory_slots": 6
+    },
+    {
+      "persona_id": "tier4_001",
+      "ability_tier": 4,
+      "kc_acquisition_rate": 0.22,
+      "carelessness": 0.04,
+      "guess_strategy": "random",
+      "misconception_persistence": 0.6,
+      "reading_comprehension": 0.85,
+      "working_memory_slots": 5
+    },
+    {
+      "persona_id": "tier4_002",
+      "ability_tier": 4,
+      "kc_acquisition_rate": 0.22,
+      "carelessness": 0.04,
+      "guess_strategy": "random",
+      "misconception_persistence": 0.61,
+      "reading_comprehension": 0.85,
+      "working_memory_slots": 5
+    },
+    {
+      "persona_id": "tier4_003",
+      "ability_tier": 4,
+      "kc_acquisition_rate": 0.22,
+      "carelessness": 0.04,
+      "guess_strategy": "random",
+      "misconception_persistence": 0.61,
+      "reading_comprehension": 0.86,
+      "working_memory_slots": 5
+    },
+    {
+      "persona_id": "tier4_004",
+      "ability_tier": 4,
+      "kc_acquisition_rate": 0.22,
+      "carelessness": 0.04,
+      "guess_strategy": "random",
+      "misconception_persistence": 0.62,
+      "reading_comprehension": 0.86,
+      "working_memory_slots": 5
+    },
+    {
+      "persona_id": "tier4_005",
+      "ability_tier": 4,
+      "kc_acquisition_rate": 0.22,
+      "carelessness": 0.04,
+      "guess_strategy": "random",
+      "misconception_persistence": 0.63,
+      "reading_comprehension": 0.87,
+      "working_memory_slots": 5
+    },
+    {
+      "persona_id": "tier4_006",
+      "ability_tier": 4,
+      "kc_acquisition_rate": 0.22,
+      "carelessness": 0.04,
+      "guess_strategy": "partial_knowledge",
+      "misconception_persistence": 0.63,
+      "reading_comprehension": 0.87,
+      "working_memory_slots": 5
+    },
+    {
+      "persona_id": "tier4_007",
+      "ability_tier": 4,
+      "kc_acquisition_rate": 0.22,
+      "carelessness": 0.04,
+      "guess_strategy": "partial_knowledge",
+      "misconception_persistence": 0.64,
+      "reading_comprehension": 0.88,
+      "working_memory_slots": 6
+    },
+    {
+      "persona_id": "tier4_008",
+      "ability_tier": 4,
+      "kc_acquisition_rate": 0.22,
+      "carelessness": 0.04,
+      "guess_strategy": "partial_knowledge",
+      "misconception_persistence": 0.64,
+      "reading_comprehension": 0.88,
+      "working_memory_slots": 6
+    },
+    {
+      "persona_id": "tier4_009",
+      "ability_tier": 4,
+      "kc_acquisition_rate": 0.22,
+      "carelessness": 0.04,
+      "guess_strategy": "partial_knowledge",
+      "misconception_persistence": 0.65,
+      "reading_comprehension": 0.88,
+      "working_memory_slots": 6
+    },
+    {
+      "persona_id": "tier4_010",
+      "ability_tier": 4,
+      "kc_acquisition_rate": 0.22,
+      "carelessness": 0.04,
+      "guess_strategy": "partial_knowledge",
+      "misconception_persistence": 0.66,
+      "reading_comprehension": 0.89,
+      "working_memory_slots": 6
+    },
+    {
+      "persona_id": "tier4_011",
+      "ability_tier": 4,
+      "kc_acquisition_rate": 0.22,
+      "carelessness": 0.04,
+      "guess_strategy": "partial_knowledge",
+      "misconception_persistence": 0.66,
+      "reading_comprehension": 0.89,
+      "working_memory_slots": 6
+    },
+    {
+      "persona_id": "tier4_012",
+      "ability_tier": 4,
+      "kc_acquisition_rate": 0.22,
+      "carelessness": 0.04,
+      "guess_strategy": "partial_knowledge",
+      "misconception_persistence": 0.67,
+      "reading_comprehension": 0.9,
+      "working_memory_slots": 6
+    },
+    {
+      "persona_id": "tier4_013",
+      "ability_tier": 4,
+      "kc_acquisition_rate": 0.22,
+      "carelessness": 0.04,
+      "guess_strategy": "partial_knowledge",
+      "misconception_persistence": 0.68,
+      "reading_comprehension": 0.9,
+      "working_memory_slots": 6
+    },
+    {
+      "persona_id": "tier4_014",
+      "ability_tier": 4,
+      "kc_acquisition_rate": 0.22,
+      "carelessness": 0.04,
+      "guess_strategy": "partial_knowledge",
+      "misconception_persistence": 0.68,
+      "reading_comprehension": 0.9,
+      "working_memory_slots": 6
+    },
+    {
+      "persona_id": "tier4_015",
+      "ability_tier": 4,
+      "kc_acquisition_rate": 0.22,
+      "carelessness": 0.04,
+      "guess_strategy": "partial_knowledge",
+      "misconception_persistence": 0.69,
+      "reading_comprehension": 0.91,
+      "working_memory_slots": 6
+    },
+    {
+      "persona_id": "tier4_016",
+      "ability_tier": 4,
+      "kc_acquisition_rate": 0.22,
+      "carelessness": 0.04,
+      "guess_strategy": "partial_knowledge",
+      "misconception_persistence": 0.69,
+      "reading_comprehension": 0.91,
+      "working_memory_slots": 6
+    },
+    {
+      "persona_id": "tier4_017",
+      "ability_tier": 4,
+      "kc_acquisition_rate": 0.22,
+      "carelessness": 0.04,
+      "guess_strategy": "partial_knowledge",
+      "misconception_persistence": 0.7,
+      "reading_comprehension": 0.92,
+      "working_memory_slots": 6
+    },
+    {
+      "persona_id": "tier4_018",
+      "ability_tier": 4,
+      "kc_acquisition_rate": 0.22,
+      "carelessness": 0.04,
+      "guess_strategy": "partial_knowledge",
+      "misconception_persistence": 0.71,
+      "reading_comprehension": 0.92,
+      "working_memory_slots": 6
+    },
+    {
+      "persona_id": "tier4_019",
+      "ability_tier": 4,
+      "kc_acquisition_rate": 0.22,
+      "carelessness": 0.04,
+      "guess_strategy": "partial_knowledge",
+      "misconception_persistence": 0.71,
+      "reading_comprehension": 0.93,
+      "working_memory_slots": 7
+    },
+    {
+      "persona_id": "tier4_020",
+      "ability_tier": 4,
+      "kc_acquisition_rate": 0.22,
+      "carelessness": 0.04,
+      "guess_strategy": "partial_knowledge",
+      "misconception_persistence": 0.72,
+      "reading_comprehension": 0.93,
+      "working_memory_slots": 7
+    },
+    {
+      "persona_id": "tier4_021",
+      "ability_tier": 4,
+      "kc_acquisition_rate": 0.22,
+      "carelessness": 0.04,
+      "guess_strategy": "partial_knowledge",
+      "misconception_persistence": 0.73,
+      "reading_comprehension": 0.93,
+      "working_memory_slots": 7
+    },
+    {
+      "persona_id": "tier4_022",
+      "ability_tier": 4,
+      "kc_acquisition_rate": 0.22,
+      "carelessness": 0.04,
+      "guess_strategy": "partial_knowledge",
+      "misconception_persistence": 0.73,
+      "reading_comprehension": 0.94,
+      "working_memory_slots": 7
+    },
+    {
+      "persona_id": "tier4_023",
+      "ability_tier": 4,
+      "kc_acquisition_rate": 0.22,
+      "carelessness": 0.04,
+      "guess_strategy": "partial_knowledge",
+      "misconception_persistence": 0.74,
+      "reading_comprehension": 0.94,
+      "working_memory_slots": 7
+    },
+    {
+      "persona_id": "tier4_024",
+      "ability_tier": 4,
+      "kc_acquisition_rate": 0.22,
+      "carelessness": 0.04,
+      "guess_strategy": "partial_knowledge",
+      "misconception_persistence": 0.74,
+      "reading_comprehension": 0.95,
+      "working_memory_slots": 7
+    },
+    {
+      "persona_id": "tier4_025",
+      "ability_tier": 4,
+      "kc_acquisition_rate": 0.22,
+      "carelessness": 0.04,
+      "guess_strategy": "partial_knowledge",
+      "misconception_persistence": 0.75,
+      "reading_comprehension": 0.95,
+      "working_memory_slots": 7
+    },
+    {
+      "persona_id": "tier5_001",
+      "ability_tier": 5,
+      "kc_acquisition_rate": 0.3,
+      "carelessness": 0.02,
+      "guess_strategy": "random",
+      "misconception_persistence": 0.5,
+      "reading_comprehension": 0.95,
+      "working_memory_slots": 6
+    },
+    {
+      "persona_id": "tier5_002",
+      "ability_tier": 5,
+      "kc_acquisition_rate": 0.3,
+      "carelessness": 0.02,
+      "guess_strategy": "partial_knowledge",
+      "misconception_persistence": 0.51,
+      "reading_comprehension": 0.95,
+      "working_memory_slots": 6
+    },
+    {
+      "persona_id": "tier5_003",
+      "ability_tier": 5,
+      "kc_acquisition_rate": 0.3,
+      "carelessness": 0.02,
+      "guess_strategy": "partial_knowledge",
+      "misconception_persistence": 0.51,
+      "reading_comprehension": 0.96,
+      "working_memory_slots": 6
+    },
+    {
+      "persona_id": "tier5_004",
+      "ability_tier": 5,
+      "kc_acquisition_rate": 0.3,
+      "carelessness": 0.02,
+      "guess_strategy": "partial_knowledge",
+      "misconception_persistence": 0.52,
+      "reading_comprehension": 0.96,
+      "working_memory_slots": 6
+    },
+    {
+      "persona_id": "tier5_005",
+      "ability_tier": 5,
+      "kc_acquisition_rate": 0.3,
+      "carelessness": 0.02,
+      "guess_strategy": "partial_knowledge",
+      "misconception_persistence": 0.53,
+      "reading_comprehension": 0.96,
+      "working_memory_slots": 6
+    },
+    {
+      "persona_id": "tier5_006",
+      "ability_tier": 5,
+      "kc_acquisition_rate": 0.3,
+      "carelessness": 0.02,
+      "guess_strategy": "partial_knowledge",
+      "misconception_persistence": 0.54,
+      "reading_comprehension": 0.97,
+      "working_memory_slots": 6
+    },
+    {
+      "persona_id": "tier5_007",
+      "ability_tier": 5,
+      "kc_acquisition_rate": 0.3,
+      "carelessness": 0.02,
+      "guess_strategy": "partial_knowledge",
+      "misconception_persistence": 0.54,
+      "reading_comprehension": 0.97,
+      "working_memory_slots": 6
+    },
+    {
+      "persona_id": "tier5_008",
+      "ability_tier": 5,
+      "kc_acquisition_rate": 0.3,
+      "carelessness": 0.02,
+      "guess_strategy": "partial_knowledge",
+      "misconception_persistence": 0.55,
+      "reading_comprehension": 0.98,
+      "working_memory_slots": 7
+    },
+    {
+      "persona_id": "tier5_009",
+      "ability_tier": 5,
+      "kc_acquisition_rate": 0.3,
+      "carelessness": 0.02,
+      "guess_strategy": "partial_knowledge",
+      "misconception_persistence": 0.56,
+      "reading_comprehension": 0.98,
+      "working_memory_slots": 7
+    },
+    {
+      "persona_id": "tier5_010",
+      "ability_tier": 5,
+      "kc_acquisition_rate": 0.3,
+      "carelessness": 0.02,
+      "guess_strategy": "partial_knowledge",
+      "misconception_persistence": 0.56,
+      "reading_comprehension": 0.98,
+      "working_memory_slots": 7
+    },
+    {
+      "persona_id": "tier5_011",
+      "ability_tier": 5,
+      "kc_acquisition_rate": 0.3,
+      "carelessness": 0.02,
+      "guess_strategy": "partial_knowledge",
+      "misconception_persistence": 0.57,
+      "reading_comprehension": 0.99,
+      "working_memory_slots": 7
+    },
+    {
+      "persona_id": "tier5_012",
+      "ability_tier": 5,
+      "kc_acquisition_rate": 0.3,
+      "carelessness": 0.02,
+      "guess_strategy": "partial_knowledge",
+      "misconception_persistence": 0.58,
+      "reading_comprehension": 0.99,
+      "working_memory_slots": 7
+    },
+    {
+      "persona_id": "tier5_013",
+      "ability_tier": 5,
+      "kc_acquisition_rate": 0.3,
+      "carelessness": 0.02,
+      "guess_strategy": "partial_knowledge",
+      "misconception_persistence": 0.59,
+      "reading_comprehension": 0.99,
+      "working_memory_slots": 7
+    },
+    {
+      "persona_id": "tier5_014",
+      "ability_tier": 5,
+      "kc_acquisition_rate": 0.3,
+      "carelessness": 0.02,
+      "guess_strategy": "partial_knowledge",
+      "misconception_persistence": 0.59,
+      "reading_comprehension": 1,
+      "working_memory_slots": 7
+    },
+    {
+      "persona_id": "tier5_015",
+      "ability_tier": 5,
+      "kc_acquisition_rate": 0.3,
+      "carelessness": 0.02,
+      "guess_strategy": "partial_knowledge",
+      "misconception_persistence": 0.6,
+      "reading_comprehension": 1,
+      "working_memory_slots": 7
+    }
+  ]
+}
