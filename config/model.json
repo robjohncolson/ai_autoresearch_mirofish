@@ -1,15 +1,28 @@
 {
   "primary": {
-    "name": "qwen2.5-coder-32b-instruct",
-    "quant": "Q8_0",
+    "name": "qwen3-coder-next",
+    "architecture": "MoE (80B total, 3B active per token)",
+    "quant": "Q4_K_XL or Q4_0",
     "context_size": 8192,
+    "max_context": 262144,
     "temperature": 0.2,
-    "estimated_vram_gb": 38,
-    "notes": "Legacy quant (not Q8_K) for Intel SYCL performance"
+    "estimated_vram_gb": "35-40",
+    "gguf_source": "unsloth/Qwen3-Coder-Next-GGUF on HuggingFace",
+    "notes": "Try Q4_K_XL first; benchmark against Q4_0 for SYCL performance. MoE routing may behave differently than dense models on SYCL."
   },
   "fallback": [
     {
       "name": "qwen2.5-coder-32b-instruct",
+      "architecture": "dense",
+      "quant": "Q8_0",
+      "context_size": 8192,
+      "temperature": 0.2,
+      "estimated_vram_gb": 38,
+      "notes": "Proven stable dense model. Legacy Q8_0 (NOT Q8_K) for Intel SYCL performance."
+    },
+    {
+      "name": "qwen2.5-coder-32b-instruct",
+      "architecture": "dense",
       "quant": "Q5_0",
       "context_size": 8192,
       "temperature": 0.2,
@@ -18,11 +31,12 @@
     },
     {
       "name": "qwen3-coder-30b-a3b",
+      "architecture": "MoE (30B total, 3B active)",
       "quant": "Q8_0",
       "context_size": 8192,
       "temperature": 0.2,
       "estimated_vram_gb": 32,
-      "notes": "MoE — faster inference, slightly lower quality"
+      "notes": "Speed-optimized MoE alternative"
     }
   ],
   "acceptance_gates": {

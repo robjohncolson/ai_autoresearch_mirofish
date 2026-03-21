@@ -71,87 +71,147 @@ This repo previously contained a synthetic student simulation engine for AP Stat
 
 **Fallback:** llama.cpp `llama-server` with SYCL or Vulkan Windows release zips. More control (KV cache quantization flags, monitoring endpoints), less convenient.
 
-### 3.2 Model: Qwen2.5-Coder-32B-Instruct
+### 3.2 Model Selection
 
-**Primary choice.** The pragmatic workhorse for local agentic coding.
+**Primary: Qwen3-Coder-Next (80B MoE, 3B active per token)**
+
+This is the top recommendation based on post-commit research. Despite being "80B total,"
+only **3B parameters activate per token** (MoE routing), so inference is faster than
+a dense 32B while quality is significantly higher.
 
 | Property | Value |
 |----------|-------|
-| Parameters | 32.5B dense |
-| Context | 131,072 native (start at 8K, scale after benchmarking) |
-| License | Apache-2.0 |
-| Quantization | **Q8_0** (legacy format — NOT Q8_K) |
-| Weight footprint | ~38 GB |
-| Headroom in 54 GB | ~16 GB for KV cache + OS |
-| Expected speed | ~3-4 t/s on Arc iGPU |
-| Strength | Code generation, tool calling, instruction following |
+| Parameters | 80B total, **3B active per token** (MoE) |
+| Context | 256K native (start at 8K, scale after benchmarking) |
+| Benchmark | 66.2 Aider, 44.3% SWE-Bench Pro |
+| Quantization | **Q4_0** (legacy) or Unsloth UD-Q4_K_XL (~35-40 GB) |
+| Weight footprint | ~35-40 GB at Q4 |
+| Headroom in 54 GB | ~14-19 GB for KV cache + OS |
+| Expected speed | ~5-15 t/s on Arc iGPU (MoE advantage: small active params) |
+| Strength | Purpose-built for coding agents, tool calling, autonomous iteration |
 
-**Why Q8_0 specifically:**
-- Near-lossless quality (indistinguishable from FP16 in blind tests)
-- Legacy quant format — SYCL kernels for Q8_0 are **significantly faster** than K-quant equivalents (Q8_K) on Intel
-- 38 GB fits comfortably in 54 GB unified VRAM
+**Why this over the 32B?**
+- Higher quality: 66.2 Aider vs lower scores for Qwen2.5-Coder-32B
+- Faster inference: only 3B active params despite 80B total weight
+- Similar VRAM: ~38 GB (32B Q8) vs ~35-40 GB (80B MoE Q4) — comparable footprint
+- Designed specifically for agentic coding loops (the exact use case)
 
-**Why not the 80B MoE?**
-- Qwen3-Coder-Next 80B MoE at Q4_0 is ~50 GB — too tight in 54 GB. Memory pressure + KV cache = instability risk.
-- Start conservative. If benchmarks show headroom, try it later.
+**Quantization caveat:** GGUF quants from Unsloth/HuggingFace are mostly K-quants
+(Q4_K_XL) and dynamic formats. Legacy Q4_0 may not be available. **On first boot,
+benchmark both Q4_K_XL and Q4_0 (if available) to see if the SYCL K-quant penalty
+applies to MoE models.** The MoE routing may change the performance characteristics
+vs dense models. If K-quants are unacceptably slow, fall back to the dense 32B at Q8_0.
 
-**Fallback options (if 32B Q8_0 is too slow or too tight):**
+**GGUF sources:**
+- `unsloth/Qwen3-Coder-Next-GGUF` on HuggingFace (Unsloth dynamic quants)
+- `Qwen/Qwen3-Coder-Next-GGUF` on HuggingFace (official)
+
+**MoE optimization flag:** For llama.cpp, use `-ot ".ffn_.*_exps.=CPU"` to offload
+inactive expert weights to CPU RAM, freeing GPU memory for KV cache.
+
+**Fallback: Qwen2.5-Coder-32B-Instruct (dense)**
+
+If Qwen3-Coder-Next has issues (SYCL incompatibility, tool-calling bugs, OOM):
 
 | Model | Quant | VRAM | Speed | When to use |
 |-------|-------|------|-------|-------------|
+| Qwen2.5-Coder-32B | Q8_0 | ~38 GB | ~3-4 t/s | Proven stable, near-lossless quality |
 | Qwen2.5-Coder-32B | Q5_0 | ~22 GB | ~5-6 t/s | If Q8_0 causes memory pressure |
-| Qwen3-Coder-30B-A3B MoE | Q8_0 | ~32 GB | ~5-8 t/s | If speed matters more than quality |
-| Devstral Small 2 24B | Q8_0 | ~25 GB | ~4-5 t/s | Compact alternative, 68% SWE-Bench |
+| Qwen3-Coder-30B-A3B MoE | Q8_0 | ~32 GB | ~5-8 t/s | Speed-optimized MoE alternative |
 
 **Model acquisition:**
 ```bash
-# Option A: Direct Ollama pull (if tag exists)
-ollama pull qwen2.5-coder:32b-instruct-q8_0
+# Option A: Ollama pull (check available tags first)
+ollama search qwen3-coder
+ollama pull qwen3-coder:next          # or whatever the exact tag is
 
-# Option B: Custom Modelfile pointing to downloaded GGUF
-# Download from Hugging Face (bartowski or official quants)
+# Option B: Custom Modelfile from downloaded GGUF
+# Download from HuggingFace:
+#   https://huggingface.co/unsloth/Qwen3-Coder-Next-GGUF
 # Create Modelfile:
-#   FROM ./qwen2.5-coder-32b-instruct-q8_0.gguf
+#   FROM ./Qwen3-Coder-Next-Q4_K_XL.gguf
 #   PARAMETER num_ctx 8192
-# ollama create qwen-coder-32b -f Modelfile
+# ollama create qwen3-coder-next -f Modelfile
+
+# Fallback: Qwen2.5-Coder-32B
+ollama pull qwen2.5-coder:32b-instruct-q8_0
 ```
 
 ### 3.3 Agent Framework
 
-The agent framework connects the local model to real tools (filesystem, shell, git). Three tiers, deploy in order:
+The agent framework connects the local model to real tools (filesystem, shell, git).
+Test in this order — if Tier 1 works, you may not need the others.
 
-**Tier 1 — Open Interpreter (persistent local assistant)**
+**Tier 1 — Claude Code with local Ollama (CONFIRMED WORKING)**
 
-The closest thing to "a local Claude Code." Natural language interface, file read/write, shell execution, Python/JS interpretation. Works with any OpenAI-compatible endpoint.
-
-```bash
-pip install open-interpreter
-interpreter --api-base http://localhost:11434/v1 --model qwen2.5-coder-32b
-```
-
-Use for: filesystem crawling, repo summarization, script writing, improvement discovery. This is the "resident AI" mode.
-
-**Tier 2 — Aider (code-focused editing)**
-
-Purpose-built for code editing with git integration. Handles diffs, commits, multi-file edits. Strong local model support.
+Ollama v0.14.0+ exposes an **Anthropic-compatible Messages API** at
+`localhost:11434/v1/messages`. Claude Code connects directly to it.
+This is confirmed working as of January 2026 with tool calling, streaming,
+multi-turn, and vision support.
 
 ```bash
-pip install aider-chat
-aider --model openai/qwen2.5-coder-32b --api-base http://localhost:11434/v1 --api-key dummy
-```
-
-Use for: autoresearch loops (edit file → run experiment → measure → keep/revert). Aider handles the git ops natively.
-
-**Tier 3 — Claude Code with local endpoint (experimental)**
-
-Ollama v0.14.0+ reportedly supports the Anthropic Messages API. If this works:
-
-```bash
+set ANTHROPIC_AUTH_TOKEN=ollama
 set ANTHROPIC_BASE_URL=http://localhost:11434
 claude
 ```
 
-Same interface you already know, powered by local model. Quality will be lower than API Claude, but the workflow is identical. **Test this on first boot — if it works reliably, it may be the only framework needed.**
+Same interface you already know, powered by local model. Quality is lower than
+API Claude, but the workflow is identical. Recommended models for this mode:
+`qwen3-coder`, `glm-4.7`, `minimax-m2.1`.
+
+**If this works reliably, it's the only framework you need.** Test on first boot.
+
+**Tier 2 — OpenCode (open-source Claude Code alternative, 95K+ GitHub stars)**
+
+Provider-agnostic Go-based TUI. Supports 75+ providers including Ollama.
+Full agentic capabilities: bash execution, file operations, code search.
+Requires 64K+ context from the model.
+
+```bash
+# Install via Go or download binary
+# See: https://github.com/opencode-ai/opencode
+opencode --provider ollama --model qwen3-coder-next
+```
+
+Use if: Claude Code + local Ollama has edge-case issues, or you want a
+purpose-built open-source alternative.
+
+**Tier 3 — Aider (code-focused editing)**
+
+Purpose-built for code editing with git integration. Handles diffs, commits,
+multi-file edits. Qwen3-Coder-Next scores 66.2 on Aider's own benchmark.
+
+```bash
+pip install aider-chat
+aider --model ollama_chat/qwen3-coder-next --api-base http://localhost:11434
+```
+
+Use for: autoresearch loops (edit file → run experiment → measure → keep/revert).
+Aider handles the git ops natively.
+
+**Tier 4 — Qwen-Agent (Alibaba's official framework)**
+
+Built specifically for Qwen >= 3.0 models. Native function calling, MCP
+integration, code interpreter (Docker sandbox), RAG. Supports parallel
+function calls out of the box.
+
+```bash
+pip install -U "qwen-agent[gui,rag,code_interpreter,mcp]"
+```
+
+Use for: custom tool-calling pipelines, MCP server integration, structured
+multi-step workflows.
+
+**Tier 5 — Open Interpreter (general-purpose)**
+
+Natural language interface for computers. Runs code locally.
+
+```bash
+pip install open-interpreter
+interpreter --api-base http://localhost:11434/v1 --model qwen3-coder-next
+```
+
+Use for: quick ad-hoc tasks, filesystem exploration, script generation.
 
 ### 3.4 Quantization Rules (Intel SYCL)
 
@@ -295,7 +355,9 @@ Each component is averaged across its task set. Higher is better. Keep if new sc
 
 ### 5.5 Orchestrator
 
-A small Python script (`scripts/autoresearch.py`) that:
+**Option A: Simple keep/revert script** (`scripts/autoresearch.py`)
+
+A minimal Python script that:
 
 1. Reads `program.md` (human-written research direction)
 2. Asks the local model to propose an edit to one of the editable files
@@ -307,7 +369,24 @@ A small Python script (`scripts/autoresearch.py`) that:
 8. Logs result to `runs/{timestamp}.json`
 9. Repeats (with configurable experiment cap and wall-clock timeout)
 
-**Safety guardrails:**
+**Option B: DSPy prompt optimization** (more principled)
+
+DSPy (Stanford, 28K+ GitHub stars) works with Ollama and can automatically
+optimize prompts via MIPROv2/GEPA optimizers. Instead of random prompt edits
+with keep/revert, DSPy uses gradient-free optimization to systematically
+improve prompts based on a training set.
+
+```python
+import dspy
+lm = dspy.LM('ollama_chat/qwen3-coder-next', api_base='http://localhost:11434')
+dspy.configure(lm=lm)
+# Define module, metric, and let MIPROv2 optimize
+```
+
+DSPy is the better long-term approach but adds complexity. Start with Option A
+for proof-of-concept, migrate to DSPy once the basic loop works.
+
+**Safety guardrails (both options):**
 - Max 100 experiments per session
 - 10-minute wall-clock timeout per benchmark run
 - Only the 4 editable files can change (enforced by `git diff --name-only` check)
@@ -355,32 +434,40 @@ set no_proxy=localhost,127.0.0.1
 ollama serve
 
 # 6. Pull model (in another terminal)
-ollama pull qwen2.5-coder:32b-instruct-q8_0
-# Or use custom Modelfile if exact tag unavailable (see Section 3.2)
+# Try Qwen3-Coder-Next first:
+ollama search qwen3-coder
+ollama pull qwen3-coder:next    # or exact tag from search results
+# If unavailable, download GGUF from HuggingFace and use custom Modelfile (see Section 3.2)
+# Fallback: ollama pull qwen2.5-coder:32b-instruct-q8_0
 
 # 7. Verify
 curl http://localhost:11434/api/tags
-curl http://localhost:11434/api/generate -d '{"model":"qwen2.5-coder:32b-instruct-q8_0","prompt":"Write a Python function that lists files in a directory","stream":false}'
+curl http://localhost:11434/api/generate -d '{"model":"qwen3-coder-next","prompt":"Write a Python function that lists files in a directory","stream":false}'
 ```
 
-### Phase 2: Agent Framework
+### Phase 2: Agent Framework (test in order, stop when one works)
 
 ```bash
-# Install Open Interpreter
-pip install open-interpreter
-
-# Install Aider
-pip install aider-chat
-
-# Test Open Interpreter with local model
-interpreter --api-base http://localhost:11434/v1 --model qwen2.5-coder-32b
-
-# Test Aider with local model
-aider --model openai/qwen2.5-coder-32b --api-base http://localhost:11434/v1 --api-key dummy
-
-# Test Claude Code with local endpoint (experimental)
+# === Tier 1: Claude Code with local Ollama (try this FIRST) ===
+set ANTHROPIC_AUTH_TOKEN=ollama
 set ANTHROPIC_BASE_URL=http://localhost:11434
 claude
+# If this works with tool calling, you're done. Skip the rest.
+
+# === Tier 2: OpenCode (open-source Claude Code alternative) ===
+# Download from: https://github.com/opencode-ai/opencode
+opencode --provider ollama --model qwen3-coder-next
+
+# === Tier 3: Aider (code-focused) ===
+pip install aider-chat
+aider --model ollama_chat/qwen3-coder-next
+
+# === Tier 4: Qwen-Agent (Alibaba's framework) ===
+pip install -U "qwen-agent[gui,rag,code_interpreter,mcp]"
+
+# === Tier 5: Open Interpreter (general-purpose) ===
+pip install open-interpreter
+interpreter --api-base http://localhost:11434/v1 --model qwen3-coder-next
 ```
 
 ### Phase 3: Benchmark
@@ -407,10 +494,12 @@ If any gate fails, fall back to a smaller model (see Section 3.2 fallback table)
 ### Phase 4: First Real Task
 
 ```bash
-# Point the resident AI at a repo and ask it to summarize
-interpreter --api-base http://localhost:11434/v1 --model qwen2.5-coder-32b
-
->>> Crawl C:\Users\ColsonR\grid-bot-v3 and write a markdown architecture summary to summaries/grid-bot-v3.md
+# Using whichever agent framework worked in Phase 2, ask it to:
+# "Crawl C:\Users\ColsonR\grid-bot-v3 and write a markdown architecture
+#  summary to summaries/grid-bot-v3.md"
+#
+# This validates: file reading, directory traversal, markdown generation,
+# file writing, and code comprehension — all core capabilities.
 ```
 
 ---
@@ -468,13 +557,14 @@ ai_autoresearch_mirofish/
 
 | # | Question | How to resolve |
 |---|----------|----------------|
-| 1 | Exact CPU model and Arc GPU execution units? | Run `scripts/benchmark.py` — log `wmic cpu` and Intel GPU info |
+| 1 | Exact CPU model and Arc GPU execution units? | Run `scripts/benchmark.py` — log `wmic cpu` and Intel GPU info. If <80 EUs, iGPU may be too slow. |
 | 2 | Is IPEX-LLM Ollama portable zip compatible with this iGPU? | Try it. If SYCL init fails, fall back to Vulkan llama-server |
-| 3 | Does Qwen2.5-Coder-32B Q8_0 GGUF exist as an Ollama tag? | Check `ollama search qwen2.5-coder`. If not, use custom Modelfile |
-| 4 | Does Claude Code work with `ANTHROPIC_BASE_URL=localhost`? | Test it. If yes, this may be the only framework needed |
-| 5 | Actual inference speed at 8K context? | Benchmark. If <2 t/s, drop to Q5_0 or switch to 30B model |
-| 6 | Is the home laptop admin-capable? | Check. Affects whether IPEX-LLM portable works without elevation |
-| 7 | DDR5 or DDR4? | Affects bandwidth ceiling. DDR5 = ~3-4 t/s at 32B; DDR4 = ~1.5-2 t/s |
+| 3 | Does Qwen3-Coder-Next GGUF exist as an Ollama tag? | `ollama search qwen3-coder`. If not, download GGUF from unsloth/Qwen3-Coder-Next-GGUF on HuggingFace and use custom Modelfile |
+| 4 | Does Claude Code work with `ANTHROPIC_BASE_URL=localhost`? | Confirmed working with Ollama v0.14.0+. Test with: `set ANTHROPIC_AUTH_TOKEN=ollama` + `set ANTHROPIC_BASE_URL=http://localhost:11434` + `claude` |
+| 5 | Do K-quants (Q4_K_XL) perform OK on SYCL for MoE models? | Benchmark Q4_K_XL vs Q4_0 (if available). MoE routing may change perf characteristics vs dense models. If K-quants are slow, fall back to Qwen2.5-Coder-32B Q8_0. |
+| 6 | Actual inference speed at 8K context? | Benchmark. If <2 t/s, try CPU-only inference (may be competitive on efficient cores) or drop to smaller model |
+| 7 | Is the home laptop admin-capable? | Check. Affects whether IPEX-LLM portable works without elevation |
+| 8 | DDR5 or DDR4? | Affects bandwidth ceiling. DDR5 = better throughput; DDR4 = may need smaller model |
 
 ---
 
