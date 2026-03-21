@@ -1,0 +1,32 @@
+{
+  "ollama": {
+    "endpoint": "http://localhost:11434",
+    "openai_compat_endpoint": "http://localhost:11434/v1",
+    "env": {
+      "OLLAMA_NUM_GPU": "999",
+      "SYCL_CACHE_PERSISTENT": "1",
+      "no_proxy": "localhost,127.0.0.1"
+    }
+  },
+  "autoresearch": {
+    "max_experiments_per_session": 100,
+    "experiment_timeout_seconds": 600,
+    "score_floor": 0.2,
+    "editable_files": [
+      "config/system_prompt.md",
+      "config/tool_definitions.json",
+      "config/summarization_template.md",
+      "config/improvement_rubric.md"
+    ]
+  },
+  "crawl": {
+    "default_targets": [
+      "C:/Users/ColsonR/grid-bot-v3",
+      "C:/Users/ColsonR/curriculum_render",
+      "C:/Users/ColsonR/lrsl-driller",
+      "C:/Users/ColsonR/Agent"
+    ],
+    "max_file_lines_per_read": 200,
+    "output_dir": "summaries"
+  }
+}

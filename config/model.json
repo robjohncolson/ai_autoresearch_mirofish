@@ -1,0 +1,33 @@
+{
+  "primary": {
+    "name": "qwen2.5-coder-32b-instruct",
+    "quant": "Q8_0",
+    "context_size": 8192,
+    "temperature": 0.2,
+    "estimated_vram_gb": 38,
+    "notes": "Legacy quant (not Q8_K) for Intel SYCL performance"
+  },
+  "fallback": [
+    {
+      "name": "qwen2.5-coder-32b-instruct",
+      "quant": "Q5_0",
+      "context_size": 8192,
+      "temperature": 0.2,
+      "estimated_vram_gb": 22,
+      "notes": "Use if Q8_0 causes memory pressure or slow speed"
+    },
+    {
+      "name": "qwen3-coder-30b-a3b",
+      "quant": "Q8_0",
+      "context_size": 8192,
+      "temperature": 0.2,
+      "estimated_vram_gb": 32,
+      "notes": "MoE — faster inference, slightly lower quality"
+    }
+  ],
+  "acceptance_gates": {
+    "min_generation_tokens_per_second": 2.0,
+    "min_tool_calling_success_rate": 0.8,
+    "max_context_for_stability": "benchmark_determined"
+  }
+}

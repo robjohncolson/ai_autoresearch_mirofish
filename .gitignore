@@ -1,6 +1,7 @@
-# Logs (large, per-run)
-logs/runs/
-logs/summary.tsv
+# Generated outputs (large, per-run)
+runs/
+summaries/
+improvements/
 
 # Environment
 .env
@@ -15,3 +16,14 @@ Thumbs.db
 # IDE
 .vscode/
 .idea/
+
+# GitNexus index
+.gitnexus/
+
+# Model files (do not commit GGUFs)
+models/
+*.gguf
+
+# Temp
+tmp.*
+*.patch

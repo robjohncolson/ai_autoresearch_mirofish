@@ -1,0 +1,54 @@
+{
+  "tools": [
+    {
+      "name": "read_file",
+      "description": "Read the contents of a file by absolute path",
+      "parameters": {
+        "path": { "type": "string", "description": "Absolute file path" },
+        "max_lines": { "type": "integer", "description": "Max lines to read (default: all)", "default": null }
+      }
+    },
+    {
+      "name": "write_file",
+      "description": "Write content to a file (creates or overwrites)",
+      "parameters": {
+        "path": { "type": "string", "description": "Absolute file path" },
+        "content": { "type": "string", "description": "File content to write" }
+      }
+    },
+    {
+      "name": "list_directory",
+      "description": "List files and directories at a path",
+      "parameters": {
+        "path": { "type": "string", "description": "Directory path" },
+        "recursive": { "type": "boolean", "description": "Include subdirectories", "default": false },
+        "pattern": { "type": "string", "description": "Glob pattern filter (e.g. *.py)", "default": null }
+      }
+    },
+    {
+      "name": "run_command",
+      "description": "Execute a shell command and return stdout/stderr",
+      "parameters": {
+        "command": { "type": "string", "description": "Shell command to execute" },
+        "timeout_seconds": { "type": "integer", "description": "Max execution time", "default": 30 }
+      }
+    },
+    {
+      "name": "search_files",
+      "description": "Search file contents for a regex pattern (like grep)",
+      "parameters": {
+        "pattern": { "type": "string", "description": "Regex pattern to search for" },
+        "path": { "type": "string", "description": "Directory to search in" },
+        "file_pattern": { "type": "string", "description": "Glob filter for files (e.g. *.py)", "default": null }
+      }
+    },
+    {
+      "name": "git_log",
+      "description": "Get recent git history for a repository",
+      "parameters": {
+        "path": { "type": "string", "description": "Repository root path" },
+        "max_commits": { "type": "integer", "description": "Number of commits to show", "default": 20 }
+      }
+    }
+  ]
+}
